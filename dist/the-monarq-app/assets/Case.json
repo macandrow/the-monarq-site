@@ -1,0 +1,52 @@
+{
+	"Galleries" :[
+		{
+			"title" : "Fractures",
+			"description" : "123SC",
+			"slides" : [
+				{
+					"src" : "https://unsplash.it/1200/900/?image=702", 
+					"w" : 1200, 
+					"h" : 900, 
+					"title" : "Sea side, south shore"  
+				},
+				{
+					"src" : "https://unsplash.it/1200/900/?image=695",
+					"w" : 1200, 
+					"h" : 900, 
+					"title" : "Image Caption"
+				},
+				{
+					"src" : "https://unsplash.it/1200/900/?image=675",
+					"w" : 1200, 
+					"h" : 900, 
+					"title" : "Image Caption"
+				}
+			]
+		},
+		{
+			"title" : "Photography",
+			"description" : "123SC",
+			"slides" : [
+				{
+					"src" : "https://unsplash.it/1200/900/?image=702", 
+					"w" : 1200, 
+					"h" : 900, 
+					"title" : "Sea side, south shore"  
+				},
+				{
+					"src" : "https://unsplash.it/1200/900/?image=695",
+					"w" : 1200, 
+					"h" : 900, 
+					"title" : "Image Caption"
+				},
+				{
+					"src" : "https://unsplash.it/1200/900/?image=675",
+					"w" : 1200, 
+					"h" : 900, 
+					"title" : "Image Caption"
+				}
+			]
+		}
+	]
+}

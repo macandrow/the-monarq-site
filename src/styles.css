@@ -1,0 +1,86 @@
+@import url(/Applications/MAMP/htdocs/the-monarq-app/src/assets/css/main.css);
+@import url(/Applications/MAMP/htdocs/the-monarq-app/src/assets/css/normalize.css);
+body {
+  font-family: brandon-grotesque,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: white;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */
+}
+
+body.color-fractures {
+  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg");
+}
+
+body.color-photography {
+  background: url("src/assets/images/thumbs/bg_img143.jpg");
+}
+
+body.color-textures {
+  background-color: lightgrey;
+}
+
+body.color-paintings {
+  background-color: ivory;
+}
+
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  /*pointer-events: none;*/
+}
+
+header {
+  height: 30vh;
+  background-color: pink;
+}
+
+.flex-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.flex-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.baseline {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.stretch {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,51 @@
+@import "assets/css/main.css"; 
+@import "assets/css/normalize.css"; 
+// @import '../node_modules/photoswipe/dist/photoswipe.css';
+// @import '../node_modules/photoswipe/dist/default-skin/default-skin.css';
+
+body{
+	font-family: brandon-grotesque,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background-color: white;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+	&.color-fractures{
+		background:url('src/assets/images/thumbs/thumb_pattern_full_img146.jpg');
+	}
+	&.color-photography{
+		background:url('src/assets/images/thumbs/bg_img143.jpg');
+	}
+	&.color-textures{
+		background-color: lightgrey;
+	}
+	&.color-paintings{
+		background-color:ivory;
+	}
+}
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+.row{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	min-height: 600px;
+	/*pointer-events: none;*/
+}
+header{
+	height: 30vh;
+	background-color: pink;
+}
+.flex-start { align-self: flex-start; }
+.flex-end { align-self: flex-end; }
+.center { align-self: center; }
+.baseline { align-self: baseline; }
+.stretch { align-self: stretch; }
+
+

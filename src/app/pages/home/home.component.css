@@ -1,0 +1,71 @@
+@charset "UTF-8";
+header h1 {
+  text-align: center;
+  margin-top: 16vh;
+  margin-bottom: 21vh;
+}
+
+.row {
+  background-size: contain;
+}
+
+.row[data-color="fractures"] .gallery_img {
+  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+}
+
+.row[data-color="photography"] .gallery_img {
+  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+}
+
+.row[data-color="textures"] .gallery_img {
+  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+}
+
+.row[data-color="paintings"] .gallery_img {
+  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+}
+
+.gallery {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 30%;
+  height: calc(100vh - 16rem);
+  background-size: cover;
+}
+
+.gallery   .gallery_img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .desc {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 5rem;
+  right: -15vw;
+  text-align: right;
+  width: 100%;
+}
+
+.gallery .desc h1 {
+  font-size: 5rem;
+  margin: 0;
+  font-family: 'salomeregular', Georgia, Serif;
+}
+
+.gallery .desc p {
+  font-size: 1.5rem;
+}
+
+.gallery.odd .desc {
+  text-align: right;
+  right: -15vw;
+}
+
+.gallery.even .desc {
+  text-align: left;
+  left: -15vw;
+}
+/*# sourceMappingURL=home.component.css.map */
