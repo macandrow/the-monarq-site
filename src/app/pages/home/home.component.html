@@ -7,6 +7,11 @@
 	<div *ngFor="let gallery of galleries" [routerLink]="['/gallery', gallery.title, gallery.id]">
 		<h1>{{gallery.title | uppercase}}</h1>
 	</div>
+
+	<h2>By Title</h2>
+	<div *ngFor="let gallery of galleries" [routerLink]="['/gallery2', gallery.title]">
+		<h1>{{gallery.title | uppercase}}</h1>
+	</div>
 </div>
 
 <!-- <div *ngFor= "let gallery of galleries" [routerLink]="['/gallery', gallery.id]"></div>

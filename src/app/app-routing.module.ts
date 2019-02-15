@@ -5,6 +5,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HttpClientModule } from '@angular/common/http';
+import {Gallery2Component} from './pages/gallery2/gallery2.component';
 
 const routes: Routes = [
   { path: 'home',  component: HomeComponent },
@@ -24,6 +25,10 @@ const routes: Routes = [
    {
     path: 'gallery/:title/:id',
     component: GalleryComponent
+  },
+  {
+    path: 'gallery2/:title',
+    component: Gallery2Component
   }
   
   // {
