@@ -4,6 +4,25 @@ body {
   font-family: brandon-grotesque,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background: url("src/assets/images/thumbs/bg_img143.jpg") center no-repeat;
+  background-size: 75%;
+  background-attachment: fixed;
+}
+
+body.color-fractures {
+  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg");
+}
+
+body.color-photography {
+  background: url("src/assets/images/thumbs/bg_img143.jpg");
+}
+
+body.color-textures {
+  background-color: lightgrey;
+}
+
+body.color-paintings {
+  background-color: ivory;
 }
 
 .wrapper {
