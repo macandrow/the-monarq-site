@@ -3,9 +3,15 @@
 	<h1>lorem ipsum boilerplate text intro</h1>
 </header>
 
-<div *ngIf="galleries">
-	<div *ngFor="let gallery of galleries" [routerLink]="['/gallery', gallery.title, gallery.id]">
-		<h1>{{gallery.title | uppercase}}</h1>
+<div *ngIf="galleries" class="galleries">
+	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }" [routerLink]="['/gallery', gallery.title, gallery.id]" >
+		<div class="gallery-item">
+			<span class="desc">
+				<h1>{{gallery.title | uppercase}}</h1>
+				<p>description</p>
+			</span>
+		</div>
+
 	</div>
 </div>
 
