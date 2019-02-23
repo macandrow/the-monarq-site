@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Params, ActivatedRoute } from '@angular/router';
+import {Params, ActivatedRoute, Router, Event, NavigationEnd} from '@angular/router';
 import { Location } from '@angular/common';
 
 import 'rxjs/add/operator/switchMap';
@@ -25,25 +25,46 @@ import * as PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
 export class GalleryComponent implements OnInit {
 
   gallery: Gallery;
-  galleryIds: number[];
-  prev: number;
-  next: number;
+  galleryTitles: string[];
+  prev: string;
+  next: string;
+  album: string;
+  albums: {};
+  activeSlides: {};
   
-  constructor(private galleryservice: GalleryService,
-    private route: ActivatedRoute,
-    private location: Location) { }
+  constructor(private galleryservice: GalleryService, private route: ActivatedRoute, private router: Router, private location: Location) {
+    this.router.events.subscribe((event: Event)=>{
+      if (event instanceof NavigationEnd) {
+        this.album = route.snapshot.paramMap.get('album')!== null ? route.snapshot.paramMap.get('album'):'default';
+        this.setActiveSlides();
+      }
+    });
+  }
 
-    
   ngOnInit() : void {
-    this.galleryservice.getGalleryIds().subscribe(galleryIds => this.galleryIds = galleryIds);
+
+    this.galleryservice.getGalleryTitles().subscribe(galleryTitles => this.galleryTitles = galleryTitles);
+
     this.route.params
-      .switchMap((params: Params) => this.galleryservice.getGallery(+params['id'])) // (+) converts string id to a number
-      .subscribe(gallery => { this.gallery = gallery; this.setPrevNext(gallery.id); });
+      .switchMap((params: Params) => this.galleryservice.getGalleryByTitle(params['title'])) // (+) converts string id to a number
+      .subscribe(( gallery) => {
+        this.albums = this.galleryservice.getGalleryAlbums(gallery.title, gallery);
+        this.gallery = gallery;
+        this.setActiveSlides();
+        this.setPrevNext(gallery.title);
+
+      });
+
+
+
+
+
+
       'use strict';
 
       /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
       
-      (function($) {
+      /*(function($) {
       
         // Init empty gallery array
         var container = [];
@@ -79,15 +100,21 @@ export class GalleryComponent implements OnInit {
           gallery.init();
         });
       
-      }(jQuery));  
+      }(jQuery));*/
   }
-  
 
-  setPrevNext(galleryId: number) {
-    let index = this.galleryIds.indexOf(galleryId);
-    this.prev = this.galleryIds[(this.galleryIds.length + index - 1)%this.galleryIds.length];
-    this.next = this.galleryIds[(this.galleryIds.length + index + 1)%this.galleryIds.length];
+  setActiveSlides(){
+    if(this.gallery) {
+      this.activeSlides = this.gallery.slides.filter((slide) => slide.album == this.album);
+    }
   }
+
+  setPrevNext(galleryId: string) {
+    let index = this.galleryTitles.indexOf(galleryId);
+    this.prev = this.galleryTitles[(this.galleryTitles.length + index - 1)%this.galleryTitles.length];
+    this.next = this.galleryTitles[(this.galleryTitles.length + index + 1)%this.galleryTitles.length];
+  }
+
 
   goBack(): void {
     this.location.back();

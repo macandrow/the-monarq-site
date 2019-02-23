@@ -11,7 +11,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import {GalleryService} from './services/gallery.service';
-import {Gallery2Component} from './pages/gallery2/gallery2.component';
 import {GalleryComponent} from './pages/gallery/gallery.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import {GalleryComponent} from './pages/gallery/gallery.component';
     HomeComponent,
     AboutComponent,
     GalleryComponent,
-    Gallery2Component,
     ContactComponent
   ],
   imports: [

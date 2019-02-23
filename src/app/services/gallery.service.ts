@@ -12,6 +12,8 @@ export class GalleryService {
 
   constructor() { }
 
+
+
   getGalleries(): Observable<Gallery[]> {
     return Observable.of(GALLERIES);
   }
@@ -27,4 +29,9 @@ export class GalleryService {
   getGalleryByTitle(title: string): Observable<Gallery> {
     return Observable.of(GALLERIES.filter((gallery) => (gallery.title === title))[0]);
   }
+  getGalleryAlbums(title: string, gallery){
+    return Array.from(new Set(gallery.slides.map(slide=>slide.album)));
+  }
+
+
 }

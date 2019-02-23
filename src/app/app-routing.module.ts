@@ -3,9 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HttpClientModule } from '@angular/common/http';
-import {Gallery2Component} from './pages/gallery2/gallery2.component';
+import {GalleryComponent} from './pages/gallery/gallery.component';
 
 const routes: Routes = [
   { path: 'home',  component: HomeComponent },
@@ -22,14 +21,14 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent
   },
-   {
-    path: 'gallery/:title/:id',
+  {
+    path: 'gallery/:title/:album',
     component: GalleryComponent
   },
   {
-    path: 'gallery2/:title',
-    component: Gallery2Component
-  }
+    path: 'gallery/:title',
+    component: GalleryComponent
+  },
   
   // {
   //   path: 'gallery/:id',

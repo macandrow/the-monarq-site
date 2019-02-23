@@ -12,19 +12,22 @@ export const GALLERIES: Gallery[] = [
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
 				w : 1200, 
 				h : 900, 
-				title : "Sea side, south shore"  
+				title : "Sea side, south shore",
+				album : 'default'
 			},
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
 				w : 1200, 
 				h : 900, 
-				title : "Image Caption 1"
+				title : "Image Caption 1",
+				album : 'default'
 			},
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
 				w : 1200, 
 				h : 900, 
-				title : "Image Caption 2"
+				title : "Image Caption 2",
+				album : 'default'
 			}
 		]
 	},
@@ -39,13 +42,78 @@ export const GALLERIES: Gallery[] = [
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
 				w : 1200, 
 				h : 900,  
-				title : "Sea side, south shore"  
+				title : "Sea side, south shore",
+				album : 'default'
 			},
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
 				w : 1200, 
 				h : 900, 
-				title : "Image Caption"
+				title : "Image Caption",
+				album : 'default'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-1'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-1'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-1'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-1'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-1'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-1'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-2'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-2'
+			},
+			{
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+				w : 1200,
+				h : 900,
+				title : "Image Caption",
+				album : 'album-2'
 			}
 		]
 	}
