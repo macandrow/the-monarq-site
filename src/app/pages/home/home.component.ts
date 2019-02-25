@@ -61,8 +61,15 @@ export class HomeComponent implements OnInit {
       });    
       
     }).scroll();
+    // const body = document.getElementsByTagName('body')[0];
+    // body.classList.add('auth');
   }
-	// onSelect(gallery: Gallery){
+
+  ngOnDestroy(): void {
+    const body = document.getElementsByTagName('body')[0];
+    // body.classList.remove('color-fractures', 'color-photography', 'me');
+    body.removeAttribute('class');
+  }	// onSelect(gallery: Gallery){
 	// 	this.selectedGallery = gallery;
 	// }
 }
