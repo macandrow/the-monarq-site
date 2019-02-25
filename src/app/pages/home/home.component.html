@@ -1,10 +1,12 @@
-<header data-color="intro">
-	logo
-	<h1>lorem ipsum boilerplate text intro</h1>
+<header>
+	<div class="row" data-color="intro">
+			logo
+			<h1>lorem ipsum boilerplate text intro</h1>		
+	</div>
 </header>
 
 <div *ngIf="galleries" class="galleries">
-	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }"  >
+	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }" attr.data-color="{{gallery.title}}">
 		<div class="desc" [routerLink]="['/gallery', gallery.title, gallery.id]">
 			<h1>{{gallery.title | uppercase}}</h1>
 			<p>description</p>

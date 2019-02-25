@@ -4,25 +4,22 @@ body {
   font-family: brandon-grotesque,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background: url("src/assets/images/thumbs/bg_img143.jpg") center no-repeat;
+  background-image: url("https://dummyimage.com/2500x2500/ffffff/fff.png");
+  background-color: #fff;
   background-size: 75%;
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: background .5s ease-out;
+  transition: background .5s ease-out;
 }
 
 body.color-fractures {
-  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg");
+  background-image: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg");
 }
 
 body.color-photography {
-  background: url("src/assets/images/thumbs/bg_img143.jpg");
-}
-
-body.color-textures {
-  background-color: lightgrey;
-}
-
-body.color-paintings {
-  background-color: ivory;
+  background-image: url("src/assets/images/thumbs/bg_img143.jpg");
 }
 
 .wrapper {
