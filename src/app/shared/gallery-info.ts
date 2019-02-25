@@ -5,7 +5,6 @@ export class Gallery{
   title: string;
   description: string;
   thumbnail: string;
-  dataColor: string;
   slides: Slide[]; 
 }
 

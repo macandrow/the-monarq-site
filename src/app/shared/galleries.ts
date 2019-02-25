@@ -6,7 +6,6 @@ export const GALLERIES: Gallery[] = [
 		title : "fractures",
 		description : "123SC",
 		thumbnail: "sfsfd",
-		dataColor: "fractures",
 		slides : [
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
@@ -33,7 +32,6 @@ export const GALLERIES: Gallery[] = [
 		title : "photography",
 		description : "I will be photography",
 		thumbnail: " hello",
-		dataColor: "photography",
 		slides : [
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
