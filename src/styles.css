@@ -32,30 +32,7 @@ header {
   background-color: pink;
 }
 
-.flex-start {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.flex-end {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.center {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.baseline {
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
-}
-
-.stretch {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+main {
+  padding-top: 80px;
 }
 /*# sourceMappingURL=styles.css.map */
