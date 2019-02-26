@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
           $panel = $('.row');
       
       // Change 33% earlier than scroll position so colour is there when you arrive.
-      var scroll = $window.scrollTop() + ($window.height() / 3);
+      var scroll = $window.scrollTop() + ($window.height() / 5);
      
       $panel.each(function () {
         var $this = $(this);
