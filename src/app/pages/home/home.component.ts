@@ -57,6 +57,7 @@ export class HomeComponent implements OnInit {
           $body.removeClass(function (index, css) {
           return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
           });
+          $body.addClass('color-intro');
         } 
       });    
       

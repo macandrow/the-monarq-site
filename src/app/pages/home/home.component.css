@@ -1,8 +1,6 @@
 @charset "UTF-8";
 header h1 {
   text-align: center;
-  margin-top: 16vh;
-  margin-bottom: 21vh;
 }
 
 .galleries {
@@ -14,12 +12,6 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   /*pointer-events: none;*/
 }
 
@@ -27,20 +19,17 @@ header h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   height: 90vh;
   border-bottom: 3px solid pink;
-  min-height: 750px;
   background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
   background-size: 350px 350px;
   background-position: center;
@@ -53,7 +42,6 @@ header h1 {
 }
 
 .galleries .row .desc h1 {
-  font-size: 5rem;
   margin: 0;
   font-family: 'salomeregular', Georgia, Serif;
 }
@@ -69,5 +57,11 @@ header h1 {
 .gallery   .gallery_img {
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+  .galleries.row {
+    min-height: 750px;
+  }
 }
 /*# sourceMappingURL=home.component.css.map */
