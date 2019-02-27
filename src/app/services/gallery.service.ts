@@ -30,7 +30,7 @@ export class GalleryService {
     return Observable.of(GALLERIES.filter((gallery) => (gallery.title === title))[0]);
   }
   getGalleryAlbums(title: string, gallery){
-    return Array.from(new Set(gallery.slides.map(slide=>slide.album !== 'default'?slide.album:'')));
+    return Array.from(new Set(gallery.slides.filter((s)=>s.album !=='default').map(slide=>slide.album)));
   }
 
 

@@ -6,6 +6,7 @@ import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default.js';
 import 'rxjs/add/operator/switchMap';
 import { GalleryService } from 'src/app/services/gallery.service';
 import { Gallery } from 'src/app/shared/gallery-info';
+//import {type} from 'os';
 
 
 @Component({
@@ -26,9 +27,11 @@ export class GalleryComponent implements OnInit {
   album: string;
   albums: {};
   activeSlides: {};
+  gallerySlides: {};
   ps_gallery: any = null;
   ps_options: any;
   ps_element: any;
+  firstImage: any;
   
   constructor(private galleryservice: GalleryService, private route: ActivatedRoute, private router: Router, private location: Location) {
     this.router.events.subscribe((event: Event)=>{
@@ -54,9 +57,19 @@ export class GalleryComponent implements OnInit {
       });
 
   }
+  galleryCarousel(i){
+      this.gallerySlides = this.gallery.slides.filter((slide) => slide.album == i);
+      this.ps_element = document.querySelectorAll('.pswp')[0];
+      this.ps_options = {
+          index: i !== null ? i : 0,
+          showAnimationDuration: 400,
+          showHideOpacity: true,
 
+      };
+      this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.gallerySlides, this.ps_options);
+      this.ps_gallery.init();
+  }
   carousel(i){
-      console.log('--- carousel ---');
       this.ps_element = document.querySelectorAll('.pswp')[0];
       this.ps_options = {
           index: i !== null ? i : 0,
@@ -66,6 +79,11 @@ export class GalleryComponent implements OnInit {
       };
       this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.activeSlides, this.ps_options);
       this.ps_gallery.init();
+  }
+
+  getFirstImage(val){
+     this.firstImage = this.gallery.slides.find(x=>x.album == val);
+     return typeof this.firstImage !== 'undefined'?this.firstImage.src:'';
   }
 
   setActiveSlides(){
