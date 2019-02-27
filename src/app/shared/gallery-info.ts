@@ -8,6 +8,3 @@ export class Gallery{
   dataColor: string;
   slides: Slide[]; 
 }
-
-
-
