@@ -6,7 +6,7 @@
 <div *ngIf="galleries">
 	<h2>By Title</h2>
 	<div *ngFor="let gallery of galleries" [routerLink]="['/gallery', gallery.title]">
-		<h1>{{gallery.title | uppercase}}</h1>
+		<h1 class="gallery-link">{{gallery.title | uppercase}}</h1>
 	</div>
 </div>
 

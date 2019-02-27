@@ -12,12 +12,12 @@
         <!-- Galley wrapper that contains all items -->
         <div *ngIf="gallery !== undefined" id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
           <!-- Use figure for a more semantic html -->
-          <span *ngFor="let slide of activeSlides">
+          <span class="slide_thumbs" *ngFor="let slide of activeSlides; let i = index;">
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
               <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-              <a href="https://unsplash.it/1200/900/?image=702" attr.data-caption="{{slide.title}}>" data-width="1200" data-height="900" itemprop="contentUrl">
+              <a [href]="" (click)="carousel(i)"  attr.data-caption="{{slide.title}}>" data-width="1200" data-height="900" itemprop="contentUrl">
                 <!-- Thumbnail -->
-                <img src="https://unsplash.it/400/300/?image=702" itemprop="thumbnail" alt="Image description">
+                <img [src]="slide.src" itemprop="thumbnail" alt="Image description">
               </a>
             </figure>
           </span>

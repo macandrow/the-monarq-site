@@ -9,7 +9,7 @@ img {width: 100%;}
 .spacer {height: 5em;}
 
 .gallery {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   justify-content: space-between;
 
@@ -21,9 +21,26 @@ img {width: 100%;}
 figure {
   flex: 1 0 260px;
   margin: 20px 10px;
+  max-width: 20%;
+  float: left;
   a img{
     width: 100%;
     height: auto;
     display: block;
   }
+  a img:hover{
+    cursor: pointer;;
+  }
+}
+.pswp--open {
+  color: #ffffff;
+}
+.pswp--animate_opacity,
+.pswp__bg,
+.pswp__caption,
+.pswp__top-bar,
+.pswp--has_mouse .pswp__button--arrow--left,
+.pswp--has_mouse .pswp__button--arrow--right{
+  -webkit-transition: opacity 333ms cubic-bezier(.4,0,.22,1);
+  transition: opacity 333ms cubic-bezier(.4,0,.22,1);
 }
