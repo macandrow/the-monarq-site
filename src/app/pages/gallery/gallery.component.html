@@ -3,7 +3,7 @@
                 {{gallery.title | uppercase}}
             </h1>
           <p>{{gallery.description}}</p>
-          <div *ngIf="albums">
+          <div *ngIf="albums && album === 'default'">
             <h4>Gallery Albums</h4>
             <p *ngFor="let alb of albums"><a [routerLink]="['/gallery',gallery.title,alb]">{{alb}}</a></p>
           </div>
