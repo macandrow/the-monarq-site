@@ -69,15 +69,18 @@ export class GalleryComponent implements OnInit {
       this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.gallerySlides, this.ps_options);
       this.ps_gallery.init();
   }
-  carousel(i){
+  carousel(slide){
       this.ps_element = document.querySelectorAll('.pswp')[0];
       this.ps_options = {
-          index: i !== null ? i : 0,
+          index: 0,
           showAnimationDuration: 400,
           showHideOpacity: true,
 
       };
-      this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.activeSlides, this.ps_options);
+      console.log('--  SLIDE --');
+      console.log(slide);
+      console.log(this.activeSlides);
+      this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, [slide], this.ps_options);
       this.ps_gallery.init();
   }
 
