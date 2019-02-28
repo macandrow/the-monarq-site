@@ -25,18 +25,18 @@
               </figure>
             </span>
           </span>
-          <span *ngIf="albums.length > 1 && albums[0] !== '' && album == 'default'">
+         <!-- <span *ngIf="albums.length > 1 && albums[0] !== '' && album == 'default'">
             <span class="slide_thumbs" *ngFor="let alb2 of albums; let j = index;">
 
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
-                  <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                  &lt;!&ndash; Link to the big image, not mandatory, but usefull when there is no JS &ndash;&gt;
                   <a [href]="" (click)="galleryCarousel(alb2)"  attr.data-caption="{{alb}}>" data-width="1200" data-height="900" itemprop="contentUrl">
-                    <!-- Thumbnail -->
+                    &lt;!&ndash; Thumbnail &ndash;&gt;
                     <img [src]="getFirstImage(alb2)" itemprop="thumbnail" alt="Image description">
                   </a>
                 </figure>
               </span>
-            </span>
+          </span>-->
 
         </div>
 <hr>

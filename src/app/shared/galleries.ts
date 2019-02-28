@@ -115,7 +115,7 @@ export const GALLERIES: Gallery[] = [
 				h : 900,
 				title : "Image Caption",
 				album : 'by-train'
-			},
+			}/*,
 			{
 				src : "https://media.gettyimages.com/photos/camargue-woman-on-horseback-in-camargue-france-bouches-du-rhone-of-picture-id120665188",
 				w : 1200,
@@ -129,7 +129,7 @@ export const GALLERIES: Gallery[] = [
 				h : 900,
 				title : "Image Caption",
 				album : 'default'
-			}
+			}*/
 		]
 	}
 ];
