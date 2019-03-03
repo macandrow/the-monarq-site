@@ -7,6 +7,3 @@ export class Gallery{
   thumbnail: string;
   slides: Slide[]; 
 }
-
-
-

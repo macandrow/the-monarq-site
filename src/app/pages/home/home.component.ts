@@ -10,16 +10,8 @@ import { GalleryService } from 'src/app/services/gallery.service';
 })
 
 export class HomeComponent implements OnInit {
-  // gallery: Gallery;
+
   galleries: Gallery[];
-  // gallery: Gallery;
-
-  // galleries: Gallery[] = GALLERIES;
-	
-	selectedGallery: Gallery;
-
-  
-  // constructor(private galleryService: GalleryService) {}
 
   constructor(private galleryService: GalleryService) {}
 
