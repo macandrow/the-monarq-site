@@ -12,7 +12,6 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /*pointer-events: none;*/
 }
 
 .galleries .row {
@@ -28,17 +27,32 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
-  border-bottom: 3px solid pink;
+  height: 60vh;
   background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
   background-size: 350px 350px;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 10px;
 }
 
 .galleries .row .desc {
   text-align: center;
-  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
 }
 
 .galleries .row .desc h1 {
@@ -59,9 +73,19 @@ header h1 {
   height: 100%;
 }
 
+.gallery-link:hover {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 960px) {
-  .galleries.row {
-    min-height: 750px;
+  .galleries .row {
+    height: 90vh;
+  }
+  .galleries .row .desc {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    height: auto;
   }
 }
 /*# sourceMappingURL=home.component.css.map */

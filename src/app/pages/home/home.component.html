@@ -6,11 +6,11 @@
 					todo list:
 				</li>
 				<li>
-					fix w/h of link to galleries from home for desktop and mobile
+						<del>fix w/h of link to galleries from home for desktop and mobile</del>
 				</li>
 				<li> add tilt.js to home</li>
 				<li>
-					fix routes to galleries to huse ng-href https://angular.io/guide/ajs-quick-reference#ng-href
+						<del>fix routes to galleries to huse ng-href https://angular.io/guide/ajs-quick-reference#ng-href</del>
 				</li>
 				<li>
 					build server error pages, 404 etc
@@ -39,11 +39,11 @@
 
 <div *ngIf="galleries" class="galleries">
 	<!--<h2>By Title</h2>-->
-	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }" [routerLink]="['/gallery', gallery.title]"  attr.data-color="{{gallery.title}}">
-		<div class="desc" [routerLink]="['/gallery', gallery.title]">
+	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }" attr.data-color="{{gallery.title}}">
+		<a class="desc" [routerLink]="['/gallery', gallery.title]">
             <h1 class="gallery-link">{{gallery.title | uppercase}}</h1>
             <p>description</p>
-        </div>
+		</a>
 	</div>
 </div>
 

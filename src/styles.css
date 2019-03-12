@@ -39,6 +39,7 @@ body.color-intro {
 
 header {
   height: 30vh;
+  min-height: 240px;
 }
 
 main {
