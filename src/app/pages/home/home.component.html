@@ -39,14 +39,21 @@
 
 <div *ngIf="galleries" class="galleries">
 	<!--<h2>By Title</h2>-->
-	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }" attr.data-color="{{gallery.title}}">
-		<a class="desc" [routerLink]="['/gallery', gallery.title]">
+	<!-- <div class="tile js-tilt" data-tilt><div class="inner">Hover me</div></div> -->
+
+	<div *ngFor="let gallery of galleries; let i=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }" attr.data-color="{{gallery.title}}" >
+		<!-- <div class="tile js-tilt" data-tilt><div class="inner">Hover me</div></div> -->
+		<a class="desc  js-tilt" [routerLink]="['/gallery', gallery.title]" data-tilt>
             <h1 class="gallery-link">{{gallery.title | uppercase}}</h1>
             <p>description</p>
 		</a>
 	</div>
+	<!-- <div class="tile js-tilt" data-tilt><div class="inner">Hover me</div></div> -->
+
 </div>
 
+<div class="tile js-tilt" data-tilt><div class="inner">Hover me</div></div>
+<!-- <button>hello</button> -->
 <!-- <div *ngFor= "let gallery of galleries" [routerLink]="['/gallery', gallery.id]"></div>
 	<h1>{{gallery.title | uppercase}}</h1>
 

@@ -2,6 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Gallery } from 'src/app/shared/gallery-info';
 import { GalleryService } from 'src/app/services/gallery.service';
 // import { GALLERIES} from 'src/app/shared/galleries';
+// import Tilt from 'tilt.js';
+// const tilt = require('tilt');
+
+import 'tilt.js';
+//  import * as $ from 'jquery';
+
+declare const $: any;
+
+// import * as $ from 'jquery';
+const tilt = $('.js-tilt').tilt();
 
 @Component({
   selector: 'app-home',
@@ -9,16 +19,27 @@ import { GalleryService } from 'src/app/services/gallery.service';
   styleUrls: ['./home.component.scss']
 })
 
+
 export class HomeComponent implements OnInit {
+  title = 'Look jQuery Animation working in action!';
+  
 
   galleries: Gallery[];
-
+  
   constructor(private galleryService: GalleryService) {}
-
+  
   ngOnInit() {
-    this.galleryService.getGalleries()
-    .subscribe(galleries => this.galleries = galleries);
+    this.galleryService.getGalleries().subscribe(galleries => this.galleries = galleries);
+    
 
+    $(document).ready(function(){
+      
+      $('.js-tilt').tilt({
+        scale: 1.1,
+        glare: true,
+        maxGlare: 0.3
+      });
+  });
     $(window).scroll(function() {
   
       // selectors
@@ -54,6 +75,7 @@ export class HomeComponent implements OnInit {
       });    
       
     }).scroll();
+    
     // const body = document.getElementsByTagName('body')[0];
     // body.classList.add('auth');
   }
