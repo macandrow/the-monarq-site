@@ -34,7 +34,6 @@ body.color-intro {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 1em;
 }
 
 header {
@@ -43,7 +42,7 @@ header {
 }
 
 main {
-  padding-top: 80px;
+  padding: 80px 1em;
 }
 
 h1 {
@@ -51,9 +50,11 @@ h1 {
 }
 
 @media only screen and (min-width: 960px) {
+  main {
+    padding: 80px 0;
+  }
   .wrapper {
     max-width: 1230px;
-    padding: 0;
   }
   h1 {
     font-size: 5rem;
