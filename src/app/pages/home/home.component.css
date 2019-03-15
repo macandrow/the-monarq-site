@@ -44,36 +44,53 @@ header h1 {
 }
 
 .galleries .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  height: 60vh;
+  margin-bottom: 10px;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60vh;
-  margin-bottom: 10px;
-}
-
-.galleries .row .desc {
-  text-align: center;
-  text-decoration: none;
-  color: #222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+}
+
+.galleries .row .galleryPreview {
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
   background-size: 350px 350px;
   background-position: center;
   background-repeat: no-repeat;
+  width: 350px;
+  height: 350px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.galleries .row .galleryPreview .breakout {
+  position: relative;
+}
+
+.galleries .row .galleryPreview .breakout a.desc {
+  text-decoration: none;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -81,15 +98,22 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 100%;
+  margin-left: calc(-50% + 50%);
+  position: relative;
+  color: #222;
 }
 
-.galleries .row .desc h1 {
+.galleries .row .galleryPreview .breakout a.desc h1 {
   margin: 0;
   font-family: 'salomeregular', Georgia, Serif;
 }
 
-.galleries .row .desc p {
+.galleries .row .galleryPreview .breakout a.desc p {
   font-size: 1.5rem;
 }
 

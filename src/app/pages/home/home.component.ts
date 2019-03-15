@@ -35,9 +35,11 @@ export class HomeComponent implements OnInit {
     $(document).ready(function(){
       
       $('.js-tilt').tilt({
-        scale: 1.1,
+        scale: 1,
+        perspective: 500,
+        easing: "cubic-bezier(.03,.98,.52,.99)", 
         glare: true,
-        maxGlare: 0.3
+        maxGlare: .25,
       });
   });
     $(window).scroll(function() {
