@@ -63,7 +63,10 @@ export class GalleryComponent implements OnInit {
       this.ps_options = {
           index: i !== null ? i : 0,
             bgOpacity: 0.85,
-            showHideOpacity: true
+            showHideOpacity: true,
+            openZoomed: true,
+            history: false,
+            mouseMovePan: true
           // showAnimationDuration: 400,
           // showHideOpacity: true,
           // closeOnVerticalDrag: false,
@@ -77,7 +80,10 @@ export class GalleryComponent implements OnInit {
       this.ps_options = {
           index: 0,
           bgOpacity: 0.85,
-          showHideOpacity: true
+          showHideOpacity: true,
+          openZoomed: true,
+          history: false,
+          mouseMovePan: true
           // showAnimationDuration: 400,
           // showHideOpacity: true,
           // closeOnVerticalDrag: false,
