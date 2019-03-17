@@ -1,25 +1,39 @@
-body {
-  font-family: 'Bitter', Georgia, Times, sans-serif;
+.socialLinks {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: socialLinks;
+  padding: 20px;
+      grid-template-rows: 100px 1fr;
 }
 
-h1 {
-  margin: 2em;
+.bio {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: bio;
+  padding: 20px;
 }
 
-.pswp__caption__center {
-  text-align: center;
+aside {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: sidebar;
 }
 
-figure {
-  display: inline-block;
-  width: 33.333%;
+footer {
+  padding: 20px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
 }
 
-img {
-  width: 100%;
-}
-
-.spacer {
-  height: 5em;
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "bio sidebar"    "bio socialLinks"  "footer footer";
 }
 /*# sourceMappingURL=about.component.css.map */
