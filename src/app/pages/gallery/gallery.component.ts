@@ -13,8 +13,8 @@ import { Gallery } from 'src/app/shared/gallery-info';
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: [
-      ('../../../../node_modules/photoswipe/dist/photoswipe.css').toString(),
-      ('../../../../node_modules/photoswipe/dist/default-skin/default-skin.css').toString(),
+  //     ('../../../../node_modules/photoswipe/dist/photoswipe.css').toString(),
+  //     ('../../../../node_modules/photoswipe/dist/default-skin/default-skin.css').toString(),
       './gallery.component.scss'
   ]
 })
@@ -62,9 +62,10 @@ export class GalleryComponent implements OnInit {
       this.ps_element = document.querySelectorAll('.pswp')[0];
       this.ps_options = {
           index: i !== null ? i : 0,
-          showAnimationDuration: 400,
-          showHideOpacity: true,
-
+          // showAnimationDuration: 400,
+          // showHideOpacity: true,
+          // closeOnVerticalDrag: false,
+          // closeOnScroll: false
       };
       this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.gallerySlides, this.ps_options);
       this.ps_gallery.init();
@@ -73,8 +74,10 @@ export class GalleryComponent implements OnInit {
       this.ps_element = document.querySelectorAll('.pswp')[0];
       this.ps_options = {
           index: 0,
-          showAnimationDuration: 400,
-          showHideOpacity: true,
+          // showAnimationDuration: 400,
+          // showHideOpacity: true,
+          // closeOnVerticalDrag: false,
+          // closeOnScroll: false
 
       };
       console.log('--  SLIDE --');

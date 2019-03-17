@@ -38,18 +38,158 @@ export const GALLERIES: Gallery[] = [
 		slides : [
 
 			{
-				src : "https://media.gettyimages.com/photos/making-memories-picture-id528474010",
-				w : 1200, 
-				h : 900,  
-				title : "Sea side, south shore",
-				album : 'in-the-car'
+				src : "assets/images/texture_on_polaroid/img146.jpg",
+				w : 900, 
+				h : 1067,  
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
 			},
 			{
-				src : "https://media.gettyimages.com/photos/kids-having-fun-in-car-on-a-road-trip-picture-id606003044",
-				w : 1200, 
-				h : 900, 
-				title : "Image Caption",
-				album : 'in-the-car'
+				src : "assets/images/texture_on_polaroid/img112.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img113.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img114.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img116.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img117_2.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img042.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img157.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img160.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},
+			{
+				src : "assets/images/texture_on_polaroid/img192.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img184.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img179.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img172.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img166.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img158.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img157.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img153.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img152.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},						
+			{
+				src : "assets/images/texture_on_polaroid/img132.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img129.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img119.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Texture on Polariod",
+				album : 'texture-on-polaroid'
+			},			
+			{
+				src : "assets/images/texture_on_polaroid/img116.jpg",
+				w : 900, 
+				h : 1067, 
+				title : "Aura",
+				album : 'aura'
 			},
 			{
 				src : "https://media.gettyimages.com/photos/the-house-used-in-the-american-sitcom-the-brady-bunch-has-been-listed-picture-id1001904568",

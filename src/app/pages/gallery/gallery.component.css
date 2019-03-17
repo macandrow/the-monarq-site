@@ -6,6 +6,11 @@ h1 {
   text-align: center;
 }
 
+.pswp__img {
+  width: 100vh !important;
+  height: auto !important;
+}
+
 .spacer {
   height: 5em;
 }
@@ -27,11 +32,14 @@ h1 {
 
 .gallery .slide_thumbs figure {
   margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .gallery .slide_thumbs figure:hover {
   cursor: pointer;
-  opacity: .3;
+  -webkit-box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
 .gallery .slide_thumbs figure img {

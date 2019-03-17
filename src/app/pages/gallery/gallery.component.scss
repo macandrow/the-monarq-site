@@ -1,5 +1,9 @@
 h1 {margin: 2em;}
 .pswp__caption__center {text-align: center;}
+ .pswp__img{
+	width: 100vh !important;
+	height: auto !important;
+}
 // figure {
 //   display: inline-block;
 //   width: 33.333%;
@@ -20,9 +24,12 @@ h1 {margin: 2em;}
 		}
 		figure{
 			margin:0;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			transition: all .3s;
 			&:hover{
 				cursor: pointer;
-				opacity: .3;
+				box-shadow: 6px 6px 18px 0px rgba(0,0,0,0.3);
 			}
 			img{
 				object-fit: cover;
@@ -35,6 +42,28 @@ h1 {margin: 2em;}
 		}
 	}
 }
+
+// .gallery {
+// 	width: 100%;
+// 	float: left;
+//   }
+  
+//   .gallery img {
+// 	width: 100%;
+// 	height: auto;
+//   }
+  
+//   .gallery figure {
+// 	display: block;
+// 	float: left;
+// 	margin: 0 5px 5px 0;
+// 	width: 150px;
+// 	height: 150px;
+//   }
+  
+//   .gallery figcaption {
+// 	display: none;
+//   }
 // .gallery {
 // 	// display: inline-block;
 // 	// flex-wrap: wrap;

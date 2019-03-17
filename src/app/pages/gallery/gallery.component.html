@@ -1,7 +1,7 @@
 <span *ngIf="gallery !== undefined">
-	<h1 class="text-center">
-		{{gallery.title | uppercase}}
-	</h1>
+	<!-- <h1 *ngFor="let slide of activeSlides;" class="text-center">
+			{{slide.title}}
+	</h1> -->
 	<p>{{gallery.description}}</p>
 	<div *ngIf="albums && album === 'default'">
 	<a  *ngFor="let alb of albums" class="{{alb}}" [routerLink]="['/gallery',gallery.title,alb]">{{alb}}</a>
@@ -16,7 +16,7 @@
 		<span class="slide_thumbs_holder" *ngIf="slide.album == 'default' || album == slide.album">
 			<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
 			<!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-			<a [href]="" (click)="carousel(slide)"  attr.data-caption="{{slide.title}}>" data-width="1200" data-height="900" itemprop="contentUrl">
+			<a [href]="" (click)="carousel(slide)"  attr.data-caption="{{slide.title}}>" attr.data-width="{{slide.w}}" attr.data-height="{{slide.h}}" itemprop="contentUrl">
 				<!-- Thumbnail -->
 				<img [src]="slide.src" itemprop="thumbnail" alt="Image description">
 			</a>
