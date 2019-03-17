@@ -1,3 +1,11 @@
+body {
+  font-family: 'Bitter', Georgia, Times, sans-serif;
+}
+
+h1 {
+  margin: 2em;
+}
+
 .pswp__caption__center {
   text-align: center;
 }
@@ -5,10 +13,13 @@
 figure {
   display: inline-block;
   width: 33.333%;
-  float: left;
 }
 
 img {
   width: 100%;
+}
+
+.spacer {
+  height: 5em;
 }
 /*# sourceMappingURL=about.component.css.map */

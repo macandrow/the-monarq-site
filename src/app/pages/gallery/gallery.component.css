@@ -2,27 +2,8 @@ h1 {
   margin: 2em;
 }
 
-.pswp__caption__center {
-  text-align: center;
-}
-
-.pswp img {
-  width: 100vh !important;
-  height: auto !important;
-}
-
-figure {
-  display: inline-block;
-  width: 33.333%;
-  float: left;
-}
-
-img {
-  width: 100%;
-}
-
-.spacer {
-  height: 5em;
+.pswp__bg {
+  background: hotpink !important;
 }
 
 .gallery {
@@ -55,10 +36,6 @@ img {
 .gallery .slide_thumbs figure img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.pswp--open {
-  color: #ffffff;
 }
 
 .pswp--animate_opacity,

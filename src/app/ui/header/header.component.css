@@ -1,4 +1,12 @@
-nav {
+.navWrapper {
+  position: relative;
+  max-width: 1230px;
+  height: 80px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.navWrapper nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,13 +18,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  max-width: 1230px;
 }
 
-nav .menu {
+.navWrapper nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +34,7 @@ nav .menu {
   margin: 0;
 }
 
-nav .menu a {
+.navWrapper nav .menu a {
   display: block;
   text-decoration: none;
   padding: .6em 1em;

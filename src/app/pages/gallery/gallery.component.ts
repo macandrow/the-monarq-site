@@ -13,7 +13,9 @@ import { Gallery } from 'src/app/shared/gallery-info';
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: [
-      './gallery.component.scss'
+      './gallery.component.scss',
+      '../../../../node_modules/photoswipe/dist/default-skin/default-skin.css',
+      '../../../../node_modules/photoswipe/dist/photoswipe.css',
   ]
 })
 export class GalleryComponent implements OnInit {
@@ -60,6 +62,8 @@ export class GalleryComponent implements OnInit {
       this.ps_element = document.querySelectorAll('.pswp')[0];
       this.ps_options = {
           index: i !== null ? i : 0,
+            bgOpacity: 0.85,
+            showHideOpacity: true
           // showAnimationDuration: 400,
           // showHideOpacity: true,
           // closeOnVerticalDrag: false,
@@ -72,6 +76,8 @@ export class GalleryComponent implements OnInit {
       this.ps_element = document.querySelectorAll('.pswp')[0];
       this.ps_options = {
           index: 0,
+          bgOpacity: 0.85,
+          showHideOpacity: true
           // showAnimationDuration: 400,
           // showHideOpacity: true,
           // closeOnVerticalDrag: false,
