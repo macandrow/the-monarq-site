@@ -1,9 +1,15 @@
 h1 {margin: 2em;}
 .pswp__caption__center {text-align: center;}
- .pswp__img{
+.pswp img{
 	width: 100vh !important;
 	height: auto !important;
 }
+figure {
+	display: inline-block;
+	width: 33.333%;
+	float: left;
+  }
+  img {width: 100%;}
 // figure {
 //   display: inline-block;
 //   width: 33.333%;

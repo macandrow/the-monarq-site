@@ -65,13 +65,17 @@ var routes = [
         component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_5__["ContactComponent"]
     },
     {
+        path: 'gallery/:title/default',
+        redirectTo: 'gallery/:title'
+    },
+    {
+        path: 'gallery/:title/:album',
+        component: _pages_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_7__["GalleryComponent"]
+    },
+    {
         path: 'gallery/:title',
         component: _pages_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_7__["GalleryComponent"]
-    }
-    // {
-    //   path: 'gallery/:id',
-    //   component: GalleryComponent
-    // }
+    },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -99,7 +103,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<!-- header -->\r\n<app-header></app-header>\r\n\r\n<main>\r\n    <!-- routes will be rendered here -->\r\n    <router-outlet></router-outlet>\r\n</main>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- header -->\n<app-header></app-header>\n\n<main>\n    <!-- routes will be rendered here -->\n    <router-outlet></router-outlet>\n</main>\n"
 
 /***/ }),
 
@@ -128,9 +132,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-// import $ from 'jquery';
-// // declare var jQuery : any;
-// // declare var $ : any;
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'The Monarq';
@@ -222,7 +223,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  about works!\r\n</p>\r\n"
+module.exports = "<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm-8 col-sm-offset-2\">\n  \n        <h1 class=\"text-center\">\n            Iceland<br>\n            <small><em>a PhotoSwipe Demo</em></small>\n          </h1>\n  \n        <!-- Galley wrapper that contains all items -->\n        <div id=\"gallery\" class=\"gallery\" itemscope itemtype=\"http://schema.org/ImageGallery\">\n  \n          <!-- Use figure for a more semantic html -->\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <!-- Link to the big image, not mandatory, but usefull when there is no JS -->\n            <a href=\"https://unsplash.it/1200/900/?image=702\" data-caption=\"Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <!-- Thumbnail -->\n              <img src=\"https://unsplash.it/400/300/?image=702\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n  \n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=695\" data-caption=\"Sunset in the wheat field<br><em class='text-muted'>© Jordan McQueen</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=695\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=675\" data-caption=\"Mysterious ocean<br><em class='text-muted'>© Barn Images</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=675\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=651\" data-caption=\"Cloud over the mountains<br><em class='text-muted'>© James Pritchett</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=651\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=584\" data-caption=\"Icelandic horses<br><em class='text-muted'>© Bethany Legg</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=584\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=574\" data-caption=\"Sea side, south shore<br><em class='text-muted'>© Julien Lavallée</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=574\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=551\" data-caption=\"Sunset on the highland road<br><em class='text-muted'>© Forrest Cavale</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=551\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=509\" data-caption=\"Seljalandsfoss waterfall<br><em class='text-muted'>© Jeff Sheldon</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=509\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=511\" data-caption=\"Fjadrarglufur canyon, south shore<br><em class='text-muted'>© Jeff Sheldon</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=511\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=515\" data-caption=\"Eerie wreckage of a crashed U.S. Navy aircraft<br><em class='text-muted'>© Jeff Sheldon</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=515\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=512\" data-caption=\"Blue Lagoon<br><em class='text-muted'>© Jeff Sheldon</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=512\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">\n            <a href=\"https://unsplash.it/1200/900/?image=514\" data-caption=\"Sunny Reykjavik street<br><em class='text-muted'>© Jeff Sheldon</em>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\n              <img src=\"https://unsplash.it/400/300/?image=514\" itemprop=\"thumbnail\" alt=\"Image description\">\n            </a>\n          </figure>\n        </div>\n  \n      </div>\n    </div>\n  </div>\n  \n  <!-- Some spacing 😉 -->\n  <div class=\"spacer\"></div>\n  \n  \n  <!-- Root element of PhotoSwipe. Must have class pswp. -->\n  <div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n    <!-- Background of PhotoSwipe. \n             It's a separate element as animating opacity is faster than rgba(). -->\n    <div class=\"pswp__bg\"></div>\n    <!-- Slides wrapper with overflow:hidden. -->\n    <div class=\"pswp__scroll-wrap\">\n      <!-- Container that holds slides. \n                PhotoSwipe keeps only 3 of them in the DOM to save memory.\n                Don't modify these 3 pswp__item elements, data is added later on. -->\n      <div class=\"pswp__container\">\n        <div class=\"pswp__item\"></div>\n        <div class=\"pswp__item\"></div>\n        <div class=\"pswp__item\"></div>\n      </div>\n      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->\n      <div class=\"pswp__ui pswp__ui--hidden\">\n        <div class=\"pswp__top-bar\">\n          <!--  Controls are self-explanatory. Order can be changed. -->\n          <div class=\"pswp__counter\"></div>\n          <button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button>\n          <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button>\n          <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button>\n          <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button>\n          <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->\n          <!-- element will get class pswp__preloader--active when preloader is running -->\n          <div class=\"pswp__preloader\">\n            <div class=\"pswp__preloader__icn\">\n              <div class=\"pswp__preloader__cut\">\n                <div class=\"pswp__preloader__donut\"></div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">\n          <div class=\"pswp__share-tooltip\"></div>\n        </div>\n        <button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\">\n        </button>\n        <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\">\n        </button>\n        <div class=\"pswp__caption\">\n          <div class=\"pswp__caption__center\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n<!-- Root element of PhotoSwipe. Must have class pswp. -->\n<div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n\n  <!-- Background of PhotoSwipe. \n       It's a separate element as animating opacity is faster than rgba(). -->\n  <div class=\"pswp__bg\"></div>\n\n  <!-- Slides wrapper with overflow:hidden. -->\n  <div class=\"pswp__scroll-wrap\">\n\n      <!-- Container that holds slides. \n          PhotoSwipe keeps only 3 of them in the DOM to save memory.\n          Don't modify these 3 pswp__item elements, data is added later on. -->\n      <div class=\"pswp__container\">\n          <div class=\"pswp__item\"></div>\n          <div class=\"pswp__item\"></div>\n          <div class=\"pswp__item\"></div>\n      </div>\n\n      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->\n      <div class=\"pswp__ui pswp__ui--hidden\">\n\n          <div class=\"pswp__top-bar\">\n\n              <!--  Controls are self-explanatory. Order can be changed. -->\n\n              <div class=\"pswp__counter\"></div>\n\n              <button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button>\n\n              <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button>\n\n              <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button>\n\n              <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button>\n\n              <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->\n              <!-- element will get class pswp__preloader--active when preloader is running -->\n              <div class=\"pswp__preloader\">\n                  <div class=\"pswp__preloader__icn\">\n                    <div class=\"pswp__preloader__cut\">\n                      <div class=\"pswp__preloader__donut\"></div>\n                    </div>\n                  </div>\n              </div>\n          </div>\n\n          <div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">\n              <div class=\"pswp__share-tooltip\"></div> \n          </div>\n\n          <button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\">\n          </button>\n\n          <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\">\n          </button>\n\n          <div class=\"pswp__caption\">\n              <div class=\"pswp__caption__center\"></div>\n          </div>\n\n      </div>\n\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -233,7 +234,7 @@ module.exports = "<p>\r\n  about works!\r\n</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = ".pswp__caption__center {\n  text-align: center; }\n\nfigure {\n  display: inline-block;\n  width: 33.333%;\n  float: left; }\n\nimg {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9BcHBsaWNhdGlvbnMvTUFNUC9odGRvY3MvdGhlLW1vbmFycS1zaXRlL3NyYy9hcHAvcGFnZXMvYWJvdXQvYWJvdXQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUk7RUFBd0Isa0JBQWtCLEVBQUE7O0FBQzFDO0VBQ0UscUJBQXFCO0VBQ3JCLGNBQWM7RUFDZCxXQUFXLEVBQUE7O0FBRWI7RUFBSyxXQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9hYm91dC9hYm91dC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4gICAgLnBzd3BfX2NhcHRpb25fX2NlbnRlciB7dGV4dC1hbGlnbjogY2VudGVyO31cbiAgICBmaWd1cmUge1xuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgd2lkdGg6IDMzLjMzMyU7XG4gICAgICBmbG9hdDogbGVmdDtcbiAgICB9XG4gICAgaW1nIHt3aWR0aDogMTAwJTt9XG4gICAgLy8gLnNwYWNlciB7aGVpZ2h0OiA1ZW07fSJdfQ== */"
 
 /***/ }),
 
@@ -249,12 +250,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! photoswipe/dist/photoswipe.min.js */ "./node_modules/photoswipe/dist/photoswipe.min.js");
+/* harmony import */ var photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! photoswipe/dist/photoswipe-ui-default.js */ "./node_modules/photoswipe/dist/photoswipe-ui-default.js");
+/* harmony import */ var photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
     }
     AboutComponent.prototype.ngOnInit = function () {
+        'use strict';
+        /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
+        (function ($) {
+            // Init empty gallery array
+            var container = [];
+            // Loop over gallery items and push it to the array
+            $('#gallery').find('figure').each(function () {
+                var $link = $(this).find('a'), item = {
+                    src: $link.attr('href'),
+                    w: $link.data('width'),
+                    h: $link.data('height'),
+                    title: $link.data('caption')
+                };
+                container.push(item);
+            });
+            // Define click event on gallery item
+            $('a').click(function (event) {
+                // Prevent location change
+                event.preventDefault();
+                // Define object and gallery options
+                var $pswp = $('.pswp')[0], options = {
+                    index: $(this).parent('figure').index(),
+                    bgOpacity: 0.85,
+                    showHideOpacity: true
+                };
+                // Initialize PhotoSwipe
+                var gallery = new photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_2___default.a($pswp, photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_3___default.a, container, options);
+                gallery.init();
+            });
+        }(jQuery));
     };
     AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -278,7 +315,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  contact works!\r\n</p>\r\n"
+module.exports = "<p>\n  contact works!\n</p>\n"
 
 /***/ }),
 
@@ -334,7 +371,7 @@ var ContactComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "        <span *ngIf=\"gallery !== undefined\">\r\n            <h1 class=\"text-center\">\r\n                {{gallery.title | uppercase}}\r\n            </h1>\r\n            <p>{{gallery.description}}    \r\n        </span>\r\n  \r\n        <!-- Galley wrapper that contains all items -->\r\n        <div *ngIf=\"gallery !== undefined\" id=\"gallery\" class=\"gallery\" itemscope itemtype=\"http://schema.org/ImageGallery\">\r\n          <!-- Use figure for a more semantic html -->\r\n          <figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\"  *ngFor=\"let slide of gallery.slides\">\r\n            <!-- Link to the big image, not mandatory, but usefull when there is no JS -->\r\n            <a href=\"https://unsplash.it/1200/900/?image=702\" attr.data-caption=\"{{slide.title}}>\" data-width=\"1200\" data-height=\"900\" itemprop=\"contentUrl\">\r\n              <!-- Thumbnail -->\r\n              <img src=\"https://unsplash.it/400/300/?image=702\" itemprop=\"thumbnail\" alt=\"Image description\">\r\n            </a>\r\n          </figure>\r\n\r\n        </div>\r\n\r\n\r\n\r\n\r\n<hr>\r\n\r\n  <!-- Some spacing 😉 -->\r\n  <div class=\"spacer\"></div>\r\n  \r\n  \r\n  <!-- Root element of PhotoSwipe. Must have class pswp. -->\r\n  <div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\r\n    <!-- Background of PhotoSwipe. \r\n             It's a separate element as animating opacity is faster than rgba(). -->\r\n    <div class=\"pswp__bg\"></div>\r\n    <!-- Slides wrapper with overflow:hidden. -->\r\n    <div class=\"pswp__scroll-wrap\">\r\n      <!-- Container that holds slides. \r\n                PhotoSwipe keeps only 3 of them in the DOM to save memory.\r\n                Don't modify these 3 pswp__item elements, data is added later on. -->\r\n      <div class=\"pswp__container\">\r\n        <div class=\"pswp__item\"></div>\r\n        <div class=\"pswp__item\"></div>\r\n        <div class=\"pswp__item\"></div>\r\n      </div>\r\n      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->\r\n      <div class=\"pswp__ui pswp__ui--hidden\">\r\n        <div class=\"pswp__top-bar\">\r\n          <!--  Controls are self-explanatory. Order can be changed. -->\r\n          <div class=\"pswp__counter\"></div>\r\n          <button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button>\r\n          <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button>\r\n          <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button>\r\n          <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button>\r\n          <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->\r\n          <!-- element will get class pswp__preloader--active when preloader is running -->\r\n          <div class=\"pswp__preloader\">\r\n            <div class=\"pswp__preloader__icn\">\r\n              <div class=\"pswp__preloader__cut\">\r\n                <div class=\"pswp__preloader__donut\"></div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">\r\n          <div class=\"pswp__share-tooltip\"></div>\r\n        </div>\r\n        <button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\">\r\n        </button>\r\n        <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\">\r\n        </button>\r\n        <div class=\"pswp__caption\">\r\n          <div class=\"pswp__caption__center\"></div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  \r\n  \r\n"
+module.exports = "<span *ngIf=\"gallery !== undefined\">\n\t<!-- <h1 *ngFor=\"let slide of activeSlides;\" class=\"text-center\">\n\t\t\t{{slide.title}}\n\t</h1> -->\n\t<p>{{gallery.description}}</p>\n\t<div *ngIf=\"albums && album === 'default'\">\n\t<a  *ngFor=\"let alb of albums\" class=\"{{alb}}\" [routerLink]=\"['/gallery',gallery.title,alb]\">{{alb}}</a>\n\t</div>\n</span>\n  \n<!-- Galley wrapper that contains all items -->\n<div *ngIf=\"gallery !== undefined\" id=\"gallery\" class=\"gallery\" itemscope itemtype=\"http://schema.org/ImageGallery\">\n\t\n\t<!-- Use figure for a more semantic html -->\n\t<span class=\"slide_thumbs\" *ngFor=\"let slide of activeSlides; let i = index;\">\n\t\t<span class=\"slide_thumbs_holder\" *ngIf=\"slide.album == 'default' || album == slide.album\">\n\t\t\t<figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\" >\n\t\t\t<!-- Link to the big image, not mandatory, but usefull when there is no JS -->\n\t\t\t<a [href]=\"\" (click)=\"carousel(slide)\"  attr.data-caption=\"{{slide.title}}>\" attr.data-width=\"{{slide.w}}\" attr.data-height=\"{{slide.h}}\" itemprop=\"contentUrl\">\n\t\t\t\t<!-- Thumbnail -->\n\t\t\t\t<img [src]=\"slide.src\" itemprop=\"thumbnail\" alt=\"Image description\">\n\t\t\t</a>\n\t\t\t</figure>\n\t\t</span>\n\t</span>\n</div>\n<!-- <hr> -->\n\n<!-- Some spacing 😉 -->\n<div class=\"spacer\"></div>\n\n\n<!-- Root element of PhotoSwipe. Must have class pswp. -->\n<div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n<!-- Background of PhotoSwipe. \n\t\t\tIt's a separate element as animating opacity is faster than rgba(). -->\n\t<div class=\"pswp__bg\"></div>\n<!-- Slides wrapper with overflow:hidden. -->\n\t<div class=\"pswp__scroll-wrap\">\n\t<!-- Container that holds slides. \n\t\t\tPhotoSwipe keeps only 3 of them in the DOM to save memory.\n\t\t\tDon't modify these 3 pswp__item elements, data is added later on. -->\n\t\t\t<div class=\"pswp__container\">\n\t\t\t\t<div class=\"pswp__item\"></div>\n\t\t\t\t<div class=\"pswp__item\"></div>\n\t\t\t\t<div class=\"pswp__item\"></div>\n\t\t\t</div>\n\t\t\t<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->\n\t\t\t<div class=\"pswp__ui pswp__ui--hidden\">\n\t\t\t\t<div class=\"pswp__top-bar\">\n\t\t\t\t\t<!--  Controls are self-explanatory. Order can be changed. -->\n\t\t\t\t\t<div class=\"pswp__counter\"></div>\n\t\t\t\t\t<button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button>\n\t\t\t\t\t<button class=\"pswp__button pswp__button--share\" title=\"Share\"></button>\n\t\t\t\t\t<button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button>\n\t\t\t\t\t<button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button>\n\t\t\t\t\t<!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->\n\t\t\t\t\t<!-- element will get class pswp__preloader--active when preloader is running -->\n\t\t\t\t\t<div class=\"pswp__preloader\">\n\t\t\t\t\t\t<div class=\"pswp__preloader__icn\">\n\t\t\t\t\t\t\t<div class=\"pswp__preloader__cut\">\n\t\t\t\t\t\t\t\t<div class=\"pswp__preloader__donut\"></div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t<div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">\n\t\t\t\t<div class=\"pswp__share-tooltip\"></div>\n\t\t\t</div>\n\t\t\t<button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button>\n\t\t\t<button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button>\n\t\t\t<div class=\"pswp__caption\">\n\t\t\t\t<div class=\"pswp__caption__center\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n  \n  \n"
 
 /***/ }),
 
@@ -345,7 +382,7 @@ module.exports = "        <span *ngIf=\"gallery !== undefined\">\r\n            
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\n  margin: 2em; }\n\n.pswp__caption__center {\n  text-align: center; }\n\nimg {\n  width: 100%; }\n\n.spacer {\n  height: 5em; }\n\n.gallery {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between; }\n\nfigure {\n  flex: 1 0 260px;\n  margin: 20px 10px; }\n\nfigure a img {\n    width: 100%;\n    height: auto;\n    display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZ2FsbGVyeS9DOlxcTUFNUFxcaHRkb2NzXFxuZXctZGFcXHRoZS1tb25hcnEtc2l0ZS9zcmNcXGFwcFxccGFnZXNcXGdhbGxlcnlcXGdhbGxlcnkuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBSSxXQUFXLEVBQUE7O0FBQ2Y7RUFBd0Isa0JBQWtCLEVBQUE7O0FBTTFDO0VBQUssV0FBVyxFQUFBOztBQUNoQjtFQUFTLFdBQVcsRUFBQTs7QUFFcEI7RUFDRSxhQUFhO0VBQ2IsZUFBZTtFQUNmLDhCQUE4QixFQUFBOztBQU9oQztFQUNFLGVBQWU7RUFDZixpQkFBaUIsRUFBQTs7QUFGbkI7SUFJSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGNBQWMsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2dhbGxlcnkvZ2FsbGVyeS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImgxIHttYXJnaW46IDJlbTt9XHJcbi5wc3dwX19jYXB0aW9uX19jZW50ZXIge3RleHQtYWxpZ246IGNlbnRlcjt9XHJcbi8vIGZpZ3VyZSB7XHJcbi8vICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4vLyAgIHdpZHRoOiAzMy4zMzMlO1xyXG4vLyAgIGZsb2F0OiBsZWZ0O1xyXG4vLyB9XHJcbmltZyB7d2lkdGg6IDEwMCU7fVxyXG4uc3BhY2VyIHtoZWlnaHQ6IDVlbTt9XHJcblxyXG4uZ2FsbGVyeSB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG5cclxuICAvLyBmbGV4OiAxIDAgMzAwcHg7IC8qIGV4cGxhbmF0aW9uIGJlbG93ICovXHJcbiAgLy8gbWFyZ2luOiA1cHg7XHJcbiAgLy8gaGVpZ2h0OiAzMDBweDtcclxufVxyXG5cclxuZmlndXJlIHtcclxuICBmbGV4OiAxIDAgMjYwcHg7XHJcbiAgbWFyZ2luOiAyMHB4IDEwcHg7XHJcbiAgYSBpbWd7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gIH1cclxufSJdfQ== */"
+module.exports = "h1 {\n  margin: 2em; }\n\n.pswp__caption__center {\n  text-align: center; }\n\n.pswp img {\n  width: 100vh !important;\n  height: auto !important; }\n\nfigure {\n  display: inline-block;\n  width: 33.333%;\n  float: left; }\n\nimg {\n  width: 100%; }\n\n.spacer {\n  height: 5em; }\n\n.gallery {\n  display: grid;\n  grid-gap: 20px;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  grid-auto-rows: 250px; }\n\n.gallery .slide_thumbs .slide_thumbs_holder, .gallery .slide_thumbs img, .gallery .slide_thumbs figure {\n    width: 100%;\n    height: 100%;\n    display: block; }\n\n.gallery .slide_thumbs figure {\n    margin: 0;\n    transition: all .3s; }\n\n.gallery .slide_thumbs figure:hover {\n      cursor: pointer;\n      box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.3); }\n\n.gallery .slide_thumbs figure img {\n      -o-object-fit: cover;\n         object-fit: cover; }\n\n.pswp--open {\n  color: #ffffff; }\n\n.pswp--animate_opacity,\n.pswp__bg,\n.pswp__caption,\n.pswp__top-bar,\n.pswp--has_mouse .pswp__button--arrow--left,\n.pswp--has_mouse .pswp__button--arrow--right {\n  transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9BcHBsaWNhdGlvbnMvTUFNUC9odGRvY3MvdGhlLW1vbmFycS1zaXRlL3NyYy9hcHAvcGFnZXMvZ2FsbGVyeS9nYWxsZXJ5LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQUksV0FBVyxFQUFBOztBQUNmO0VBQXdCLGtCQUFrQixFQUFBOztBQUMxQztFQUNDLHVCQUF1QjtFQUN2Qix1QkFBdUIsRUFBQTs7QUFFeEI7RUFDQyxxQkFBcUI7RUFDckIsY0FBYztFQUNkLFdBQVcsRUFBQTs7QUFFVjtFQUFLLFdBQVcsRUFBQTs7QUFPbEI7RUFBUyxXQUFXLEVBQUE7O0FBQ3BCO0VBQ0MsYUFBYTtFQUNiLGNBQWM7RUFDZCw0REFBNEQ7RUFDNUQscUJBQXFCLEVBQUE7O0FBSnRCO0lBT0csV0FBVTtJQUNWLFlBQVk7SUFDWixjQUFjLEVBQUE7O0FBVGpCO0lBWUcsU0FBUTtJQUdSLG1CQUFtQixFQUFBOztBQWZ0QjtNQWlCSSxlQUFlO01BQ2YsK0NBQTRDLEVBQUE7O0FBbEJoRDtNQXFCSSxvQkFBaUI7U0FBakIsaUJBQWlCLEVBQUE7O0FBNkVyQjtFQUNHLGNBQWMsRUFBQTs7QUFFakI7Ozs7OztFQU9DLHVEQUFrRCxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvZ2FsbGVyeS9nYWxsZXJ5LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDEge21hcmdpbjogMmVtO31cbi5wc3dwX19jYXB0aW9uX19jZW50ZXIge3RleHQtYWxpZ246IGNlbnRlcjt9XG4ucHN3cCBpbWd7XG5cdHdpZHRoOiAxMDB2aCAhaW1wb3J0YW50O1xuXHRoZWlnaHQ6IGF1dG8gIWltcG9ydGFudDtcbn1cbmZpZ3VyZSB7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jaztcblx0d2lkdGg6IDMzLjMzMyU7XG5cdGZsb2F0OiBsZWZ0O1xuICB9XG4gIGltZyB7d2lkdGg6IDEwMCU7fVxuLy8gZmlndXJlIHtcbi8vICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuLy8gICB3aWR0aDogMzMuMzMzJTtcbi8vICAgZmxvYXQ6IGxlZnQ7XG4vLyB9XG4vLyBpbWcge3dpZHRoOiAxMDAlO31cbi5zcGFjZXIge2hlaWdodDogNWVtO31cbi5nYWxsZXJ5e1xuXHRkaXNwbGF5OiBncmlkO1xuXHRncmlkLWdhcDogMjBweDtcblx0Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoYXV0by1maWxsLCBtaW5tYXgoMjUwcHgsIDFmcikpO1xuXHRncmlkLWF1dG8tcm93czogMjUwcHg7XG5cdC5zbGlkZV90aHVtYnN7XG5cdFx0LnNsaWRlX3RodW1ic19ob2xkZXIsIGltZywgZmlndXJle1xuXHRcdFx0d2lkdGg6MTAwJTtcblx0XHRcdGhlaWdodDogMTAwJTtcblx0XHRcdGRpc3BsYXk6IGJsb2NrO1xuXHRcdH1cblx0XHRmaWd1cmV7XG5cdFx0XHRtYXJnaW46MDtcblx0XHRcdC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIC4zcztcblx0XHRcdC1tb3otdHJhbnNpdGlvbjogYWxsIC4zcztcblx0XHRcdHRyYW5zaXRpb246IGFsbCAuM3M7XG5cdFx0XHQmOmhvdmVye1xuXHRcdFx0XHRjdXJzb3I6IHBvaW50ZXI7XG5cdFx0XHRcdGJveC1zaGFkb3c6IDZweCA2cHggMThweCAwcHggcmdiYSgwLDAsMCwwLjMpO1xuXHRcdFx0fVxuXHRcdFx0aW1ne1xuXHRcdFx0XHRvYmplY3QtZml0OiBjb3Zlcjtcblx0XHRcdH1cblx0XHRcdC8vIGEgaW1ne1xuXHRcdFx0Ly8gXHR3aWR0aDogMTAwJTtcblx0XHRcdC8vIFx0aGVpZ2h0OiBhdXRvO1xuXHRcdFx0Ly8gXHRkaXNwbGF5OiBibG9jaztcblx0XHRcdC8vIH1cblx0XHR9XG5cdH1cbn1cblxuLy8gLmdhbGxlcnkge1xuLy8gXHR3aWR0aDogMTAwJTtcbi8vIFx0ZmxvYXQ6IGxlZnQ7XG4vLyAgIH1cbiAgXG4vLyAgIC5nYWxsZXJ5IGltZyB7XG4vLyBcdHdpZHRoOiAxMDAlO1xuLy8gXHRoZWlnaHQ6IGF1dG87XG4vLyAgIH1cbiAgXG4vLyAgIC5nYWxsZXJ5IGZpZ3VyZSB7XG4vLyBcdGRpc3BsYXk6IGJsb2NrO1xuLy8gXHRmbG9hdDogbGVmdDtcbi8vIFx0bWFyZ2luOiAwIDVweCA1cHggMDtcbi8vIFx0d2lkdGg6IDE1MHB4O1xuLy8gXHRoZWlnaHQ6IDE1MHB4O1xuLy8gICB9XG4gIFxuLy8gICAuZ2FsbGVyeSBmaWdjYXB0aW9uIHtcbi8vIFx0ZGlzcGxheTogbm9uZTtcbi8vICAgfVxuLy8gLmdhbGxlcnkge1xuLy8gXHQvLyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4vLyBcdC8vIGZsZXgtd3JhcDogd3JhcDtcbi8vIFx0Ly8ganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuLy8gXHRkaXNwbGF5OiBmbGV4O1xuLy8gXHRmbGV4LWZsb3c6IHJvdyB3cmFwO1xuLy8gXHRqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4vLyBcdC5zbGlkZV90aHVtYnN7XG4vLyBcdFx0ZmxleC1iYXNpczogMjUlO1xuLy8gXHRcdGhlaWdodDogMjUlO1xuLy8gXHRcdC1tcy1mbGV4OiBhdXRvO1xuLy8gXHRcdC8vIHdpZHRoOiAyNTlweDtcbi8vIFx0XHRwb3NpdGlvbjogcmVsYXRpdmU7XG4vLyBcdFx0cGFkZGluZzogMTBweDtcbi8vIFx0XHRib3gtc2l6aW5nOiBib3JkZXItYm94O1xuLy8gXHRcdGJhY2tncm91bmQtY29sb3I6IHBpbms7XG4vLyBcdH1cbi8vIFx0ZmlndXJle1xuLy8gXHRcdG1hcmdpbjowO1xuLy8gXHRcdGEgaW1ne1xuLy8gXHRcdFx0d2lkdGg6IDEwMCU7XG4vLyBcdFx0XHRoZWlnaHQ6IGF1dG87XG4vLyBcdFx0XHRkaXNwbGF5OiBibG9jaztcbi8vIFx0XHR9XG4vLyBcdFx0Jjpob3Zlcntcbi8vIFx0XHRcdGN1cnNvcjogcG9pbnRlcjs7XG4vLyBcdFx0fVxuLy8gXHR9XG4vLyB9XG5cbi8vIGZpZ3VyZSB7XG4vLyBcdGZsZXg6IDEgMCAyNjBweDtcbi8vIFx0bWFyZ2luOiAyMHB4IDEwcHg7XG4vLyBcdG1heC13aWR0aDogMjAlO1xuLy8gXHRmbG9hdDogbGVmdDtcbi8vIFx0bWluLWhlaWdodDogMjIwcHg7XG4vLyBcdGEgaW1ne1xuLy8gXHRcdHdpZHRoOiAxMDAlO1xuLy8gXHRcdGhlaWdodDogYXV0bztcbi8vIFx0XHRkaXNwbGF5OiBibG9jaztcbi8vIFx0fVxuLy8gXHRhIGltZzpob3Zlcntcbi8vIFx0XHRjdXJzb3I6IHBvaW50ZXI7O1xuLy8gXHR9XG4vLyB9XG4ucHN3cC0tb3BlbiB7XG4gIFx0Y29sb3I6ICNmZmZmZmY7XG59XG4ucHN3cC0tYW5pbWF0ZV9vcGFjaXR5LFxuLnBzd3BfX2JnLFxuLnBzd3BfX2NhcHRpb24sXG4ucHN3cF9fdG9wLWJhcixcbi5wc3dwLS1oYXNfbW91c2UgLnBzd3BfX2J1dHRvbi0tYXJyb3ctLWxlZnQsXG4ucHN3cC0taGFzX21vdXNlIC5wc3dwX19idXR0b24tLWFycm93LS1yaWdodHtcblx0LXdlYmtpdC10cmFuc2l0aW9uOiBvcGFjaXR5IDMzM21zIGN1YmljLWJlemllciguNCwwLC4yMiwxKTtcblx0dHJhbnNpdGlvbjogb3BhY2l0eSAzMzNtcyBjdWJpYy1iZXppZXIoLjQsMCwuMjIsMSk7XG59XG5cblxuLy8gQG1lZGlhKG1heC13aWR0aDogMTMzM3B4KSB7XG4vLyBcdC5nYWxsZXJ5IC5zbGlkZV90aHVtYnMge1xuLy8gXHQgIGZsZXgtYmFzaXM6IDMzLjMzJTtcbi8vIFx0fVxuLy8gICB9XG4vLyBAbWVkaWEobWF4LXdpZHRoOiAxMDI0cHgpIHtcbi8vIFx0LmdhbGxlcnkgLnNsaWRlX3RodW1icyB7XG4vLyBcdFx0ZmxleC1iYXNpczogMzMuMzMlO1xuLy8gXHR9XG4vLyB9XG4vLyBAbWVkaWEobWF4LXdpZHRoOiA4MTVweCkge1xuLy8gXHQuZ2FsbGVyeSAuc2xpZGVfdGh1bWJzIHtcbi8vIFx0ICBmbGV4LWJhc2lzOiA1MCU7XG4vLyBcdH1cbi8vIH1cbi8vIEBtZWRpYShtYXgtd2lkdGg6IDU1NXB4KSB7XG4vLyBcdC5nYWxsZXJ5IC5zbGlkZV90aHVtYnMge1xuLy8gXHRcdGZsZXgtYmFzaXM6IDEwMCU7XG4vLyBcdH1cbi8vIH0iXX0= */"
 
 /***/ }),
 
@@ -363,73 +400,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var rxjs_add_operator_switchMap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/switchMap */ "./node_modules/rxjs-compat/_esm5/add/operator/switchMap.js");
-/* harmony import */ var src_app_services_gallery_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/gallery.service */ "./src/app/services/gallery.service.ts");
-/* harmony import */ var photoswipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! photoswipe */ "./node_modules/photoswipe/dist/photoswipe.js");
-/* harmony import */ var photoswipe__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(photoswipe__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! photoswipe/dist/photoswipe-ui-default */ "./node_modules/photoswipe/dist/photoswipe-ui-default.js");
-/* harmony import */ var photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! photoswipe/dist/photoswipe.min.js */ "./node_modules/photoswipe/dist/photoswipe.min.js");
+/* harmony import */ var photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! photoswipe/dist/photoswipe-ui-default.js */ "./node_modules/photoswipe/dist/photoswipe-ui-default.js");
+/* harmony import */ var photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var rxjs_add_operator_switchMap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/operator/switchMap */ "./node_modules/rxjs-compat/_esm5/add/operator/switchMap.js");
+/* harmony import */ var src_app_services_gallery_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/services/gallery.service */ "./src/app/services/gallery.service.ts");
 
 
 
 
 
 
-// import PhotoSwipe from 'photoswipe'
-// import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
-// Core JS file
 
-// UI JS file
 
+//import {type} from 'os';
 var GalleryComponent = /** @class */ (function () {
-    function GalleryComponent(galleryservice, route, location) {
+    function GalleryComponent(galleryservice, route, router, location) {
+        var _this = this;
         this.galleryservice = galleryservice;
         this.route = route;
+        this.router = router;
         this.location = location;
+        this.ps_gallery = null;
+        this.router.events.subscribe(function (event) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"]) {
+                _this.album = route.snapshot.paramMap.get('album') !== null ? route.snapshot.paramMap.get('album') : 'default';
+                _this.setActiveSlides();
+            }
+        });
     }
     GalleryComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.galleryservice.getGalleryTitles().subscribe(function (galleryTitles) { return _this.galleryTitles = galleryTitles; });
-        console.log('--------');
-        console.log(this.galleryTitles);
         this.route.params
             .switchMap(function (params) { return _this.galleryservice.getGalleryByTitle(params['title']); }) // (+) converts string id to a number
             .subscribe(function (gallery) {
-            console.log(gallery);
+            _this.albums = _this.galleryservice.getGalleryAlbums(gallery.title, gallery);
             _this.gallery = gallery;
+            _this.setActiveSlides();
             _this.setPrevNext(gallery.title);
         });
-        'use strict';
-        /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
-        (function ($) {
-            // Init empty gallery array
-            var container = [];
-            // Loop over gallery items and push it to the array
-            $('#gallery').find('figure').each(function () {
-                var $link = $(this).find('a'), item = {
-                    src: $link.attr('href'),
-                    w: $link.data('width'),
-                    h: $link.data('height'),
-                    title: $link.data('caption')
-                };
-                alert($link.data('caption'));
-                container.push(item);
-            });
-            // Define click event on gallery item
-            $('#gallery a').click(function (event) {
-                // Prevent location change
-                event.preventDefault();
-                // Define object and gallery options
-                var $pswp = $('.pswp')[0], options = {
-                    index: $(this).parent('figure').index(),
-                    bgOpacity: 0.85,
-                    showHideOpacity: true
-                };
-                // Initialize PhotoSwipe
-                var gallery = new photoswipe__WEBPACK_IMPORTED_MODULE_6__($pswp, photoswipe_dist_photoswipe_ui_default__WEBPACK_IMPORTED_MODULE_7__, container, options);
-                gallery.init();
-            });
-        }(jQuery));
+    };
+    GalleryComponent.prototype.galleryCarousel = function (i) {
+        this.gallerySlides = this.gallery.slides.filter(function (slide) { return slide.album == i; });
+        this.ps_element = document.querySelectorAll('.pswp')[0];
+        this.ps_options = {
+            index: i !== null ? i : 0,
+        };
+        this.ps_gallery = new photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_4___default.a(this.ps_element, photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_5___default.a, this.gallerySlides, this.ps_options);
+        this.ps_gallery.init();
+    };
+    GalleryComponent.prototype.carousel = function (slide) {
+        this.ps_element = document.querySelectorAll('.pswp')[0];
+        this.ps_options = {
+            index: 0,
+        };
+        console.log('--  SLIDE --');
+        console.log(slide);
+        console.log(this.activeSlides);
+        this.ps_gallery = new photoswipe_dist_photoswipe_min_js__WEBPACK_IMPORTED_MODULE_4___default.a(this.ps_element, photoswipe_dist_photoswipe_ui_default_js__WEBPACK_IMPORTED_MODULE_5___default.a, [slide], this.ps_options);
+        this.ps_gallery.init();
+    };
+    GalleryComponent.prototype.getFirstImage = function (val) {
+        this.firstImage = this.gallery.slides.find(function (x) { return x.album == val; });
+        return typeof this.firstImage !== 'undefined' ? this.firstImage.src : '';
+    };
+    GalleryComponent.prototype.setActiveSlides = function () {
+        var _this = this;
+        if (this.gallery) {
+            this.activeSlides = this.gallery.slides.filter(function (slide) { return slide.album == _this.album; });
+        }
     };
     GalleryComponent.prototype.setPrevNext = function (galleryId) {
         var index = this.galleryTitles.indexOf(galleryId);
@@ -445,7 +486,7 @@ var GalleryComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./gallery.component.html */ "./src/app/pages/gallery/gallery.component.html"),
             styles: [__webpack_require__(/*! ./gallery.component.scss */ "./src/app/pages/gallery/gallery.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_gallery_service__WEBPACK_IMPORTED_MODULE_5__["GalleryService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_gallery_service__WEBPACK_IMPORTED_MODULE_7__["GalleryService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"]])
     ], GalleryComponent);
     return GalleryComponent;
 }());
@@ -461,7 +502,7 @@ var GalleryComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header data-color=\"intro\">\r\n\tlogo\r\n\t<h1>lorem ipsum boilerplate text intro</h1>\r\n</header>\r\n\r\n<div *ngIf=\"galleries\">\r\n\t<h2>By Title</h2>\r\n\t<div *ngFor=\"let gallery of galleries\" [routerLink]=\"['/gallery', gallery.title]\">\r\n\t\t<h1>{{gallery.title | uppercase}}</h1>\r\n\t</div>\r\n</div>\r\n\r\n<!-- <div *ngFor= \"let gallery of galleries\" [routerLink]=\"['/gallery', gallery.id]\"></div>\r\n\t<h1>{{gallery.title | uppercase}}</h1>\r\n\r\n</div> -->\r\n<hr>\r\n<!-- <div *ngIf=\"gallery\">\r\n\t\t{{gallery.title | uppercase}}\r\n</div> -->\r\n<hr>\r\n<!-- <div *ngFor=\"let gallery of galleries\" [routerLink]=\"['/gallery', gallery.id]\"> \r\n\t{{gallery.title | uppercase}}\r\n</div> -->\r\n<hr>\r\n<!-- <div *ngFor= \"let gallery of galleries\" (click)=\"onSelect(gallery)\">\r\n\t\t<h1>{{gallery.title}}</h1>\r\n\t\r\n\t</div> -->\r\n\t\r\n\r\n<!-- <div *ngIf=\"selectedGallery\">\r\n    <h3>Selected Gallery</h3>\r\n     <h2>{{selectedGallery.title}}</h2>\r\n     <h2>{{selectedGallery.description}}</h2>\r\n   </div> -->\r\n <!-- <app-gallery></app-gallery> -->\r\n<!-- <app-gallery [gallery]=\"selectedGallery\"></app-gallery> -->\r\n\r\n"
+module.exports = "<header>\n\t<div class=\"row\" data-color=\"intro\">\n\t\t\t<h3>lorem ipsum boilerplate text intro</h3>\n\t\t\t<ul>\n\t\t\t\t<li>\n\t\t\t\t\ttodo list:\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\t\t<del>fix w/h of link to galleries from home for desktop and mobile</del>\n\t\t\t\t</li>\n\t\t\t\t<li> <del> add tilt.js to home</del></li>\n\t\t\t\t<li>\n\t\t\t\t\t\t<del>fix routes to galleries to huse ng-href https://angular.io/guide/ajs-quick-reference#ng-href</del>\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tbuild server error pages, 404 etc\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\tpage transitions\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\t- shape overlays example in dls\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\t- mobile menu\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\t- style galleries\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\t- contact form\n\t\t\t\t</li>\n\t\t\t\t<li>\n\t\t\t\t\t- about page design with cv\n\t\t\t\t</li>\n\t\t\t</ul>\n\t</div>\n</header>\n\n<div *ngIf=\"galleries\" class=\"galleries\">\n\t<div *ngFor=\"let gallery of galleries; let i=index; let odd=odd; let even=even;\" class=\"row\" [ngClass]=\"{ odd: odd, even: even }\" attr.data-color=\"{{gallery.title}}\" >\n\t\t<div class=\"galleryPreview js-tilt\"  data-tilt>\n\t\t\t<div class=\"breakout\">\n\t\t\t\t<a class=\"desc\" [routerLink]=\"['/gallery', gallery.title]\">\n\t\t\t\t\t<h1 class=\"gallery-link\">{{gallery.title}}</h1>\n\t\t\t\t\t<p>description</p>\n\t\t\t\t</a>\t\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n"
 
 /***/ }),
 
@@ -472,7 +513,7 @@ module.exports = "<header data-color=\"intro\">\r\n\tlogo\r\n\t<h1>lorem ipsum b
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@charset \"UTF-8\";\nheader h1 {\n  text-align: center;\n  margin-top: 16vh;\n  margin-bottom: 21vh; }\n.row {\n  background-size: contain; }\n.row[data-color=\"fractures\"] .gallery_img {\n    background: url('thumb_pattern_full_img146.jpg') repeat top left; }\n.row[data-color=\"photography\"] .gallery_img {\n    background: url('thumb_pattern_full_img146.jpg') repeat top left; }\n.row[data-color=\"textures\"] .gallery_img {\n    background: url('thumb_pattern_full_img146.jpg') repeat top left; }\n.row[data-color=\"paintings\"] .gallery_img {\n    background: url('thumb_pattern_full_img146.jpg') repeat top left; }\n.gallery {\n  position: relative;\n  flex: none;\n  width: 30%;\n  height: calc(100vh - 16rem);\n  background-size: cover; }\n.gallery   .gallery_img {\n    width: 100%;\n    height: 100%; }\n.gallery .desc {\n    position: absolute;\n    bottom: 0;\n    padding-bottom: 5rem;\n    right: -15vw;\n    text-align: right;\n    width: 100%; }\n.gallery .desc h1 {\n      font-size: 5rem;\n      margin: 0;\n      font-family: 'salomeregular', Georgia, Serif; }\n.gallery .desc p {\n      font-size: 1.5rem; }\n.gallery.odd .desc {\n    text-align: right;\n    right: -15vw; }\n.gallery.even .desc {\n    text-align: left;\n    left: -15vw; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9ob21lL0M6XFxNQU1QXFxodGRvY3NcXG5ldy1kYVxcdGhlLW1vbmFycS1zaXRlL3NyY1xcYXBwXFxwYWdlc1xcaG9tZVxcaG9tZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7RUFDRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLG1CQUFtQixFQUFBO0FBRXJCO0VBQ0Usd0JBQXdCLEVBQUE7QUFEMUI7SUFHSSxnRUFBeUYsRUFBQTtBQUg3RjtJQU1JLGdFQUF5RixFQUFBO0FBTjdGO0lBU0ksZ0VBQXlGLEVBQUE7QUFUN0Y7SUFZSSxnRUFBeUYsRUFBQTtBQUk3RjtFQUNFLGtCQUFrQjtFQUNuQixVQUFVO0VBQ1YsVUFBVTtFQUNWLDJCQUEyQjtFQUMxQixzQkFBc0IsRUFBQTtBQUx4QjtJQU9JLFdBQVc7SUFDWCxZQUFZLEVBQUE7QUFSaEI7SUFXSSxrQkFBa0I7SUFDbEIsU0FBUztJQUNULG9CQUFvQjtJQUNwQixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLFdBQVcsRUFBQTtBQWhCZjtNQWtCTSxlQUFlO01BQ2YsU0FBUztNQUNULDRDQUE0QyxFQUFBO0FBcEJsRDtNQXVCTSxpQkFBaUIsRUFBQTtBQXZCdkI7SUEyQkksaUJBQWlCO0lBQ2pCLFlBQVksRUFBQTtBQTVCaEI7SUErQkksZ0JBQWdCO0lBQ2hCLFdBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbmhlYWRlciBoMSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogMTZ2aDtcbiAgbWFyZ2luLWJvdHRvbTogMjF2aDsgfVxuXG4ucm93IHtcbiAgYmFja2dyb3VuZC1zaXplOiBjb250YWluOyB9XG4gIC5yb3dbZGF0YS1jb2xvcj1cImZyYWN0dXJlc1wiXSAuZ2FsbGVyeV9pbWcge1xuICAgIGJhY2tncm91bmQ6IHVybChcInNyYy9hc3NldHMvaW1hZ2VzL3RodW1icy90aHVtYl9wYXR0ZXJuX2Z1bGxfaW1nMTQ2LmpwZ1wiKSByZXBlYXQgdG9wIGxlZnQ7IH1cbiAgLnJvd1tkYXRhLWNvbG9yPVwicGhvdG9ncmFwaHlcIl0gLmdhbGxlcnlfaW1nIHtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCJzcmMvYXNzZXRzL2ltYWdlcy90aHVtYnMvdGh1bWJfcGF0dGVybl9mdWxsX2ltZzE0Ni5qcGdcIikgcmVwZWF0IHRvcCBsZWZ0OyB9XG4gIC5yb3dbZGF0YS1jb2xvcj1cInRleHR1cmVzXCJdIC5nYWxsZXJ5X2ltZyB7XG4gICAgYmFja2dyb3VuZDogdXJsKFwic3JjL2Fzc2V0cy9pbWFnZXMvdGh1bWJzL3RodW1iX3BhdHRlcm5fZnVsbF9pbWcxNDYuanBnXCIpIHJlcGVhdCB0b3AgbGVmdDsgfVxuICAucm93W2RhdGEtY29sb3I9XCJwYWludGluZ3NcIl0gLmdhbGxlcnlfaW1nIHtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCJzcmMvYXNzZXRzL2ltYWdlcy90aHVtYnMvdGh1bWJfcGF0dGVybl9mdWxsX2ltZzE0Ni5qcGdcIikgcmVwZWF0IHRvcCBsZWZ0OyB9XG5cbi5nYWxsZXJ5IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmbGV4OiBub25lO1xuICB3aWR0aDogMzAlO1xuICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAxNnJlbSk7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7IH1cbiAgLmdhbGxlcnkgwqDCoC5nYWxsZXJ5X2ltZyB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlOyB9XG4gIC5nYWxsZXJ5IC5kZXNjIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAwO1xuICAgIHBhZGRpbmctYm90dG9tOiA1cmVtO1xuICAgIHJpZ2h0OiAtMTV2dztcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICB3aWR0aDogMTAwJTsgfVxuICAgIC5nYWxsZXJ5IC5kZXNjIGgxIHtcbiAgICAgIGZvbnQtc2l6ZTogNXJlbTtcbiAgICAgIG1hcmdpbjogMDtcbiAgICAgIGZvbnQtZmFtaWx5OiAnc2Fsb21lcmVndWxhcicsIEdlb3JnaWEsIFNlcmlmOyB9XG4gICAgLmdhbGxlcnkgLmRlc2MgcCB7XG4gICAgICBmb250LXNpemU6IDEuNXJlbTsgfVxuICAuZ2FsbGVyeS5vZGQgLmRlc2Mge1xuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgIHJpZ2h0OiAtMTV2dzsgfVxuICAuZ2FsbGVyeS5ldmVuIC5kZXNjIHtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xuICAgIGxlZnQ6IC0xNXZ3OyB9XG4iLCJoZWFkZXIgaDF7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIG1hcmdpbi10b3A6IDE2dmg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjF2aDtcclxufVxyXG4ucm93e1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcclxuICAmW2RhdGEtY29sb3I9XCJmcmFjdHVyZXNcIl0gLmdhbGxlcnlfaW1ne1xyXG4gICAgYmFja2dyb3VuZDogdXJsKCdzcmMvYXNzZXRzL2ltYWdlcy90aHVtYnMvdGh1bWJfcGF0dGVybl9mdWxsX2ltZzE0Ni5qcGcnKSByZXBlYXQgdG9wIGxlZnQ7XHJcbiAgfVxyXG4gICZbZGF0YS1jb2xvcj1cInBob3RvZ3JhcGh5XCJdIC5nYWxsZXJ5X2ltZ3tcclxuICAgIGJhY2tncm91bmQ6IHVybCgnc3JjL2Fzc2V0cy9pbWFnZXMvdGh1bWJzL3RodW1iX3BhdHRlcm5fZnVsbF9pbWcxNDYuanBnJykgcmVwZWF0IHRvcCBsZWZ0O1xyXG4gIH1cclxuICAmW2RhdGEtY29sb3I9XCJ0ZXh0dXJlc1wiXSAuZ2FsbGVyeV9pbWd7XHJcbiAgICBiYWNrZ3JvdW5kOiB1cmwoJ3NyYy9hc3NldHMvaW1hZ2VzL3RodW1icy90aHVtYl9wYXR0ZXJuX2Z1bGxfaW1nMTQ2LmpwZycpIHJlcGVhdCB0b3AgbGVmdDtcclxuICB9XHJcbiAgJltkYXRhLWNvbG9yPVwicGFpbnRpbmdzXCJdIC5nYWxsZXJ5X2ltZ3tcclxuICAgIGJhY2tncm91bmQ6IHVybCgnc3JjL2Fzc2V0cy9pbWFnZXMvdGh1bWJzL3RodW1iX3BhdHRlcm5fZnVsbF9pbWcxNDYuanBnJykgcmVwZWF0IHRvcCBsZWZ0O1xyXG4gIH1cclxufVxyXG5cclxuLmdhbGxlcnl7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG5cdGZsZXg6IG5vbmU7XHJcblx0d2lkdGg6IDMwJTtcclxuXHRoZWlnaHQ6IGNhbGMoMTAwdmggLSAxNnJlbSk7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuwqDCoC5nYWxsZXJ5X2ltZ3tcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gIH1cclxuICAuZGVzY3tcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogMDtcclxuICAgIHBhZGRpbmctYm90dG9tOiA1cmVtO1xyXG4gICAgcmlnaHQ6IC0xNXZ3O1xyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGgxe1xyXG4gICAgICBmb250LXNpemU6IDVyZW07XHJcbiAgICAgIG1hcmdpbjogMDtcclxuICAgICAgZm9udC1mYW1pbHk6ICdzYWxvbWVyZWd1bGFyJywgR2VvcmdpYSwgU2VyaWY7XHJcbiAgICB9XHJcbiAgICBwe1xyXG4gICAgICBmb250LXNpemU6IDEuNXJlbTtcclxuICAgIH1cclxuICB9XHJcbiAgJi5vZGQgLmRlc2N7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxuICAgIHJpZ2h0OiAtMTV2dztcclxuICB9XHJcbiAgJi5ldmVuIC5kZXNje1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGxlZnQ6IC0xNXZ3O1xyXG4gIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuIl19 */"
+module.exports = "@charset \"UTF-8\";\n.tile {\n  display: block;\n  width: 300px;\n  height: 300px;\n  background: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);\n  box-shadow: 0 3px 47px rgba(0, 0, 0, 0.2);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n  position: relative; }\n.tile .inner {\n    display: block;\n    width: 200px;\n    height: 40px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translateZ(20px) translateX(-50%) translateY(-50%);\n            transform: translateZ(20px) translateX(-50%) translateY(-50%);\n    background: transparent;\n    text-align: center;\n    font-size: 40px;\n    line-height: 40px;\n    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);\n    color: white; }\nheader h1 {\n  text-align: center; }\n.galleries {\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n.galleries .row {\n    height: 60vh;\n    margin-bottom: 10px;\n    width: 100%;\n    justify-content: center;\n    align-items: center;\n    display: flex; }\n.galleries .row .galleryPreview {\n      margin: 0 auto;\n      position: relative;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      background-image: url('thumb_fractures.jpg');\n      background-size: 350px 350px;\n      background-position: center;\n      background-repeat: no-repeat;\n      width: 350px;\n      height: 350px;\n      -webkit-transform-style: preserve-3d;\n              transform-style: preserve-3d; }\n.galleries .row .galleryPreview .breakout {\n        position: relative; }\n.galleries .row .galleryPreview .breakout a.desc {\n          text-decoration: none;\n          -webkit-transform: translateZ(20px);\n                  transform: translateZ(20px);\n          display: flex;\n          flex-direction: column;\n          justify-content: center;\n          align-items: center;\n          height: 200px;\n          width: 100%;\n          margin-left: calc(-50% + 50%);\n          position: relative;\n          color: #222; }\n.galleries .row .galleryPreview .breakout a.desc h1 {\n            margin: 0;\n            font-family: 'salomeregular', Georgia, Serif; }\n.galleries .row .galleryPreview .breakout a.desc p {\n            font-size: 1.5rem; }\n.gallery {\n  background-size: cover; }\n.gallery   .gallery_img {\n    width: 100%;\n    height: 100%; }\n.gallery-link:hover {\n  cursor: pointer; }\n@media only screen and (min-width: 960px) {\n  .galleries .row {\n    height: 90vh; }\n    .galleries .row .desc {\n      flex: none;\n      height: auto; } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIiwiL0FwcGxpY2F0aW9ucy9NQU1QL2h0ZG9jcy90aGUtbW9uYXJxLXNpdGUvc3JjL2FwcC9wYWdlcy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCO0VBQ0MsY0FBYztFQUNkLFlBQVk7RUFDWixhQUFhO0VBRWIsNkRBQTZEO0VBQzdELHlDQUF5QztFQUN6QyxvQ0FBNEI7VUFBNUIsNEJBQTRCO0VBQzVCLGtCQUFrQixFQUFBO0FBUm5CO0lBVUUsY0FBYztJQUNkLFlBQVk7SUFDWixZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLFFBQVE7SUFDUixTQUFTO0lBQ1QscUVBQTZEO1lBQTdELDZEQUE2RDtJQUM3RCx1QkFBdUI7SUFDdkIsa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZixpQkFBaUI7SUFDakIsNENBQXlDO0lBQ3pDLFlBQVksRUFBQTtBQUlkO0VBQ0Usa0JBQWtCLEVBQUE7QUFHcEI7RUFDQyxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLHNCQUFzQixFQUFBO0FBSHZCO0lBZ0JFLFlBQVk7SUFDWixtQkFBbUI7SUFDbkIsV0FBVztJQUNYLHVCQUF1QjtJQUN2QixtQkFBbUI7SUFDbkIsYUFBYSxFQUFBO0FBckJmO01BdUJHLGNBQWM7TUFDZCxrQkFBa0I7TUFDbEIsYUFBYTtNQUNiLHVCQUF1QjtNQUN2QixtQkFBbUI7TUFDbkIsNENBQXFFO01BQ3JFLDRCQUE0QjtNQUM1QiwyQkFBMkI7TUFDM0IsNEJBQTRCO01BQzVCLFlBQVk7TUFDWixhQUFhO01BQ2Isb0NBQTRCO2NBQTVCLDRCQUE0QixFQUFBO0FBbEMvQjtRQW9DSSxrQkFBa0IsRUFBQTtBQXBDdEI7VUFzQ0sscUJBQXFCO1VBQ3JCLG1DQUEyQjtrQkFBM0IsMkJBQTJCO1VBQzNCLGFBQWE7VUFDYixzQkFBc0I7VUFDdEIsdUJBQXVCO1VBQ3ZCLG1CQUFtQjtVQUNuQixhQUFhO1VBQ2IsV0FBVztVQUNYLDZCQUE2QjtVQUM3QixrQkFBa0I7VUFFbEIsV0FBVyxFQUFBO0FBakRoQjtZQW1ETSxTQUFTO1lBQ1QsNENBQTRDLEVBQUE7QUFwRGxEO1lBdURNLGlCQUFpQixFQUFBO0FBb0N2QjtFQUNDLHNCQUFzQixFQUFBO0FBRHZCO0lBR0UsV0FBVztJQUNYLFlBQVksRUFBQTtBQUdkO0VBQ0csZUFBZSxFQUFBO0FBSWxCO0VBQ0M7SUFFRSxZQUFZLEVBQUE7SUFGZDtNQUlHLFVBQVU7TUFFVixZQUFZLEVBQUEsRUFFWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi50aWxlIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHdpZHRoOiAzMDBweDtcbiAgaGVpZ2h0OiAzMDBweDtcbiAgYmFja2dyb3VuZDogLXdlYmtpdC1saW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmYwMGJhIDAlLCAjZmFlNzEzIDEwMCUpO1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmYwMGJhIDAlLCAjZmFlNzEzIDEwMCUpO1xuICBib3gtc2hhZG93OiAwIDNweCA0N3B4IHJnYmEoMCwgMCwgMCwgMC4yKTtcbiAgdHJhbnNmb3JtLXN0eWxlOiBwcmVzZXJ2ZS0zZDtcbiAgcG9zaXRpb246IHJlbGF0aXZlOyB9XG4gIC50aWxlIC5pbm5lciB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgd2lkdGg6IDIwMHB4O1xuICAgIGhlaWdodDogNDBweDtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWigyMHB4KSB0cmFuc2xhdGVYKC01MCUpIHRyYW5zbGF0ZVkoLTUwJSk7XG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogNDBweDtcbiAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICB0ZXh0LXNoYWRvdzogMHB4IDBweCAyMHB4IHJnYmEoMCwgMCwgMCwgMC4zKTtcbiAgICBjb2xvcjogd2hpdGU7IH1cblxuaGVhZGVyIGgxIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyOyB9XG5cbi5nYWxsZXJpZXMge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IH1cbiAgLmdhbGxlcmllcyAucm93IHtcbiAgICBoZWlnaHQ6IDYwdmg7XG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGRpc3BsYXk6IGZsZXg7IH1cbiAgICAuZ2FsbGVyaWVzIC5yb3cgLmdhbGxlcnlQcmV2aWV3IHtcbiAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcInNyYy9hc3NldHMvaW1hZ2VzL3RodW1icy90aHVtYl9mcmFjdHVyZXMuanBnXCIpO1xuICAgICAgYmFja2dyb3VuZC1zaXplOiAzNTBweCAzNTBweDtcbiAgICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgICB3aWR0aDogMzUwcHg7XG4gICAgICBoZWlnaHQ6IDM1MHB4O1xuICAgICAgdHJhbnNmb3JtLXN0eWxlOiBwcmVzZXJ2ZS0zZDsgfVxuICAgICAgLmdhbGxlcmllcyAucm93IC5nYWxsZXJ5UHJldmlldyAuYnJlYWtvdXQge1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7IH1cbiAgICAgICAgLmdhbGxlcmllcyAucm93IC5nYWxsZXJ5UHJldmlldyAuYnJlYWtvdXQgYS5kZXNjIHtcbiAgICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVaKDIwcHgpO1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgIGhlaWdodDogMjAwcHg7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IGNhbGMoLTUwJSArIDUwJSk7XG4gICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgIGNvbG9yOiAjMjIyOyB9XG4gICAgICAgICAgLmdhbGxlcmllcyAucm93IC5nYWxsZXJ5UHJldmlldyAuYnJlYWtvdXQgYS5kZXNjIGgxIHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnc2Fsb21lcmVndWxhcicsIEdlb3JnaWEsIFNlcmlmOyB9XG4gICAgICAgICAgLmdhbGxlcmllcyAucm93IC5nYWxsZXJ5UHJldmlldyAuYnJlYWtvdXQgYS5kZXNjIHAge1xuICAgICAgICAgICAgZm9udC1zaXplOiAxLjVyZW07IH1cblxuLmdhbGxlcnkge1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyB9XG4gIC5nYWxsZXJ5IMKgwqAuZ2FsbGVyeV9pbWcge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTsgfVxuXG4uZ2FsbGVyeS1saW5rOmhvdmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyOyB9XG5cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogOTYwcHgpIHtcbiAgLmdhbGxlcmllcyAucm93IHtcbiAgICBoZWlnaHQ6IDkwdmg7IH1cbiAgICAuZ2FsbGVyaWVzIC5yb3cgLmRlc2Mge1xuICAgICAgZmxleDogbm9uZTtcbiAgICAgIGhlaWdodDogYXV0bzsgfSB9XG4iLCIudGlsZXtcdFxuXHRkaXNwbGF5OiBibG9jaztcblx0d2lkdGg6IDMwMHB4O1xuXHRoZWlnaHQ6IDMwMHB4O1xuXHRiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudCgxMzVkZWcsICNmZjAwYmEgMCUsICNmYWU3MTMgMTAwJSk7XG5cdGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxMzVkZWcsICNmZjAwYmEgMCUsICNmYWU3MTMgMTAwJSk7XG5cdGJveC1zaGFkb3c6IDAgM3B4IDQ3cHggcmdiYSgwLCAwLCAwLCAwLjIpO1xuXHR0cmFuc2Zvcm0tc3R5bGU6IHByZXNlcnZlLTNkO1xuXHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdC5pbm5lcntcdFx0XG5cdFx0ZGlzcGxheTogYmxvY2s7XG5cdFx0d2lkdGg6IDIwMHB4O1xuXHRcdGhlaWdodDogNDBweDtcblx0XHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdFx0dG9wOiA1MCU7XG5cdFx0bGVmdDogNTAlO1xuXHRcdHRyYW5zZm9ybTogdHJhbnNsYXRlWigyMHB4KSB0cmFuc2xhdGVYKC01MCUpIHRyYW5zbGF0ZVkoLTUwJSk7XG5cdFx0YmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG5cdFx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHRcdGZvbnQtc2l6ZTogNDBweDtcblx0XHRsaW5lLWhlaWdodDogNDBweDtcblx0XHR0ZXh0LXNoYWRvdzogMHB4IDBweCAyMHB4IHJnYmEoMCwwLDAsMC4zKTtcblx0XHRjb2xvcjogd2hpdGU7XG5cdH1cbn1cblxuaGVhZGVyIGgxe1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5nYWxsZXJpZXN7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0ZGlzcGxheTogZmxleDtcblx0ZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblx0Ly8gaHRtbCB7XG5cdC8vIFx0d2lkdGg6IDEwMCU7XG5cdC8vIFx0aGVpZ2h0OiAxMDAlO1xuXHQvLyB9XG5cdFxuXG5cdFxuXHQucm93e1xuXHRcdC8vIGRpc3BsYXk6IGZsZXg7XG5cdFx0Ly8gZmxleDogMSAxIGF1dG87XG5cdFx0Ly8ganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdFx0Ly8gYWxpZ24taXRlbXM6IGNlbnRlcjtcblx0XHRoZWlnaHQ6IDYwdmg7XG5cdFx0bWFyZ2luLWJvdHRvbTogMTBweDtcblx0XHR3aWR0aDogMTAwJTtcblx0XHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0XHRhbGlnbi1pdGVtczogY2VudGVyO1xuXHRcdGRpc3BsYXk6IGZsZXg7XG5cdFx0LmdhbGxlcnlQcmV2aWV3IHtcblx0XHRcdG1hcmdpbjogMCBhdXRvO1xuXHRcdFx0cG9zaXRpb246IHJlbGF0aXZlO1xuXHRcdFx0ZGlzcGxheTogZmxleDtcblx0XHRcdGp1c3RpZnktY29udGVudDogY2VudGVyO1xuXHRcdFx0YWxpZ24taXRlbXM6IGNlbnRlcjtcblx0XHRcdGJhY2tncm91bmQtaW1hZ2U6IHVybCgnc3JjL2Fzc2V0cy9pbWFnZXMvdGh1bWJzL3RodW1iX2ZyYWN0dXJlcy5qcGcnKTtcblx0XHRcdGJhY2tncm91bmQtc2l6ZTogMzUwcHggMzUwcHg7XG5cdFx0XHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG5cdFx0XHRiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuXHRcdFx0d2lkdGg6IDM1MHB4O1xuXHRcdFx0aGVpZ2h0OiAzNTBweDtcblx0XHRcdHRyYW5zZm9ybS1zdHlsZTogcHJlc2VydmUtM2Q7XG5cdFx0XHQuYnJlYWtvdXQge1xuXHRcdFx0XHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdFx0XHRcdGEuZGVzYyB7XG5cdFx0XHRcdFx0dGV4dC1kZWNvcmF0aW9uOiBub25lO1xuXHRcdFx0XHRcdHRyYW5zZm9ybTogdHJhbnNsYXRlWigyMHB4KTtcblx0XHRcdFx0XHRkaXNwbGF5OiBmbGV4O1xuXHRcdFx0XHRcdGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdFx0XHRcdFx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdFx0XHRcdFx0YWxpZ24taXRlbXM6IGNlbnRlcjtcblx0XHRcdFx0XHRoZWlnaHQ6IDIwMHB4O1xuXHRcdFx0XHRcdHdpZHRoOiAxMDAlO1xuXHRcdFx0XHRcdG1hcmdpbi1sZWZ0OiBjYWxjKC01MCUgKyA1MCUpO1xuXHRcdFx0XHRcdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0XHRcdFx0XHQvLyB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdFx0XHRcdFx0Y29sb3I6ICMyMjI7XG5cdFx0XHRcdFx0aDF7XG5cdFx0XHRcdFx0XHRtYXJnaW46IDA7XG5cdFx0XHRcdFx0XHRmb250LWZhbWlseTogJ3NhbG9tZXJlZ3VsYXInLCBHZW9yZ2lhLCBTZXJpZjtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0cHtcblx0XHRcdFx0XHRcdGZvbnQtc2l6ZTogMS41cmVtO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fVxuXHRcdFx0fVxuXHRcdFxuXHRcdC8vIC5nYWxsZXJ5UHJldmlld3tcblx0XHQvLyBcdGJhY2tncm91bmQtaW1hZ2U6IHVybCgnc3JjL2Fzc2V0cy9pbWFnZXMvdGh1bWJzL3RodW1iX2ZyYWN0dXJlcy5qcGcnKTtcblx0XHQvLyBcdGJhY2tncm91bmQtc2l6ZTogMzUwcHggMzUwcHg7XG5cdFx0Ly8gXHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG5cdFx0Ly8gXHRiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuXHRcdC8vIFx0d2lkdGg6IDM1MHB4O1xuXHRcdC8vIFx0aGVpZ2h0OiAzNTBweDtcblx0XHQvLyB9XG5cdFx0Ly8gLmRlc2N7XG5cdFx0Ly8gXHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdFx0Ly8gXHR0ZXh0LWRlY29yYXRpb246IG5vbmU7XG5cdFx0Ly8gXHRjb2xvcjogIzIyMjtcblx0XHQvLyBcdGRpc3BsYXk6IGZsZXg7XG5cdFx0Ly8gXHRmbGV4OjE7XG5cdFx0Ly8gXHQvLyBmbGV4OiAxIDEgYXV0bztcblx0XHQvLyBcdGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdFx0Ly8gXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0XHQvLyBcdC8vIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cdFx0Ly8gXHRoZWlnaHQ6IDEwMCU7XG5cdFx0Ly8gXHRoMXtcblx0XHQvLyBcdFx0bWFyZ2luOiAwO1xuXHRcdC8vIFx0XHRmb250LWZhbWlseTogJ3NhbG9tZXJlZ3VsYXInLCBHZW9yZ2lhLCBTZXJpZjtcblx0XHQvLyBcdH1cblx0XHQvLyBcdHB7XG5cdFx0Ly8gXHRcdGZvbnQtc2l6ZTogMS41cmVtO1xuXHRcdC8vIFx0fVxuXHRcdH1cbiAgXHR9XG59XG5cblxuLmdhbGxlcnl7XG5cdGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG5cdMKgwqAuZ2FsbGVyeV9pbWd7XG5cdFx0d2lkdGg6IDEwMCU7XG5cdFx0aGVpZ2h0OiAxMDAlO1xuXHR9XG59XG4uZ2FsbGVyeS1saW5rOmhvdmVyIHtcbiAgXHRjdXJzb3I6IHBvaW50ZXI7XG59XG5cblxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOjk2MHB4KXtcblx0LmdhbGxlcmllcyB7XG5cdFx0LnJvd3tcblx0XHRcdGhlaWdodDogOTB2aDtcblx0XHRcdC5kZXNje1xuXHRcdFx0XHRmbGV4OiBub25lO1xuXHRcdFx0XHQvLyBiYWNrZ3JvdW5kLWNvbG9yOiBwaW5rO1xuXHRcdFx0XHRoZWlnaHQ6IGF1dG87XG5cdFx0XHRcdC8vIGZsZXg6MTtcblx0XHRcdH1cblx0XHR9XG5cdH1cbn1cblxuXG5cbiJdfQ== */"
 
 /***/ }),
 
@@ -489,24 +530,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_gallery_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/gallery.service */ "./src/app/services/gallery.service.ts");
+/* harmony import */ var tilt_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tilt.js */ "./node_modules/tilt.js/src/tilt.jquery.js");
+/* harmony import */ var tilt_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(tilt_js__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 // import { GALLERIES} from 'src/app/shared/galleries';
+// import Tilt from 'tilt.js';
+// const tilt = require('tilt');
+
+// import * as $ from 'jquery';
+var tilt = $('.js-tilt').tilt();
 var HomeComponent = /** @class */ (function () {
-    // constructor(private galleryService: GalleryService) {}
     function HomeComponent(galleryService) {
         this.galleryService = galleryService;
+        this.title = 'Look jQuery Animation working in action!';
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.galleryService.getGalleries()
-            .subscribe(function (galleries) { return _this.galleries = galleries; });
+        this.galleryService.getGalleries().subscribe(function (galleries) { return _this.galleries = galleries; });
+        $(document).ready(function () {
+            $('.js-tilt').tilt({
+                scale: 1,
+                perspective: 500,
+                easing: "cubic-bezier(.03,.98,.52,.99)",
+                glare: true,
+                maxGlare: .25,
+            });
+        });
         $(window).scroll(function () {
             // selectors
             var $window = $(window), $body = $('body'), $panel = $('.row');
             // Change 33% earlier than scroll position so colour is there when you arrive.
-            var scroll = $window.scrollTop() + ($window.height() / 3);
+            var scroll = $window.scrollTop() + ($window.height() / 5);
             $panel.each(function () {
                 var $this = $(this);
                 // if position is within range of this panel.
@@ -524,10 +580,18 @@ var HomeComponent = /** @class */ (function () {
                     $body.removeClass(function (index, css) {
                         return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
                     });
+                    $body.addClass('color-intro');
                 }
             });
         }).scroll();
+        // const body = document.getElementsByTagName('body')[0];
+        // body.classList.add('auth');
     };
+    HomeComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName('body')[0];
+        // body.classList.remove('color-fractures', 'color-photography', 'me');
+        body.removeAttribute('class');
+    }; // onSelect(gallery: Gallery){
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
@@ -583,6 +647,9 @@ var GalleryService = /** @class */ (function () {
     GalleryService.prototype.getGalleryByTitle = function (title) {
         return rxjs_Observable__WEBPACK_IMPORTED_MODULE_3__["Observable"].of(src_app_shared_galleries__WEBPACK_IMPORTED_MODULE_2__["GALLERIES"].filter(function (gallery) { return (gallery.title === title); })[0]);
     };
+    GalleryService.prototype.getGalleryAlbums = function (title, gallery) {
+        return Array.from(new Set(gallery.slides.filter(function (s) { return s.album !== 'default'; }).map(function (slide) { return slide.album; })));
+    };
     GalleryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
@@ -610,7 +677,6 @@ var GALLERIES = [
         title: "fractures",
         description: "123SC",
         thumbnail: "sfsfd",
-        dataColor: "fractures",
         slides: [
             {
                 src: "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
@@ -620,14 +686,14 @@ var GALLERIES = [
                 album: 'default'
             },
             {
-                src: "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+                src: "https://media.gettyimages.com/photos/rainbow-colored-fan-picture-id172980469",
                 w: 1200,
                 h: 900,
                 title: "Image Caption 1",
                 album: 'default'
             },
             {
-                src: "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+                src: "https://media.gettyimages.com/photos/young-couple-choosing-the-right-color-for-their-wall-while-renovating-picture-id922010262",
                 w: 1200,
                 h: 900,
                 title: "Image Caption 2",
@@ -640,22 +706,238 @@ var GALLERIES = [
         title: "photography",
         description: "I will be photography",
         thumbnail: " hello",
-        dataColor: "photography",
         slides: [
             {
-                src: "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
-                w: 1200,
-                h: 900,
-                title: "Sea side, south shore",
-                album: 'default'
+                src: "assets/images/texture_on_polaroid/img146.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
             },
             {
-                src: "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098",
+                src: "assets/images/texture_on_polaroid/img112.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img113.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img114.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img116.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img117_2.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img042.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img157.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img160.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img192.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img184.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img179.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img172.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img166.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img158.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img157.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img153.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img152.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img132.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img129.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img119.jpg",
+                w: 900,
+                h: 1067,
+                title: "Texture on Polariod",
+                album: 'texture-on-polaroid'
+            },
+            {
+                src: "assets/images/texture_on_polaroid/img116.jpg",
+                w: 900,
+                h: 1067,
+                title: "Aura",
+                album: 'aura'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/the-house-used-in-the-american-sitcom-the-brady-bunch-has-been-listed-picture-id1001904568",
                 w: 1200,
                 h: 900,
                 title: "Image Caption",
-                album: 'default'
-            }
+                album: 'at-home'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/modern-architecture-in-chile-from-raimundo-anguita-in-hacienda-picture-id976189812",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'at-home'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/mother-and-father-watching-young-daughter-play-picture-id659856897",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'at-home'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/newlyconstructed-home-is-offered-for-sale-on-april-24-2018-in-chicago-picture-id950869234",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'at-home'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/dilapidated-haunted-house-in-maine-picture-id149267319",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'at-home'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/autumn-in-bostons-brighton-neighborhood-picture-id1032330550",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'at-home'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/passenger-train-is-seen-on-the-great-belt-bridge-after-a-railway-on-picture-id1076538784",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'by-train'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/emegency-crews-work-at-the-scene-of-a-amtrak-train-derailment-on-18-picture-id894968984",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'by-train'
+            },
+            {
+                src: "https://media.gettyimages.com/photos/scenic-view-of-train-on-viaduct-in-switzerland-picture-id898687414",
+                w: 1200,
+                h: 900,
+                title: "Image Caption",
+                album: 'by-train'
+            } /*,
+            {
+                src : "https://media.gettyimages.com/photos/camargue-woman-on-horseback-in-camargue-france-bouches-du-rhone-of-picture-id120665188",
+                w : 1200,
+                h : 900,
+                title : "Image Caption",
+                album : 'default'
+            },
+            {
+                src : "https://media.gettyimages.com/photos/teamwork-picture-id183815157",
+                w : 1200,
+                h : 900,
+                title : "Image Caption",
+                album : 'default'
+            }*/
         ]
     }
 ];
@@ -670,7 +952,7 @@ var GALLERIES = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar\">\r\n\r\n  <!-- logo -->\r\n  <div class=\"navbar-brand\">\r\n    <a class=\"navbar-item\">\r\n      <img src=\"assets/images/logo-nav@2x.png\">\r\n    </a>\r\n  </div>\r\n\r\n  <!-- menu -->\r\n  <div class=\"navbar-menu\">\r\n    <div class=\"navbar-start\">\r\n      <a class=\"navbar-item\" routerLink=\"\">Home</a>\r\n      <a class=\"navbar-item\" routerLink=\"gallery\">Gallery</a>\r\n      <a class=\"navbar-item\" routerLink=\"contact\">Contact</a>\r\n      <a class=\"navbar-item\" routerLink=\"about\">About</a>\r\n    </div>\r\n  </div>\r\n\r\n</nav>"
+module.exports = "<nav>\n\n  <img src=\"assets/images/logo-nav@2x.png\" width=\"72\" height=\"72\">\n\n  <!-- menu -->\n  <ul class=\"menu\" >\n      <li>\n        <a class=\"navbar-item\" routerLink=\"\">Home</a>\n      </li>\n      <!--<li><a class=\"navbar-item\" routerLink=\"gallery\">Gallery</a></li>-->\n      <li>\n        <a class=\"navbar-item\" routerLink=\"contact\">Contact</a>\n      </li>\n      <li>\n        <a class=\"navbar-item\" routerLink=\"about\">About</a>\n      </li>\n  </ul>\n\n</nav>\n\n"
 
 /***/ }),
 
@@ -681,7 +963,7 @@ module.exports = "<nav class=\"navbar\">\r\n\r\n  <!-- logo -->\r\n  <div class=
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VpL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = "nav {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: center;\n  position: fixed;\n  width: 100%;\n  height: 80px;\n  max-width: 1230px; }\n  nav .menu {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: flex-end;\n    list-style-type: none;\n    padding: 0;\n    margin: 0; }\n  nav .menu a {\n      display: block;\n      text-decoration: none;\n      padding: .6em 1em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9BcHBsaWNhdGlvbnMvTUFNUC9odGRvY3MvdGhlLW1vbmFycS1zaXRlL3NyYy9hcHAvdWkvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixlQUFlO0VBQ2YsOEJBQThCO0VBQzlCLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsV0FBVztFQUNYLFlBQVk7RUFDWixpQkFBaUIsRUFBQTtFQVJuQjtJQVVJLGFBQWE7SUFDYixlQUFlO0lBQ2YseUJBQXlCO0lBQ3pCLHFCQUFxQjtJQUNyQixVQUFVO0lBQ1YsU0FBUyxFQUFBO0VBZmI7TUFpQk0sY0FBYztNQUNkLHFCQUFxQjtNQUNyQixpQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3VpL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJuYXYge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiA4MHB4O1xuICBtYXgtd2lkdGg6IDEyMzBweDsgIFxuICAubWVudXtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xuICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbiAgICBwYWRkaW5nOiAwO1xuICAgIG1hcmdpbjogMDtcbiAgICBhe1xuICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgICBwYWRkaW5nOiAuNmVtIDFlbTtcbiAgICB9XG4gIH1cbn1cblxuIl19 */"
 
 /***/ }),
 
@@ -780,7 +1062,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\new-da\the-monarq-site\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/the-monarq-site/src/main.ts */"./src/main.ts");
 
 
 /***/ })

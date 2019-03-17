@@ -13,8 +13,6 @@ import { Gallery } from 'src/app/shared/gallery-info';
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: [
-  //     ('../../../../node_modules/photoswipe/dist/photoswipe.css').toString(),
-  //     ('../../../../node_modules/photoswipe/dist/default-skin/default-skin.css').toString(),
       './gallery.component.scss'
   ]
 })
