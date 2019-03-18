@@ -13,11 +13,13 @@ import { Gallery } from 'src/app/shared/gallery-info';
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: [
-      ('../../../../node_modules/photoswipe/dist/photoswipe.css').toString(),
-      ('../../../../node_modules/photoswipe/dist/default-skin/default-skin.css').toString(),
+      ('src/assets/css/photoswipe/default-skin/default-skin.scss').toString(),
+      ('src/assets/css/photoswipe/main.scss').toString(),
       './gallery.component.scss'
   ]
 })
+// ('../../../../node_modules/photoswipe/dist/photoswipe.css').toString(),
+// ('../../../../node_modules/photoswipe/dist/default-skin/default-skin.css').toString(),
 export class GalleryComponent implements OnInit {
 
   gallery: Gallery;
@@ -57,26 +59,53 @@ export class GalleryComponent implements OnInit {
       });
 
   }
+  
   galleryCarousel(i){
-      this.gallerySlides = this.gallery.slides.filter((slide) => slide.album == i);
-      this.ps_element = document.querySelectorAll('.pswp')[0];
-      this.ps_options = {
-          index: i !== null ? i : 0,
-          showAnimationDuration: 400,
-          showHideOpacity: true,
+    this.gallerySlides = this.gallery.slides.filter((slide) => slide.album == i);
+    this.ps_element = document.querySelectorAll('.pswp')[0];
+    this.ps_options = {
+        index: i !== null ? i : 0,
+        // showAnimationDuration: 400,
+        showHideOpacity: true,
+        hideAnimationDuration:0, 
+        showAnimationDuration:0,
+        history: true,
+        zoomEl: false,
+        maxSpreadZoom: 1,
+        getDoubleTapZoom: function(isMouseClick, item) {
+            return item.initialZoomLevel;
+        },
+        pinchToClose: false,
+        closeOnScroll: false,
+    };
 
-      };
+
+    
+      
+
+      
+
+
       this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.gallerySlides, this.ps_options);
       this.ps_gallery.init();
   }
   carousel(slide){
-      this.ps_element = document.querySelectorAll('.pswp')[0];
-      this.ps_options = {
-          index: 0,
-          showAnimationDuration: 400,
-          showHideOpacity: true,
-
-      };
+    this.ps_element = document.querySelectorAll('.pswp')[0];
+    this.ps_options = {
+        index: 0,
+        // showAnimationDuration: 400,
+        showHideOpacity: true,
+        hideAnimationDuration:0, 
+        showAnimationDuration:0,
+        history: true,
+        zoomEl: false,
+        maxSpreadZoom: 1,
+        getDoubleTapZoom: function(isMouseClick, item) {
+            return item.initialZoomLevel;
+        },
+        pinchToClose: false,
+        closeOnScroll: false,
+    };
       console.log('--  SLIDE --');
       console.log(slide);
       console.log(this.activeSlides);

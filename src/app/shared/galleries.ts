@@ -253,21 +253,37 @@ export const GALLERIES: Gallery[] = [
 				h : 900,
 				title : "Image Caption",
 				album : 'by-train'
-			}/*,
+            }
+            
+		]
+    },
+    {
+		id : 3,
+		title : "testing",
+		description : "123SC",
+		thumbnail: "sfsfd",
+		slides : [
 			{
-				src : "https://media.gettyimages.com/photos/camargue-woman-on-horseback-in-camargue-france-bouches-du-rhone-of-picture-id120665188",
-				w : 1200,
-				h : 900,
-				title : "Image Caption",
+				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
+				w : 1200, 
+				h : 900, 
+				title : "Sea side, south shore",
 				album : 'default'
 			},
 			{
-				src : "https://media.gettyimages.com/photos/teamwork-picture-id183815157",
-				w : 1200,
-				h : 900,
-				title : "Image Caption",
+				src : "https://media.gettyimages.com/photos/rainbow-colored-fan-picture-id172980469",
+				w : 1200, 
+				h : 900, 
+				title : "Image Caption 1",
 				album : 'default'
-			}*/
+			},
+			{
+				src : "https://media.gettyimages.com/photos/young-couple-choosing-the-right-color-for-their-wall-while-renovating-picture-id922010262",
+				w : 1200, 
+				h : 900, 
+				title : "Image Caption 2",
+				album : 'default'
+			}
 		]
-	}
+	},
 ];

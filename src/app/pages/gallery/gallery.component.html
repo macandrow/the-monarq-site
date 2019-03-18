@@ -18,9 +18,9 @@
     <span *ngIf="slide.album == 'default' || album == slide.album">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
         <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-        <a [href]="" (click)="carousel(slide)"  attr.data-caption="{{slide.title}}>" itemprop="contentUrl">
+        <a [href]="" (click)="carousel(slide)"  attr.data-caption="{{slide.title}}>" itemprop="contentUrl" attr.data-width="{{slide.w}}" attr.data-height="{{slide.h}}">
           <!-- Thumbnail -->
-          <img [src]="slide.src" itemprop="thumbnail" alt="Image description">
+          <img [src]="slide.src" itemprop="thumbnail" alt="Image description" [width]="slide.w" [height]="slide.h">
         </a>
       </figure>
     </span>
@@ -30,9 +30,9 @@
 
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
           <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-          <a [href]="" (click)="galleryCarousel(alb2)"  attr.data-caption="{{alb}}>" itemprop="contentUrl">
+          <a [href]="" (click)="galleryCarousel(alb2)"  attr.data-caption="{{alb}}>" itemprop="contentUrl" attr.data-width="{{slide.w}}" attr.data-height="{{slide.h}}">
             <!-- Thumbnail -->
-            <img [src]="getFirstImage(alb2)" itemprop="thumbnail" alt="Image description">
+            <img [src]="getFirstImage(alb2)" itemprop="thumbnail" alt="Image description" [width]="slide.w" [height]="slide.h">
           </a>
         </figure>
       </span>
