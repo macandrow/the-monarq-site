@@ -1,9 +1,7 @@
 .navWrapper {
   position: relative;
-  max-width: 1230px;
   height: 80px;
   width: 100%;
-  margin-bottom: 80px;
 }
 
 .navWrapper nav {

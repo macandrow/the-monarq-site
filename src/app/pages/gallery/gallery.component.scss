@@ -17,12 +17,8 @@ h1 {margin: 2em;}
   transition: opacity 333ms cubic-bezier(.4,0,.22,1);
 }
 
-figure {
-	display: inline-block;
-	width: 33.333%;
-	float: left;
-  }
-  img {width: 100%;}
+
+//   img {width: 100%;}
 
 .spacer {height: 5em;}
 .gallery{
@@ -46,9 +42,9 @@ figure {
 			&:hover{
 				cursor: pointer;
                 // box-shadow: 6px 6px 18px 0px rgba(0,0,0,0.3);
-                -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-                -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-                box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+                -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+                box-shadow: 0 3px 8px rgba(0,0,0,0.3);
 			}
 			img{
 				object-fit: cover;

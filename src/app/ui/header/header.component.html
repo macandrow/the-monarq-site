@@ -1,21 +1,22 @@
 <div class="navWrapper">
-	<nav>
+	<nav class="inner">
 
-	<img src="assets/images/logo-nav@2x.png" width="72" height="72">
+        <img src="assets/images/logo-nav@2x.png" width="72" height="72">
 
-	<!-- menu -->
-	<ul class="menu" >
-		<li>
-			<a class="navbar-item" routerLink="">Home</a>
-		</li>
-		<!--<li><a class="navbar-item" routerLink="gallery">Gallery</a></li>-->
-		<li>
-			<a class="navbar-item" routerLink="contact">Contact</a>
-		</li>
-		<li>
-			<a class="navbar-item" routerLink="about">About</a>
-		</li>
-	</ul>
+        <!-- menu -->
+        <ul class="menu" >
+            <li>
+                <a class="navbar-item" routerLink="gallery" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Gallery</a>
+            </li>
+            <!--<li><a class="navbar-item" routerLink="gallery">Gallery</a></li>-->
+            <li>
+                <a class="navbar-item" routerLink="contact" routerLinkActive="active">Contact</a>
+            </li>
+            <li>
+                <a class="navbar-item" routerLink="about" routerLinkActive="active">About the Artist</a>
+            </li>
+        </ul>
 
 	</nav>
   

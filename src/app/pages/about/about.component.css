@@ -1,3 +1,47 @@
+header {
+  position: relative;
+}
+
+header .inner {
+  height: 100%;
+}
+
+header .inner .bioImage, header .inner h1 {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .inner .bioImage {
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  max-width: 300px;
+  width: 100%;
+}
+
+header .inner h1 {
+  z-index: 2;
+  color: #4a5365;
+}
+
+header {
+  height: 60vh;
+}
+
+.content {
+  background-color: #dde1e6;
+  color: #4a5365;
+}
+
+.content h1 {
+  color: #ffffff;
+}
+
 .socialLinks {
   -ms-grid-row: 2;
   -ms-grid-column: 2;

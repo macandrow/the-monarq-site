@@ -14,6 +14,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'gallery',
+    pathMatch: 'full',
+    component: HomeComponent
+  },
+  {
     path: 'about',
     component: AboutComponent
   },

@@ -69,13 +69,13 @@ export class GalleryComponent implements OnInit {
         showHideOpacity: true,
         hideAnimationDuration:0, 
         showAnimationDuration:0,
-        history: true,
-        zoomEl: false,
-        maxSpreadZoom: 1,
-        getDoubleTapZoom: function(isMouseClick, item) {
-            return item.initialZoomLevel;
-        },
-        pinchToClose: false,
+        // history: true,
+        // zoomEl: false,
+        // maxSpreadZoom: 1,
+        // getDoubleTapZoom: function(isMouseClick, item) {
+        //     return item.initialZoomLevel;
+        // },
+        // pinchToClose: false,
         closeOnScroll: false,
     };
 
@@ -97,13 +97,13 @@ export class GalleryComponent implements OnInit {
         showHideOpacity: true,
         hideAnimationDuration:0, 
         showAnimationDuration:0,
-        history: true,
-        zoomEl: false,
-        maxSpreadZoom: 1,
-        getDoubleTapZoom: function(isMouseClick, item) {
-            return item.initialZoomLevel;
-        },
-        pinchToClose: false,
+        // history: true,
+        // zoomEl: false,
+        // maxSpreadZoom: 1,
+        // getDoubleTapZoom: function(isMouseClick, item) {
+        //     return item.initialZoomLevel;
+        // },
+        // pinchToClose: false,
         closeOnScroll: false,
     };
       console.log('--  SLIDE --');
