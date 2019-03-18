@@ -108,10 +108,10 @@ header h1 {
   color: #222;
 }
 
-.galleries .row .galleryPreview .breakout a.desc h1 {
+/* .galleries .row .galleryPreview .breakout a.desc h1 {
   margin: 0;
   font-family: 'salomeregular', Georgia, Serif;
-}
+} */
 
 .galleries .row .galleryPreview .breakout a.desc p {
   font-size: 1.5rem;
