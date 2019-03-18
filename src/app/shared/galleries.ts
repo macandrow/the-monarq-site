@@ -27,6 +27,20 @@ export const GALLERIES: Gallery[] = [
 				h : 900, 
 				title : "Image Caption 2",
 				album : 'default'
+            },
+			{
+				src : "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
+				w : 1200, 
+				h : 900, 
+				title : "Image Caption 2",
+				album : 'second'
+            },
+            {
+				src : "https://images.unsplash.com/photo-1543508282-5c1f427f023f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80",
+				w : 1200, 
+				h : 900, 
+				title : "Image Caption 2",
+				album : 'second'
 			}
 		]
 	},
