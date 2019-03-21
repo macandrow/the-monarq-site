@@ -1,5 +1,5 @@
-@import url(/Applications/MAMP/htdocs/the-monarq-site/src/assets/css/main.css);
-@import url(/Applications/MAMP/htdocs/the-monarq-site/src/assets/css/normalize.css);
+@import url(/Users/sabella/Documents/GitHub/the-monarq-site/src/assets/css/main.css);
+@import url(/Users/sabella/Documents/GitHub/the-monarq-site/src/assets/css/normalize.css);
 @font-face {
   font-family: 'salomeregular';
   src: url("assets/css/fonts/salome-webfont.eot");
@@ -60,7 +60,7 @@ h1 {
 
 @media only screen and (min-width: 960px) {
   .inner {
-    max-width: 1024px;
+    max-width: 1200px;
   }
   h1 {
     font-size: 5rem;
