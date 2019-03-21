@@ -2,7 +2,8 @@ header{
 	position: relative;
 	height: 60vh;
 	.inner{
-		background: url('https://picsum.photos/200/200/?random') center right no-repeat 75%;
+		background: url("https://picsum.photos/200/200/?random") center right no-repeat;
+		height: 100%;
 		h1{
 			color:#4a5365;
 		}
@@ -24,29 +25,46 @@ header{
 	}
 	.cv{
 		display: grid;
+		grid-gap: 10px 15px;
+		// grid-template-columns: 1fr 1fr;
+
+		.set{
+			// grid-row: 1;
+			// grid-template-columns: repeat(3, 1fr 2fr);
+			// grid-template-columns: minmax(min-content, max-content) 1fr 2fr;
+			grid-template-columns: 1fr 2fr;
+			grid-gap: 10px 15px;
+		}
 		// grid-template-columns: repeat(auto-fill);
 		// grid-template-columns: 30%  70%;
-		grid-template-columns: repeat(auto-fill, minmax(30%) minmax(70%));
-		grid-template-areas: 
-			"title title" 
-			"date event"
-			"collections collections"
-			"collectionList collectionList";
+		// grid-template-columns: repeat(minmax(30%) minmax(70%));
+		// grid-template-rows:    150px 1fr 100px;
+		// grid-template-columns: 1fr 200px;
+
+		// grid-template-areas: 
+		// 	"title title" 
+		// 	"date event"
+		// 	"collections collections"
+		// 	"collectionList collectionList";
 		.title {
-			grid-area: title;
+			// grid-column-start: 1;
+			// grid-column-end:   4;
+			// grid-template-columns: auto;
+			background:grey;
 		}
 		.date {
-			grid-area: date;
+			background: pink;
 		}
-		.event {
-			grid-area: event;
-		}
-		.collections{
-			grid-area: collections;
-		}
-		.collectionList{
-			grid-area: collectionList;
-		}
+		// .event {
+		// 	grid-column: 2;
+		// 	grid-row: 1;
+		// }
+		// .collections{
+		// 	grid-area: collections;
+		// }
+		// .collectionList{
+		// 	grid-area: collectionList;
+		// }
 	}
 }
 .socialLinks {

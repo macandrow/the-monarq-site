@@ -4,7 +4,8 @@ header {
 }
 
 header .inner {
-  background: url("https://picsum.photos/200/200/?random") center right no-repeat 75%;
+  background: url("https://picsum.photos/200/200/?random") center right no-repeat;
+  height: 100%;
 }
 
 header .inner h1 {
@@ -23,42 +24,21 @@ header .inner h1 {
 .content .cv {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(30%) minmax(70%))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(30%) minmax(70%));
-      grid-template-areas: "title title"  "date event" "collections collections" "collectionList collectionList";
+  grid-gap: 10px 15px;
+}
+
+.content .cv .set {
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: 10px 15px;
 }
 
 .content .cv .title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: title;
+  background: grey;
 }
 
 .content .cv .date {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: date;
-}
-
-.content .cv .event {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: event;
-}
-
-.content .cv .collections {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: collections;
-}
-
-.content .cv .collectionList {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: collectionList;
+  background: pink;
 }
 
 .socialLinks {
