@@ -4,19 +4,14 @@ header{
 	.inner{
 		background: url("https://picsum.photos/200/200/?random") center right no-repeat;
 		height: 100%;
+		display: flex;
+		align-items: center;
+		// justify-content: center;
 		h1{
 			color:#4a5365;
 		}
 	}
 }
-
-
-
-// display: grid;
-// border:1px solid #000;
-// grid-gap: 10px;
-// 	grid-template-columns: repeat(auto-fill, minmax(30%,1fr) minmax(70%,2fr));
-
 .content{
     background-color:#dde1e6;
     color: #4a5365;
@@ -24,94 +19,28 @@ header{
         color: #ffffff;
 	}
 	.cv{
-		display: grid;
-		grid-gap: 10px 15px;
-		// grid-template-columns: 1fr 1fr;
-
-		.set{
-			// grid-row: 1;
-			// grid-template-columns: repeat(3, 1fr 2fr);
-			// grid-template-columns: minmax(min-content, max-content) 1fr 2fr;
-			grid-template-columns: 1fr 2fr;
-			grid-gap: 10px 15px;
-		}
-		// grid-template-columns: repeat(auto-fill);
-		// grid-template-columns: 30%  70%;
-		// grid-template-columns: repeat(minmax(30%) minmax(70%));
-		// grid-template-rows:    150px 1fr 100px;
-		// grid-template-columns: 1fr 200px;
-
-		// grid-template-areas: 
-		// 	"title title" 
-		// 	"date event"
-		// 	"collections collections"
-		// 	"collectionList collectionList";
-		.title {
-			// grid-column-start: 1;
-			// grid-column-end:   4;
-			// grid-template-columns: auto;
-			background:grey;
+		-ms-box-orient: horizontal;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+		h1, h3, .collectionList {
+			flex: 1 100%; 
 		}
 		.date {
-			background: pink;
+			flex: 1 20%;
 		}
-		// .event {
-		// 	grid-column: 2;
-		// 	grid-row: 1;
-		// }
-		// .collections{
-		// 	grid-area: collections;
-		// }
-		// .collectionList{
-		// 	grid-area: collectionList;
-		// }
+		.event{
+			flex: 2 80%;
+		}
 	}
 }
-.socialLinks {
-  grid-area: socialLinks;
-//   background-color: #fed330;
-  padding: 20px;
-  grid-template-rows: 100px 1fr;
-}
-.bio {
-  grid-area: bio;
-//   background-color: #20bf6b;
-  padding: 20px;
-}
-aside {
-  grid-area: sidebar;
-//   background-color: #45aaf2;
-  
-}
-footer {
-  padding: 20px;
-  grid-area: footer;
-//   background-color: #fd9644;
-}
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas:
-    "bio sidebar"   
-    "bio socialLinks" 
-    "footer footer";
-}
-
-// .inner{
-//   height: 100%;
-//   .bioImage, h1{
-//       position: absolute;
-//       top: calc(50% - 40px);
-//       left: 50%;
-//       margin-right: -50%;
-//       transform: translate(-50%, -50%)
-//   }
-//   .bioImage{
-//       border-radius: 50%;
-//       margin: 0 auto;
-//       display: block;
-//       z-index: 1;
-//       max-width: 300px;
-//       width: 100%;
-//   }
