@@ -12,13 +12,24 @@ import 'rxjs/add/operator/delay';
 })
 export class ProjectService {
 
-  constructor() { }
+	constructor() { }
 
-  getProjects(): Observable<Project[]> {
-    return Observable.of(PROJECTS);
+	getProjects(): Observable<Project[]> {
+		return Observable.of(PROJECTS);
 	}
-	// getProjectAlbums(title: string, project){
-  //   return Array.from(new Set(project.albums.filter((a)=>a.album).map(slide=>slide.album)));
+	getProjectTitles(): Observable<string[]> {
+		return Observable.of(PROJECTS.map(project => project.title ));
+	}
+	getProjectByTitle(title: string): Observable<Project> {
+    return Observable.of(PROJECTS.filter((project) => (project.title === title))[0]);
+	}
+  // getAlbums(): Observable<string[]> {
+  //   return Observable.of(PROJECTS.map(name));
   // }
+  // getProjectAlbums(title: string, project){
+  //   return Array.from(new Set(project.albums));
+  // }
+
+
 
 }
