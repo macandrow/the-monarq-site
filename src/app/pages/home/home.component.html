@@ -17,6 +17,13 @@
 		</div>
 	</div>
 </div>
+<div *ngIf="projects">
+    <div *ngFor="let project of projects;" attr.data-color="{{project.title}}" >
+				<a [routerLink]="['/projects', project.title]"> 
+					<h1>{{project.title}}</h1> 
+				</a>
+    </div>
+</div>
 <ul>
 	<li>
 		todo list:

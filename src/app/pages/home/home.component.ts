@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Gallery } from 'src/app/shared/gallery-info';
 import { GalleryService } from 'src/app/services/gallery.service';
+import { Project } from 'src/app/shared/project-info';
+import { ProjectService } from 'src/app/services/project.service';
+
 // import { GALLERIES} from 'src/app/shared/galleries';
 // import Tilt from 'tilt.js';
 // const tilt = require('tilt');
@@ -25,11 +28,13 @@ export class HomeComponent implements OnInit {
   
 
   galleries: Gallery[];
+  projects: Project[];
   
-  constructor(private galleryService: GalleryService) {}
+  constructor(private galleryService: GalleryService, private projectService: ProjectService) {}
   
   ngOnInit() {
     this.galleryService.getGalleries().subscribe(galleries => this.galleries = galleries);
+    this.projectService.getProjects().subscribe(projects => this.projects = projects);
     
 
     $(document).ready(function(){

@@ -9,9 +9,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import {ProjectService} from './services/project.service';
 import {GalleryService} from './services/gallery.service';
 import {GalleryComponent} from './pages/gallery/gallery.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {GalleryComponent} from './pages/gallery/gallery.component';
     HomeComponent,
     AboutComponent,
     GalleryComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import {GalleryComponent} from './pages/gallery/gallery.component';
   //  , HttpClientModule
   ],
   providers: [
-    GalleryService
+    GalleryService,
+    ProjectService
   ],
   bootstrap: [AppComponent]
 })

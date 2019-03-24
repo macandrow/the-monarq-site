@@ -3,8 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';
 import {GalleryComponent} from './pages/gallery/gallery.component';
+import {ProjectsComponent} from './pages/projects/projects.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   { path: 'home',  component: HomeComponent },
@@ -38,7 +40,10 @@ const routes: Routes = [
     path: 'gallery/:title',
     component: GalleryComponent
   },
-  
+  {
+    path: 'projects/:title',
+    component: ProjectsComponent
+  },
   // {
   //   path: 'gallery/:id',
   //   component: GalleryComponent
