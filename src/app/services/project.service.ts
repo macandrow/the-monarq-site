@@ -25,7 +25,10 @@ export class ProjectService {
 	}
   // getAlbums(): Observable<string[]> {
   //   return Observable.of(PROJECTS.map(name));
-  // }
+	// }
+	getProjectAlbums(title: string, project){
+    return Array.from(new Set(project.albums.map(album=>album.name)));
+  }
   // getProjectAlbums(title: string, project){
   //   return Array.from(new Set(project.albums));
   // }

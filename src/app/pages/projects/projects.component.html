@@ -1,7 +1,16 @@
 <h1> {{project.title}}</h1>
 <p>
-  I will show {{ albums.name }} or {{ albums}}
+  I will show or {{ albums}}
 </p>
 
 
+<div *ngIf="albums">
+        <div *ngFor="let album of albums;" attr.data-color="{{project.title}}" >
+                    <a [routerLink]="['/projects', project.title]"> 
+                        <h1>{{album.name}}</h1> 
+                        <p>hello</p>
+                        <p>{{album}}</p>
+                    </a>
+        </div>
+    </div>
 

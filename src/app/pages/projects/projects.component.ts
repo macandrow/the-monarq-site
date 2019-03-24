@@ -19,8 +19,13 @@ export class ProjectsComponent implements OnInit {
   albums: {};
   projectAlbums: string[];
 	
-  constructor(private projectservice: ProjectService, private route: ActivatedRoute, private router: Router, private location: Location) {}
-	
+  constructor(private projectservice: ProjectService, private route: ActivatedRoute, private router: Router, private location: Location) {
+    // this.router.events.subscribe((event: Event)=>{
+    //   if (event instanceof NavigationEnd) {
+    //     this.album = route.snapshot.paramMap.get('album');
+    //   }
+    // });
+  }	
 	ngOnInit() : void {
 
     this.projectservice.getProjectTitles().subscribe(projectTitles => this.projectTitles = projectTitles);
@@ -29,7 +34,7 @@ export class ProjectsComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.projectservice.getProjectByTitle(params['title'])) // (+) converts string id to a number
       .subscribe(( project) => {
-				//this.albums = this.projectservice.getProjectAlbums;
+				this.albums = this.projectservice.getProjectAlbums(name, project);
 				//this.albums=params.get('album');
         //this.albums = this.projectservice.getProjectAlbums(project.title, project);
         this.project = project;
