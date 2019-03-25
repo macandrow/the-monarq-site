@@ -13,7 +13,6 @@
 <div *ngIf="gallery !== undefined" id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
   <!-- Use figure for a more semantic html -->
 
-
   <span class="slide_thumbs" *ngFor="let slide of activeSlides; let i = index;">
     <span *ngIf="slide.album == 'default' || album == slide.album">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >

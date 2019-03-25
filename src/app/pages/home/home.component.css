@@ -80,11 +80,7 @@ header h1 {
           transform-style: preserve-3d;
 }
 
-.galleries .row .galleryPreview .breakout {
-  position: relative;
-}
-
-.galleries .row .galleryPreview .breakout a.desc {
+.galleries .row .galleryPreview a.desc {
   text-decoration: none;
   -webkit-transform: translateZ(20px);
           transform: translateZ(20px);
@@ -108,12 +104,16 @@ header h1 {
   color: #222;
 }
 
-.galleries .row .galleryPreview .breakout a.desc h1 {
+.galleries .row .galleryPreview a.desc:hover {
+  cursor: pointer;
+}
+
+.galleries .row .galleryPreview a.desc h1 {
   margin: 0;
   font-family: 'salomeregular', Georgia, Serif;
 }
 
-.galleries .row .galleryPreview .breakout a.desc p {
+.galleries .row .galleryPreview a.desc p {
   font-size: 1.5rem;
 }
 
@@ -124,10 +124,6 @@ header h1 {
 .gallery   .gallery_img {
   width: 100%;
   height: 100%;
-}
-
-.gallery-link:hover {
-  cursor: pointer;
 }
 
 @media only screen and (min-width: 960px) {

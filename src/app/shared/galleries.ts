@@ -5,7 +5,8 @@ export const GALLERIES: Gallery[] = [
 		id : 0,
 		title : "fractures",
 		description : "123SC",
-		thumbnail: "sfsfd",
+        thumbnail: "sfsfd",
+        isProject: false,
 		slides : [
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
@@ -48,7 +49,8 @@ export const GALLERIES: Gallery[] = [
 		id : 1,
 		title : "photography",
 		description : "I will be photography",
-		thumbnail: " hello",
+        thumbnail: " hello",
+        isProject: true,
 		slides : [
 
 			{

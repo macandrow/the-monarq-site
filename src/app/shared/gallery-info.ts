@@ -5,5 +5,6 @@ export class Gallery{
   title: string;
   description: string;
   thumbnail: string;
+  isProject: boolean;
   slides: Slide[]; 
 }

@@ -6,6 +6,12 @@ header {
 header .inner {
   background: url("https://picsum.photos/200/200/?random") center right no-repeat;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .inner h1 {
@@ -22,61 +28,37 @@ header .inner h1 {
 }
 
 .content .cv {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px 15px;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.content .cv .set {
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  grid-gap: 10px 15px;
-}
-
-.content .cv .title {
-  background: grey;
+.content .cv h1, .content .cv h3, .content .cv .collectionList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
 }
 
 .content .cv .date {
-  background: pink;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 20%;
+          flex: 1 20%;
 }
 
-.socialLinks {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: socialLinks;
-  padding: 20px;
-      grid-template-rows: 100px 1fr;
-}
-
-.bio {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: bio;
-  padding: 20px;
-}
-
-aside {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: sidebar;
-}
-
-footer {
-  padding: 20px;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: footer;
-}
-
-.wrapper {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
-      grid-template-areas: "bio sidebar"    "bio socialLinks"  "footer footer";
+.content .cv .event {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 80%;
+          flex: 2 80%;
 }
 /*# sourceMappingURL=about.component.css.map */

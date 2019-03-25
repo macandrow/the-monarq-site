@@ -7,10 +7,10 @@ export const PROJECTS: Project[] = [
 		description : "123SC",
 		albums : [
 			{
-				name : "analog",
+				name : "texture-on-polaroid",
 			},
 			{
-				name : "nature",
+				name : "aura",
 			},
 		]
 	},
