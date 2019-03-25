@@ -5,8 +5,8 @@ export const GALLERIES: Gallery[] = [
 		id : 0,
 		title : "fractures",
 		description : "123SC",
-        thumbnail: "sfsfd",
-        isProject: false,
+		thumbnail: "sfsfd",
+		isProject: false,
 		slides : [
 			{
 				src : "https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098", 
@@ -28,15 +28,15 @@ export const GALLERIES: Gallery[] = [
 				h : 900, 
 				title : "Image Caption 2",
 				album : 'default'
-            },
+						},
 			{
 				src : "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80",
 				w : 1200, 
 				h : 900, 
 				title : "Image Caption 2",
 				album : 'second'
-            },
-            {
+						},
+						{
 				src : "https://images.unsplash.com/photo-1543508282-5c1f427f023f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80",
 				w : 1200, 
 				h : 900, 
@@ -49,10 +49,9 @@ export const GALLERIES: Gallery[] = [
 		id : 1,
 		title : "photography",
 		description : "I will be photography",
-        thumbnail: " hello",
-        isProject: true,
+		thumbnail: " hello",
+		isProject: true,
 		slides : [
-
 			{
 				src : "/assets/images/texture_on_polaroid/img146.jpg",
 				w : 900, 
@@ -269,23 +268,51 @@ export const GALLERIES: Gallery[] = [
 				h : 900,
 				title : "Image Caption",
 				album : 'by-train'
-            }
-            // ,
-			// {
-			// 	src : "https://media.gettyimages.com/photos/camargue-woman-on-horseback-in-camargue-france-bouches-du-rhone-of-picture-id120665188",
-			// 	w : 1200,
-			// 	h : 900,
-			// 	title : "Image Caption",
-			// 	album : 'default'
-			// },
-			// {
-			// 	src : "https://media.gettyimages.com/photos/teamwork-picture-id183815157",
-			// 	w : 1200,
-			// 	h : 900,
-			// 	title : "Image Caption",
-			// 	album : 'default'
-			// }
-            
+			}
 		]
-    },
+	},
+	{
+		id : 2,
+		title : "portraits",
+		description : "123SC",
+		thumbnail: "sfsfd",
+		isProject: false,
+		slides : [
+			{
+				src : "https://images.unsplash.com/photo-1530785602389-07594beb8b73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80", 
+				w : 464, 
+				h : 696, 
+				title : "Sea side, south shore",
+				album : 'default'
+			},
+			{
+				src : "https://images.unsplash.com/photo-1547944409-0c3ef40a5c48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+				w : 714, 
+				h : 746, 
+				title : "Image Caption 1",
+				album : 'default'
+			},
+			{
+				src : "https://images.unsplash.com/photo-1552014947-5f72866c1e93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80",
+				w : 400, 
+				h : 500, 
+				title : "Image Caption 2",
+				album : 'default'
+			},
+			{
+				src : "https://images.unsplash.com/photo-1490855894936-79de3ac55bd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
+				w : 334, 
+				h : 501, 
+				title : "Image Caption 2",
+				album : 'default'
+				},
+			{
+				src : "https://images.unsplash.com/photo-1543508282-5c1f427f023f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80",
+				w : 1200, 
+				h : 900, 
+				title : "Image Caption 2",
+				album : 'default'
+			}
+		]
+	},
 ];

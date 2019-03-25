@@ -3,10 +3,10 @@
         {{gallery.title}}
     </h1>
   <p>{{gallery.description}}</p>
-  <div *ngIf="albums && album === 'default'">
+  <!-- <div *ngIf="albums && album === 'default'">
     <h4>Gallery Albums</h4>
     <p *ngFor="let alb of albums"><a [routerLink]="['/gallery',gallery.title,alb]">{{alb}}</a></p>
-  </div>
+  </div> -->
 </span>
 
 <!-- Galley wrapper that contains all items -->
@@ -24,18 +24,16 @@
       </figure>
     </span>
   </span>
-  <span *ngIf="albums.length > 1 && albums[0] !== '' && album == 'default'">
+  <!-- <span *ngIf="albums.length > 1 && albums[0] !== '' && album == 'default'">
     <span class="slide_thumbs" *ngFor="let alb2 of albums; let j = index;">
 
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
-          <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
           <a [href]="" (click)="galleryCarousel(alb2)"  attr.data-caption="{{alb}}" itemprop="contentUrl" >
-            <!-- Thumbnail -->
             <img [src]="getFirstImage(alb2)" itemprop="thumbnail" alt="Image description">
           </a>
         </figure>
       </span>
-    </span>
+    </span> -->
 
 </div>
 <hr>

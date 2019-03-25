@@ -14,14 +14,4 @@ export const PROJECTS: Project[] = [
 			},
 		]
 	},
-	{
-		id : 1,
-		title : "portraits",
-		description : "portraits",
-		albums : [
-			{
-				name : "family",
-			},            
-		]
-    },
 ];

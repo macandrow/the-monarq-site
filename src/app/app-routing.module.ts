@@ -28,10 +28,10 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent
   },
-  {
-    path: 'gallery/:title/default',
-    redirectTo: 'gallery/:title'
-  },
+//   {
+//     path: 'gallery/:title/default',
+//     redirectTo: 'gallery/:title'
+//   },
   {
     path: 'gallery/:title/:album',
     component: GalleryComponent
