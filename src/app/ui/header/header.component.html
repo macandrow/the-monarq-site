@@ -1,27 +1,35 @@
 <div class="navWrapper">
 	<nav class="inner">
 
-        <img src="assets/images/logo-nav@2x.png" width="72" height="72">
+    <img src="assets/images/logo-nav@2x.png" width="72" height="72">
 
-        <!-- menu -->
-        <ul class="menu" >
-            <li>
-                <a class="navbar-item" routerLink="gallery" routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }">Gallery</a>
-            </li>
-            <!--<li><a class="navbar-item" routerLink="gallery">Gallery</a></li>-->
-            <li>
-                <a class="navbar-item" routerLink="about" routerLinkActive="active">About the Artist</a>
-            </li>
-            <li>
-                <a class="navbar-item" routerLink="contact" routerLinkActive="active">CV</a>
-            </li>
-            <li>
-                <a class="navbar-item" routerLink="contact" routerLinkActive="active">Contact</a>
+    <!-- menu -->
+    <ul class="menu" >
+      <li class="dropdown">
+        <a href="#" routerLinkActive="active">Gallery</a>
+        <ul class="gallery-links">
+          <li>
+            loll
+          </li>
+          <li>
+              <a href="http://www.yahoo.com">yahoo</a>
             </li>
         </ul>
-
+      </li>
+        <!-- <li>
+            <a routerLink="gallery" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Gallery</a>
+        </li> -->
+      <li>
+        <a routerLink="about" routerLinkActive="active">About the Artist</a>
+      </li>
+      <li>
+        <a routerLink="contact" routerLinkActive="active">CV</a>
+      </li>
+      <li>
+        <a routerLink="contact" routerLinkActive="active">Contact</a>
+      </li>
+    </ul>
 	</nav>
-  
 </div>
 
