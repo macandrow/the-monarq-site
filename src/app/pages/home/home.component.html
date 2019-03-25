@@ -6,12 +6,14 @@
 </header>
 
 <div *ngIf="galleries" class="galleries">
-	<div *ngFor="let gallery of galleries;" class="row" attr.data-color="{{gallery.title}}" >
-		<div class="galleryPreview js-tilt"  data-tilt *ngIf="gallery.isProject == false">
-			<a class="desc" [routerLink]="['/gallery', gallery.title]">
-				<h1>{{gallery.title}}</h1>
-				<p>description</p>
-			</a>			
+	<div *ngFor="let gallery of galleries;"  >
+		<div *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}">
+			<div class="galleryPreview js-tilt"  data-tilt >
+				<a class="desc" [routerLink]="['/gallery', gallery.title]">
+					<h1>{{gallery.title}}</h1>
+					<p>description</p>
+				</a>			
+			</div>			
 		</div>
 	</div>
 
