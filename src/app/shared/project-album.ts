@@ -1,5 +1,4 @@
-export class Album{
-    name: string;
-  }
-  
+export class Album {
+  name: string;
+}
   

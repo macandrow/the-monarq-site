@@ -1,6 +1,6 @@
-import {Album} from "./project-album";
+import { Album } from './project-album';
 
-export class Project{
+export class Project {
   id: number;
   title: string;
   description: string;

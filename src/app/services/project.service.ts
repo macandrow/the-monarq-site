@@ -12,27 +12,30 @@ import 'rxjs/add/operator/delay';
 })
 export class ProjectService {
 
-	constructor() { }
+  constructor() { }
 
-	getProjects(): Observable<Project[]> {
-		return Observable.of(PROJECTS);
-	}
-	getProjectTitles(): Observable<string[]> {
-		return Observable.of(PROJECTS.map(project => project.title ));
-	}
-	getProjectByTitle(title: string): Observable<Project> {
+  getProjects(): Observable<Project[]> {
+    return Observable.of(PROJECTS);
+  }
+
+  getProjectTitles(): Observable<string[]> {
+    return Observable.of(PROJECTS.map(project => project.title));
+  }
+
+  getProjectByTitle(title: string): Observable<Project> {
     return Observable.of(PROJECTS.filter((project) => (project.title === title))[0]);
-	}
+  }
+
   // getAlbums(): Observable<string[]> {
   //   return Observable.of(PROJECTS.map(name));
-	// }
-	getProjectAlbums(title: string, project){
-    return Array.from(new Set(project.albums.map(album=>album.name)));
+  // }
+  getProjectAlbums(title: string, project) {
+    return Array.from(new Set(project.albums.map(album => album.name)));
   }
+
   // getProjectAlbums(title: string, project){
   //   return Array.from(new Set(project.albums));
   // }
-
 
 
 }
