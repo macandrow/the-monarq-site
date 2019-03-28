@@ -1,4 +1,3 @@
-export class Album {
+export interface IAlbum {
   name: string;
 }
-  

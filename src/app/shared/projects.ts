@@ -1,6 +1,6 @@
-import { Project } from './project-info';
+import { IProject } from './project-info';
 
-export const PROJECTS: Project[] = [
+export const PROJECTS: IProject[] = [
   {
     id: 0,
     title: 'photography',

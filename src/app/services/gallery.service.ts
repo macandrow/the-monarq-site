@@ -1,23 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Gallery } from 'src/app/shared/gallery-info';
+import { IGallery } from 'src/app/shared/gallery-info';
 import { GALLERIES } from 'src/app/shared/galleries';
-
-import { Observable } from 'rxjs/Observable';
-
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/delay';
+import { Observable } from 'rxjs';
+import 'rxjs-compat/add/observable/of';
 
 @Injectable()
 export class GalleryService {
 
   constructor() { }
 
-
-  getGalleries(): Observable<Gallery[]> {
+  getGalleries(): Observable<IGallery[]> {
     return Observable.of(GALLERIES);
   }
 
-  getGallery(id: number): Observable<Gallery> {
+  getGallery(id: number): Observable<IGallery> {
     return Observable.of(GALLERIES.filter((gallery) => (gallery.id === id))[0]);
   }
 
@@ -29,7 +25,7 @@ export class GalleryService {
     return Observable.of(GALLERIES.map(gallery => gallery.title));
   }
 
-  getGalleryByTitle(title: string): Observable<Gallery> {
+  getGalleryByTitle(title: string): Observable<IGallery> {
     return Observable.of(GALLERIES.filter((gallery) => (gallery.title === title))[0]);
   }
 

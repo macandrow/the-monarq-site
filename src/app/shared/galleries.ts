@@ -1,6 +1,6 @@
-import { Gallery } from './gallery-info';
+import { IGallery } from './gallery-info';
 
-export const GALLERIES: Gallery[] = [
+export const GALLERIES: IGallery[] = [
   {
     id: 0,
     title: 'fractures',

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ProjectService } from 'src/app/services/project.service';
-import { Project } from 'src/app/shared/project-info';
+import { IProject } from 'src/app/shared/project-info';
 
 @Component({
   selector: 'app-projects',
@@ -11,13 +11,16 @@ import { Project } from 'src/app/shared/project-info';
 })
 export class ProjectsComponent implements OnInit {
 
-  project: Project;
+  project: IProject;
   projectTitles: string[];
   album: string;
   albums: {};
   projectAlbums: string[];
 
-  constructor(private projectservice: ProjectService, private route: ActivatedRoute, private router: Router, private location: Location) {
+  constructor(private projectservice: ProjectService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private location: Location) {
     // this.router.events.subscribe((event: Event)=>{
     //   if (event instanceof NavigationEnd) {
     //     this.album = route.snapshot.paramMap.get('album');
@@ -28,13 +31,13 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
 
     this.projectservice.getProjectTitles().subscribe(projectTitles => this.projectTitles = projectTitles);
-    //this.projectservice.getAlbums().subscribe(projectAlbums => this.projectAlbums = projectAlbums);
+    // this.projectservice.getAlbums().subscribe(projectAlbums => this.projectAlbums = projectAlbums);
 
     this.route.params.switchMap((params: Params) => this.projectservice.getProjectByTitle(params['title'])) // (+) converts string id to a number
          .subscribe((project) => {
            this.albums = this.projectservice.getProjectAlbums(name, project);
-           //this.albums=params.get('album');
-           //this.albums = this.projectservice.getProjectAlbums(project.title, project);
+           // this.albums=params.get('album');
+           // this.albums = this.projectservice.getProjectAlbums(project.title, project);
            this.project = project;
          });
 
