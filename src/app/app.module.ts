@@ -8,10 +8,9 @@ import { HeaderComponent } from './ui/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';
-import {ProjectService} from './services/project.service';
-import {GalleryService} from './services/gallery.service';
-import {GalleryComponent} from './pages/gallery/gallery.component';
+import { ProjectService } from './services/project.service';
+import { GalleryService } from './services/gallery.service';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 
 @NgModule({
@@ -28,7 +27,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule
-  //  , HttpClientModule
+    //  , HttpClientModule
   ],
   providers: [
     GalleryService,
@@ -36,4 +35,4 @@ import { ProjectsComponent } from './pages/projects/projects.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

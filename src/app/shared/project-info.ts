@@ -1,8 +1,8 @@
-import {Album} from "./project-album";
+import { IAlbum } from './project-album';
 
-export class Project{
+export interface IProject {
   id: number;
   title: string;
   description: string;
-  albums: Album[];
+  albums: IAlbum[];
 }

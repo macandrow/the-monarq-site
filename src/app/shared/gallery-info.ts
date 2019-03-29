@@ -1,10 +1,10 @@
-import {Slide} from "./gallery-slide";
+import { ISlide } from './gallery-slide';
 
-export class Gallery{
+export class IGallery {
   id: number;
   title: string;
   description: string;
   thumbnail: string;
   isProject: boolean;
-  slides: Slide[]; 
+  slides: ISlide[];
 }

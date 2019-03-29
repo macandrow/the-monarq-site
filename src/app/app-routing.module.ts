@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import {GalleryComponent} from './pages/gallery/gallery.component';
-import {ProjectsComponent} from './pages/projects/projects.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
-  { path: 'home',  component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   {
     path: '',
     pathMatch: 'full',
@@ -57,4 +57,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

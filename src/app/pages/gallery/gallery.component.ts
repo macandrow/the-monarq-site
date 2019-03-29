@@ -1,133 +1,112 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Params, ActivatedRoute, Router, Event, NavigationEnd} from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Event, NavigationEnd, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import PhotoSwipe from 'photoswipe/dist/photoswipe.min.js';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default.js';
 import 'rxjs/add/operator/switchMap';
 import { GalleryService } from 'src/app/services/gallery.service';
-import { Gallery } from 'src/app/shared/gallery-info';
-//import {type} from 'os';
-
+import { IGallery } from 'src/app/shared/gallery-info';
+import { ISlide } from '../../shared/gallery-slide';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: [
-      ('src/assets/css/photoswipe/default-skin/default-skin.scss').toString(),
-      ('src/assets/css/photoswipe/main.scss').toString(),
-      './gallery.component.scss'
-  ]
+  styleUrls: ['./gallery.component.scss']
 })
-// ('../../../../node_modules/photoswipe/dist/photoswipe.css').toString(),
-// ('../../../../node_modules/photoswipe/dist/default-skin/default-skin.css').toString(),
 export class GalleryComponent implements OnInit {
+  @ViewChild('photoSwipe') photoSwipe: ElementRef;
 
-  gallery: Gallery;
+  gallery: IGallery;
   galleryTitles: string[];
   prev: string;
   next: string;
   album: string;
   albums: {};
   activeSlides: {};
-  gallerySlides: {};
-  ps_gallery: any = null;
-  ps_options: any;
-  ps_element: any;
+  pswp: PhotoSwipe = null;
   firstImage: any;
-  
-  constructor(private galleryservice: GalleryService, private route: ActivatedRoute, private router: Router, private location: Location) {
-    this.router.events.subscribe((event: Event)=>{
+
+  constructor(private galleryservice: GalleryService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private location: Location) {
+    this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        this.album = route.snapshot.paramMap.get('album')!== null ? route.snapshot.paramMap.get('album'):'default';
+        this.album = route.snapshot.paramMap.get('album') !== null ? route.snapshot.paramMap.get('album') : 'default';
         this.setActiveSlides();
       }
     });
   }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
 
     this.galleryservice.getGalleryTitles().subscribe(galleryTitles => this.galleryTitles = galleryTitles);
 
-    this.route.params
-      .switchMap((params: Params) => this.galleryservice.getGalleryByTitle(params['title'])) // (+) converts string id to a number
-      .subscribe(( gallery) => {
-        this.albums = this.galleryservice.getGalleryAlbums(gallery.title, gallery);
-        this.gallery = gallery;
-        this.setActiveSlides();
-        this.setPrevNext(gallery.title);
-
-      });
+    this.route.params.switchMap((params: Params) =>
+      this.galleryservice.getGalleryByTitle(params['title'])).subscribe(gallery => {
+      this.albums = this.galleryservice.getGalleryAlbums(gallery.title, gallery);
+      this.gallery = gallery;
+      this.setActiveSlides();
+      this.setPrevNext(gallery.title);
+    });
 
   }
-  
-  galleryCarousel(i){
-    this.gallerySlides = this.gallery.slides.filter((slide) => slide.album == i);
-    this.ps_element = document.querySelectorAll('.pswp')[0];
-    this.ps_options = {
-        index: i !== null ? i : 0,
-        // showAnimationDuration: 400,
-        showHideOpacity: true,
-        hideAnimationDuration:0, 
-        showAnimationDuration:0,
-        // history: true,
-        // zoomEl: false,
-        // maxSpreadZoom: 1,
-        // getDoubleTapZoom: function(isMouseClick, item) {
-        //     return item.initialZoomLevel;
-        // },
-        // pinchToClose: false,
-        closeOnScroll: false,
+
+  openGallery(slide: ISlide) {
+
+    const options = {
+      index: 0,
+      showHideOpacity: true,
+      hideAnimationDuration: 0,
+      showAnimationDuration: 0,
+      loop: false,
+      pinchToClose: false,
+      closeOnVerticalDrag: false,
+      closeOnScroll: false,
+      maxSpreadZoom: 1,
+      focus: false,
+      modal: true,
+      getDoubleTapZoom: (isMouseClick, item) => {
+        return item.initialZoomLevel;
+      },
+      shareButtons: [
+        {
+          id: 'facebook',
+          label: 'Share on Facebook',
+          url: 'https://www.facebook.com/sharer/sharer.php?u={{url}}'
+        },
+        {
+          id: 'twitter',
+          label: 'Tweet',
+          url: 'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'
+        },
+        {
+          id: 'pinterest',
+          label: 'Pin it',
+          url: 'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'
+        }
+      ],
     };
 
-
-    
-      
-
-      
-
-
-      this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, this.gallerySlides, this.ps_options);
-      this.ps_gallery.init();
-  }
-  carousel(slide){
-    this.ps_element = document.querySelectorAll('.pswp')[0];
-    this.ps_options = {
-        index: 0,
-        // showAnimationDuration: 400,
-        showHideOpacity: true,
-        hideAnimationDuration:0, 
-        showAnimationDuration:0,
-        // history: true,
-        // zoomEl: false,
-        // maxSpreadZoom: 1,
-        // getDoubleTapZoom: function(isMouseClick, item) {
-        //     return item.initialZoomLevel;
-        // },
-        // pinchToClose: false,
-        closeOnScroll: false,
-    };
-      console.log('--  SLIDE --');
-      console.log(slide);
-      console.log(this.activeSlides);
-      this.ps_gallery = new PhotoSwipe(this.ps_element, PhotoSwipeUI_Default, [slide], this.ps_options);
-      this.ps_gallery.init();
+    this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, [slide], options);
+    this.pswp.init();
   }
 
-  getFirstImage(val){
-     this.firstImage = this.gallery.slides.find(x=>x.album == val);
-     return typeof this.firstImage !== 'undefined'?this.firstImage.src:'';
+  getFirstImage(val) {
+    this.firstImage = this.gallery.slides.find(x => x.album === val);
+    return typeof this.firstImage !== 'undefined' ? this.firstImage.src : '';
   }
 
-  setActiveSlides(){
-    if(this.gallery) {
-      this.activeSlides = this.gallery.slides.filter((slide) => slide.album == this.album);
+  setActiveSlides() {
+    if (this.gallery) {
+      this.activeSlides = this.gallery.slides.filter((slide) => slide.album === this.album);
     }
   }
 
   setPrevNext(galleryId: string) {
-    let index = this.galleryTitles.indexOf(galleryId);
-    this.prev = this.galleryTitles[(this.galleryTitles.length + index - 1)%this.galleryTitles.length];
-    this.next = this.galleryTitles[(this.galleryTitles.length + index + 1)%this.galleryTitles.length];
+    const index = this.galleryTitles.indexOf(galleryId);
+    this.prev = this.galleryTitles[(this.galleryTitles.length + index - 1) % this.galleryTitles.length];
+    this.next = this.galleryTitles[(this.galleryTitles.length + index + 1) % this.galleryTitles.length];
   }
 
 
