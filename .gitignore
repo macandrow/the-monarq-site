@@ -79,6 +79,7 @@ typings/
 
 # User-specific stuff
 .idea/
+dist/
 .DS_Store
 
 # Gradle and Maven with auto-import
