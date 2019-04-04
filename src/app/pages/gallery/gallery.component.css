@@ -1,0 +1,79 @@
+h1 {
+  margin: 2em;
+}
+
+.pswp__caption__center {
+  text-align: center;
+}
+
+.pswp--open {
+  color: #ffffff;
+}
+
+.pswp {
+  height: 100vh;
+  width: 100vw;
+}
+
+.pswp--animate_opacity,
+.pswp__bg,
+.pswp__caption,
+.pswp__top-bar,
+.pswp--has_mouse .pswp__button--arrow--left,
+.pswp--has_mouse .pswp__button--arrow--right {
+  -webkit-transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
+  transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
+}
+
+.spacer {
+  height: 5em;
+}
+
+.gallery-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gallery-scroller {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.gallery {
+  width: 1024px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 60px;
+  -ms-grid-columns: (minmax(230px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.gallery .slide_thumbs .slide_thumbs_holder, .gallery .slide_thumbs img, .gallery .slide_thumbs figure {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gallery .slide_thumbs figure {
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.gallery .slide_thumbs figure:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 4px 2px rgba(210, 209, 209, 0.5);
+  box-shadow: 0 1px 4px 2px rgba(210, 209, 209, 0.5);
+  -webkit-transform: scale3d(1.01, 1.01, 1);
+  transform: scale3d(1.01, 1.01, 1);
+}
+/*# sourceMappingURL=gallery.component.css.map */

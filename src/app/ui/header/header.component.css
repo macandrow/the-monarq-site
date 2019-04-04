@@ -1,0 +1,76 @@
+.navWrapper {
+  z-index: 10;
+  background-color: white;
+  position: relative;
+  height: 60px;
+  width: 100%;
+}
+
+.navWrapper nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navWrapper nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navWrapper nav .menu li.dropdown ul {
+  padding: 0;
+  margin: 0;
+  background-color: darkgrey;
+}
+
+.navWrapper nav .menu li.dropdown ul li {
+  list-style: none;
+  text-align: center;
+}
+
+.navWrapper nav .menu li.dropdown ul li a {
+  display: block;
+}
+
+.navWrapper nav .menu li.dropdown ul li:hover {
+  color: pink;
+}
+
+.navWrapper nav .menu a {
+  display: block;
+  text-decoration: none;
+  padding: .6em 1em;
+}
+
+.navWrapper nav li ul {
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.navWrapper nav ul > li.dropdown:hover ul {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+/*# sourceMappingURL=header.component.css.map */

@@ -72,9 +72,15 @@ h1 {
       &:hover {
         cursor: pointer;
         // box-shadow: 6px 6px 18px 0px rgba(0,0,0,0.3);
-        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        // -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        // -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        // box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+          // box-shadow: 6px 6px 18px 0px rgba(0,0,0,0.3);
+          -webkit-box-shadow: 0 1px 4px 2px rgba(210,209,209,0.50);
+          -moz-box-shadow:0 1px 4px 2px rgba(210,209,209,0.50);
+          box-shadow: 0 1px 4px 2px rgba(210,209,209,0.50);
+          -webkit-transform: scale3d(1.01,1.01,1);
+          transform: scale3d(1.01,1.01,1);
       }
 
     }

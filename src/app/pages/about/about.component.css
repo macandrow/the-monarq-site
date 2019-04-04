@@ -1,0 +1,64 @@
+header {
+  position: relative;
+  height: 60vh;
+}
+
+header .inner {
+  background: url("https://picsum.photos/200/200/?random") center right no-repeat;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .inner h1 {
+  color: #4a5365;
+}
+
+.content {
+  background-color: #dde1e6;
+  color: #4a5365;
+}
+
+.content h1 {
+  color: #ffffff;
+}
+
+.content .cv {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.content .cv h1, .content .cv h3, .content .cv .collectionList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+
+.content .cv .date {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 20%;
+          flex: 1 20%;
+}
+
+.content .cv .event {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 80%;
+          flex: 2 80%;
+}
+/*# sourceMappingURL=about.component.css.map */
