@@ -26,7 +26,7 @@ export class GalleryComponent implements OnInit {
   pswp: PhotoSwipe = null;
   firstImage: any;
 
-  constructor(private galleryservice: GalleryService,
+  constructor(private galleryService: GalleryService,
               private route: ActivatedRoute,
               private router: Router,
               private location: Location) {
@@ -40,11 +40,11 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.galleryservice.getGalleryTitles().subscribe(galleryTitles => this.galleryTitles = galleryTitles);
+    this.galleryService.getGalleryTitles().subscribe(galleryTitles => this.galleryTitles = galleryTitles);
 
     this.route.params.switchMap((params: Params) =>
-      this.galleryservice.getGalleryByTitle(params['title'])).subscribe(gallery => {
-      this.albums = this.galleryservice.getGalleryAlbums(gallery.title, gallery);
+      this.galleryService.getGalleryByTitle(params['title'])).subscribe(gallery => {
+      this.albums = this.galleryService.getGalleryAlbums(gallery.title, gallery);
       this.gallery = gallery;
       this.setActiveSlides();
       this.setPrevNext(gallery.title);
@@ -66,6 +66,7 @@ export class GalleryComponent implements OnInit {
       maxSpreadZoom: 1,
       focus: false,
       modal: true,
+      zoomEl: false,
       getDoubleTapZoom: (isMouseClick, item) => {
         return item.initialZoomLevel;
       },
