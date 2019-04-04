@@ -57,8 +57,8 @@ export class GalleryComponent implements OnInit {
     const options = {
       index: 0,
       showHideOpacity: true,
-      hideAnimationDuration: 0,
-      showAnimationDuration: 0,
+      hideAnimationDuration: 333,
+      showAnimationDuration: 333,
       loop: false,
       pinchToClose: false,
       closeOnVerticalDrag: false,
