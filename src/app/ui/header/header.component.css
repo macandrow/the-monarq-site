@@ -37,6 +37,12 @@
 .navWrapper nav .menu li.dropdown ul {
   padding: 0;
   margin: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
   background-color: darkgrey;
 }
 
@@ -57,15 +63,20 @@
   display: block;
   text-decoration: none;
   padding: .6em 1em;
+  font-size: 13px;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #4a5365;
 }
 
-.navWrapper nav li ul {
-  z-index: 1;
-  visibility: hidden;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: 200ms ease;
-  transition: 200ms ease;
+.navWrapper nav .menu a:hover {
+  opacity: .7;
+}
+
+.navWrapper nav .menu a.active {
+  text-decoration: line-through;
 }
 
 .navWrapper nav ul > li.dropdown:hover ul {

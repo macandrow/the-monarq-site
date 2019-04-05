@@ -25,18 +25,15 @@
         ul {
           padding: 0;
           margin: 0;
-          // transition: 0.5s ease-in-out;
-          // transform-origin: top;
-          // transform: perspective(1000px) rotateX(-90deg);
-          // visibility:hidden;
-          // opacity:0;
-          // filter:alpha(opacity=0);
-          // -webkit-transition:200ms ease;
-          // -moz-transition:200ms ease;
-          // -o-transition:200ms ease;
-          // transition:200ms ease;
+          z-index: 1;
+          visibility: hidden;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          -webkit-transition: 200ms ease;
+          -moz-transition: 200ms ease;
+          -o-transition: 200ms ease;
+          transition: 200ms ease;
           background-color: darkgrey;
-
           li {
             list-style: none;
             text-align: center;
@@ -51,28 +48,39 @@
           }
         }
       }
-
       a {
         display: block;
         text-decoration: none;
         padding: .6em 1em;
+        font-size: 13px;
+        line-height: 1.6em;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        color: #4a5365;
+        &:hover{
+          opacity: .7;
+        }
+        &.active{
+          text-decoration: line-through;
+        }
       }
     }
   }
 
-  nav li ul {
-    // position:absolute;
-    // left:0;
-    // top:36px;
-    z-index: 1;
-    visibility: hidden;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: 200ms ease;
-    -moz-transition: 200ms ease;
-    -o-transition: 200ms ease;
-    transition: 200ms ease;
-  }
+  // nav li ul {
+  //   // position:absolute;
+  //   // left:0;
+  //   // top:36px;
+  //   z-index: 1;
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   filter: alpha(opacity=0);
+  //   -webkit-transition: 200ms ease;
+  //   -moz-transition: 200ms ease;
+  //   -o-transition: 200ms ease;
+  //   transition: 200ms ease;
+  // }
 
   nav ul > li.dropdown:hover ul {
     visibility: visible;
