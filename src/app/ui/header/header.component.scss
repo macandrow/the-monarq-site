@@ -22,8 +22,6 @@
       margin: 0;
       height: 60px;
       a {
-        display: block;
-        text-decoration: none;
         padding: .6em 1em;
         font-size: 13px;
         line-height: 1.6em;
@@ -31,12 +29,44 @@
         text-decoration: none;
         letter-spacing: 1px;
         color: #4a5365;
-        &:hover{
-          opacity: .7;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -.4em;
+          left: 50%;
+          right: 50%;
+          height: 1px;
+          background:#dde1e6; // system color
+          transition: all ease .2s;
+        } 
+        
+        &:hover:after {
+          left: 0;
+          right: 0;
+          height: 2px;
+        } 
+        
+        &:before {
+          position: absolute;
+          transform: translateX(-100%);
+          left: -10px;
+          color: #eee;
+          opacity: .3;
+          font-weight: 100;
+          font-size: .8em;
         }
       }
     }
   }
+
+
+
+
+  
+
+
+
 
   ///If adding back dropdown, use css below 
   // li.dropdown {

@@ -36,8 +36,6 @@
 }
 
 .navWrapper nav .menu a {
-  display: block;
-  text-decoration: none;
   padding: .6em 1em;
   font-size: 13px;
   line-height: 1.6em;
@@ -45,9 +43,35 @@
   text-decoration: none;
   letter-spacing: 1px;
   color: #4a5365;
+  position: relative;
 }
 
-.navWrapper nav .menu a:hover {
-  opacity: .7;
+.navWrapper nav .menu a:after {
+  content: '';
+  position: absolute;
+  bottom: -.4em;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: #dde1e6;
+  -webkit-transition: all ease .2s;
+  transition: all ease .2s;
+}
+
+.navWrapper nav .menu a:hover:after {
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.navWrapper nav .menu a:before {
+  position: absolute;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  left: -10px;
+  color: #eee;
+  opacity: .3;
+  font-weight: 100;
+  font-size: .8em;
 }
 /*# sourceMappingURL=header.component.css.map */
