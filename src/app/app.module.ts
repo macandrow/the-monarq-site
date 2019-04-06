@@ -12,6 +12,7 @@ import { ProjectService } from './services/project.service';
 import { GalleryService } from './services/gallery.service';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { FooterComponent } from './ui/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     AboutComponent,
     GalleryComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

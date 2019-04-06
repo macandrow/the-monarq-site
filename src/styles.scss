@@ -25,18 +25,6 @@ body {
   backface-visibility: hidden !important;
   // -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-}
-
-h1 {
-  transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-  -webkit-transition: all .2s ease-out;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-body {
   font-family: neue-haas-unica, sans-serif;
   // font-weight: 300;
   font-weight: 400;
@@ -48,7 +36,6 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-
   &.color-intro {
     background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
   }
@@ -59,6 +46,40 @@ body {
   // &.color-paintings{
   // 	background-image:ivory;
   // }
+}
+
+h1 {
+  transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  margin: 0.3em 0;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+  &.btn{
+    text-transform: uppercase;
+    border: 1px dotted #4a5365;
+    text-align: center;
+    letter-spacing: .1em;
+    border-radius: 3px;
+    font-weight: 700;
+    padding: 10px 15px;
+    margin: 20px 0;
+    display: inline-block;
+    letter-spacing: 0.125em;
+    color: #4a5365;
+    min-width: 200px;
+    transition: all .3s;
+    &:hover{
+      opacity: .7;
+      color: #222;
+    }
+  }
 }
 
 

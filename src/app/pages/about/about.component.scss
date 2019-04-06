@@ -30,22 +30,22 @@ header {
     display: -moz-flex;
     display: -webkit-flex;
     display: flex;
-
     -webkit-justify-content: space-around;
     justify-content: space-around;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     -webkit-align-items: stretch;
     align-items: stretch;
-
+    justify-content: flex-start;
+    a.btn{
+      margin-top: 45px;
+    }
     h1, h3, .collectionList {
       flex: 1 100%;
     }
-
     .date {
       flex: 1 20%;
     }
-
     .event {
       flex: 2 80%;
     }
