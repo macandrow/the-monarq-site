@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { ProjectService } from 'src/app/services/project.service';
-import { IProject } from 'src/app/shared/project-info';
+import { ProjectService } from 'src/app/services/_services/project.service';
+import { IProject } from 'src/app/shared/_models/project-info';
 
 @Component({
   selector: 'app-projects',

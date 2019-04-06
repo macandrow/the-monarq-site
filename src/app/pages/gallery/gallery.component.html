@@ -19,7 +19,7 @@
           <figure itemprop="associatedMedia"
                   itemscope
                   itemtype="http://schema.org/ImageObject">
-            <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+            <!-- Link to the big image, not mandatory, but useful when there is no JS -->
             <div (click)="openGallery(slide)">
               <!-- Thumbnail -->
               <img src="{{ slide.src }}"
@@ -41,7 +41,7 @@
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp-overlay">
+<div theme="light" class="pswp-overlay">
   <div class="pswp"
        tabindex="-1"
        role="dialog"

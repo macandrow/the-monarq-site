@@ -1,12 +1,18 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Event, NavigationEnd, Params, Router } from '@angular/router';
+import {
+  ActivatedRoute,
+  Event,
+  NavigationEnd,
+  Params,
+  Router
+} from '@angular/router';
 import { Location } from '@angular/common';
 import PhotoSwipe from 'photoswipe/dist/photoswipe.min.js';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default.js';
 import 'rxjs/add/operator/switchMap';
-import { GalleryService } from 'src/app/services/gallery.service';
-import { IGallery } from 'src/app/shared/gallery-info';
-import { ISlide } from '../../shared/gallery-slide';
+import { GalleryService } from 'src/app/services/_services/gallery.service';
+import { IGallery } from 'src/app/shared/_models/gallery-info';
+import { ISlide } from '../../shared/_models/gallery-slide';
 
 @Component({
   selector: 'app-gallery',
@@ -40,15 +46,17 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.galleryService.getGalleryTitles().subscribe(galleryTitles => this.galleryTitles = galleryTitles);
+    this.galleryService.getGalleryTitles().subscribe(
+      galleryTitles => this.galleryTitles = galleryTitles);
 
     this.route.params.switchMap((params: Params) =>
-      this.galleryService.getGalleryByTitle(params['title'])).subscribe(gallery => {
-      this.albums = this.galleryService.getGalleryAlbums(gallery.title, gallery);
-      this.gallery = gallery;
-      this.setActiveSlides();
-      this.setPrevNext(gallery.title);
-    });
+      this.galleryService.getGalleryByTitle(params['title'])).subscribe(
+      gallery => {
+        this.albums = this.galleryService.getGalleryAlbums(gallery.title, gallery);
+        this.gallery = gallery;
+        this.setActiveSlides();
+        this.setPrevNext(gallery.title);
+      });
 
   }
 
@@ -114,4 +122,5 @@ export class GalleryComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
 }

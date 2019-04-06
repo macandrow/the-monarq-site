@@ -8,10 +8,11 @@ import { HeaderComponent } from './ui/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ProjectService } from './services/project.service';
-import { GalleryService } from './services/gallery.service';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { AppServicesModule } from './services/app.services.module';
+import { ThemeModule } from './theme/theme.module';
+import { darkTheme, lightTheme } from './theme/themes';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,13 @@ import { ProjectsComponent } from './pages/projects/projects.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppServicesModule,
+    ThemeModule.forRoot({
+      themes: [lightTheme, darkTheme],
+      active: 'light'
+    }),
     //  , HttpClientModule
-  ],
-  providers: [
-    GalleryService,
-    ProjectService
   ],
   bootstrap: [AppComponent]
 })
