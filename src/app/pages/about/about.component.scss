@@ -14,7 +14,7 @@ header {
   }
 }
 
-.content {
+.content.cv {
   background-color: #dde1e6;
   color: #4a5365;
 
@@ -22,7 +22,7 @@ header {
     color: #ffffff;
   }
 
-  .cv {
+  .inner{
     -ms-box-orient: horizontal;
     display: -webkit-box;
     display: -moz-box;
@@ -37,6 +37,7 @@ header {
     -webkit-align-items: stretch;
     align-items: stretch;
     justify-content: flex-start;
+    padding-bottom: 30px;
     a.btn{
       margin-top: 45px;
     }

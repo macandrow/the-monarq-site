@@ -20,6 +20,18 @@
           align-items: center;
 }
 
+.navWrapper nav .logo {
+  background-color: black;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: white;
+}
+
+.navWrapper nav .logo h1 {
+  font-size: 3rem !important;
+}
+
 .navWrapper nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;

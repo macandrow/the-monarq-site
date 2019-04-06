@@ -13,6 +13,16 @@
     align-items: center;
     // position: fixed;
     // width: 100%;
+    .logo{
+      background-color: black;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      color:white;
+      h1{
+        font-size: 3rem !important;
+      }
+    }
     .menu {
       display: flex;
       flex-wrap: wrap;
