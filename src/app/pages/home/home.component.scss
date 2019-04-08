@@ -77,17 +77,14 @@ header h1 {
         margin-left: calc(-50% + 50%);
         position: relative;
         // text-align: center;
-        color: #222;
+        color: #1c1818;
 
         &:hover {
           cursor: pointer;
         }
-
         h1 {
           margin: 0;
-          font-family: 'salomeregular', Georgia, Serif;
         }
-
         p {
           font-size: 1.5rem;
         }

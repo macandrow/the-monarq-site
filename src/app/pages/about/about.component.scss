@@ -1,27 +1,25 @@
 header {
   position: relative;
   height: 60vh;
-
   .inner {
     background: url("https://picsum.photos/200/200/?random") center right no-repeat;
     height: 100%;
     display: flex;
-    align-items: center;
-    // justify-content: center;
-    h1 {
-      color: #4a5365;
+    flex-direction: column;
+    justify-content: center;
+    p{
+      max-width: 690px;
     }
   }
 }
 
 .content.cv {
-  background-color: #dde1e6;
-  color: #4a5365;
-
+  //background-color: #dde1e6;
+  background-color: #eae4e4;
+  // color: #4a5365;
   h1 {
     color: #ffffff;
   }
-
   .inner{
     -ms-box-orient: horizontal;
     display: -webkit-box;

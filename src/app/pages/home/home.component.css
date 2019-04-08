@@ -101,7 +101,7 @@ header h1 {
   width: 100%;
   margin-left: calc(-50% + 50%);
   position: relative;
-  color: #222;
+  color: #1c1818;
 }
 
 .galleries .row .galleryPreview a.desc:hover {
@@ -110,7 +110,6 @@ header h1 {
 
 .galleries .row .galleryPreview a.desc h1 {
   margin: 0;
-  font-family: 'salomeregular', Georgia, Serif;
 }
 
 .galleries .row .galleryPreview a.desc p {

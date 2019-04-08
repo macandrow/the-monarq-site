@@ -9,18 +9,21 @@ header .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-header .inner h1 {
-  color: #4a5365;
+header .inner p {
+  max-width: 690px;
 }
 
 .content.cv {
-  background-color: #dde1e6;
-  color: #4a5365;
+  background-color: #eae4e4;
 }
 
 .content.cv h1 {
