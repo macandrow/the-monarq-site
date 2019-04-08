@@ -31,7 +31,7 @@ import { FooterComponent } from './ui/footer/footer.component';
   ],
   providers: [
     GalleryService,
-    ProjectService
+    ProjectService,
   ],
   bootstrap: [AppComponent]
 })
