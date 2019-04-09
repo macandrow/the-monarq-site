@@ -1,15 +1,18 @@
 footer .inner{
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 0;
+  padding: 15px 0;
   justify-content: space-between;
   justify-items: center;
+  font-size: 12px;
+  #backToTop{
+    cursor: pointer;
+  }
   .copyright{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 12px;
-    padding: 0;
+    margin: 0;
   }
   ul{
     list-style: none;
@@ -18,14 +21,20 @@ footer .inner{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    justify-items: center;
     li{
       margin-left:12px;
       .ico{
+        width: 12px;
+      }
+      .socialIco{
         width: 20px;
+      }
+      .ico, .socialIco{
         height: auto;
       }
       a:hover{
-        opacity: .5;
+        opacity: .7;
       }
     }
   }
