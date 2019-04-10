@@ -12,6 +12,8 @@ import { GalleryService } from './services/gallery.service';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { FooterComponent } from './ui/footer/footer.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { FooterComponent } from './ui/footer/footer.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollToModule.forRoot()
     //  , HttpClientModule
   ],
   providers: [
