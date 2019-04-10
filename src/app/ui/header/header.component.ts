@@ -4,6 +4,7 @@ import { GalleryService } from 'src/app/services/gallery.service';
 import * as typeformEmbed from '@typeform/embed'
 
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
