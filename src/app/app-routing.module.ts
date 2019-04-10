@@ -12,7 +12,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {
+      animation: {
+        value: 'home',
+      }
+    }
   },
   {
     path: 'gallery',
@@ -21,7 +26,12 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {
+      animation: {
+        value: 'about',
+      }
+    }
   },
 //   {
 //     path: 'gallery/:title/default',

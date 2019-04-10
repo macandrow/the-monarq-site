@@ -10,12 +10,14 @@
          id="gallery"
          class="gallery"
          itemscope
-         itemtype="http://schema.org/ImageGallery">
+         itemtype="http://schema.org/ImageGallery"
+         @parentAnimation>
       <!-- Use figure for a more semantic html -->
 
       <div class="slide_thumbs"
-           *ngFor="let slide of activeSlides;">
+           *ngFor="let slide of activeSlides;  let l = count" >
         <div *ngIf="slide.album === '' || album === slide.album">
+            Here is the length of my ngFor : {{l}}
           <figure itemprop="associatedMedia"
                   itemscope
                   itemtype="http://schema.org/ImageObject">

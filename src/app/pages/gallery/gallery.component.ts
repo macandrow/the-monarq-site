@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, HostBinding } from '@angular/core';
 import { ActivatedRoute, Event, NavigationEnd, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import PhotoSwipe from 'photoswipe/dist/photoswipe.min.js';
@@ -7,13 +7,34 @@ import 'rxjs/add/operator/switchMap';
 import { GalleryService } from 'src/app/services/gallery.service';
 import { IGallery } from 'src/app/shared/gallery-info';
 import { ISlide } from '../../shared/gallery-slide';
+import { trigger, transition, style, animate , query, stagger, animateChild, keyframes} from '@angular/animations';
+
+
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.scss']
+  styleUrls: ['./gallery.component.scss'],
+  animations: [
+    trigger('parentAnimation', [
+        transition('void => *', [
+            query('.slide_thumbs', style({opacity: 0})),
+            query('.slide_thumbs', stagger('500ms', [
+                animate('1s ease-out', style({opacity: 1}))
+            ]))
+        ]),
+        transition('* => void', [
+            query('.slide_thumbs', style({opacity: 1})),
+            query('.slide_thumbs', stagger('500ms', [
+                animate('1s ease-out', style({opacity: 0.2}))
+            ]))
+        ])
+    ])
+]
+
 })
 export class GalleryComponent implements OnInit {
+  //@HostBinding('@animate') animate = true;
   @ViewChild('photoSwipe') photoSwipe: ElementRef;
 
   gallery: IGallery;
@@ -25,6 +46,7 @@ export class GalleryComponent implements OnInit {
   activeSlides: {};
   pswp: PhotoSwipe = null;
   firstImage: any;
+  // figures = [];
 
   constructor(private galleryservice: GalleryService,
               private route: ActivatedRoute,
