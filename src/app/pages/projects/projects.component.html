@@ -1,16 +1,9 @@
 <h1> {{project.title}}</h1>
-<!-- <p>
-  I will show or {{ albums}}
-</p>
- -->
-
 <div *ngIf="albums">
-  <div *ngFor="let album of albums;"
-       attr.data-color="{{project.title}}">
+  <div *ngFor="let album of albums;" attr.data-color="{{project.title}}">
     <a [routerLink]="['/gallery', project.title, album]">
       <p>{{album}}</p>
     </a>
   </div>
 </div>
-
-<!-- <p *ngFor="let alb of albums"><a [routerLink]="['/gallery',gallery.title,alb]">{{alb}}</a></p> -->
+<app-footer></app-footer>   

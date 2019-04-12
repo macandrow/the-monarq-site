@@ -8,31 +8,28 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { 
+    path: 'home', 
+    component: HomeComponent,
+    data: {state: 'homePage'} 
+  },
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent,
-    data: {
-      animation: {
-        value: 'home',
-      }
-    }
+    data: {state: 'homePage'}
   },
 
   {
     path: 'gallery',
     pathMatch: 'full',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {state: 'galleryPage'}
   },
   {
     path: 'about',
     component: AboutComponent,
-    data: {
-      animation: {
-        value: 'about',
-      }
-    }
+    data: {state: 'aboutPage'}
   },
 //   {
 //     path: 'gallery/:title/default',
@@ -40,15 +37,18 @@ const routes: Routes = [
 //   },
   {
     path: 'gallery/:title/:album',
-    component: GalleryComponent
+    component: GalleryComponent,
+    data: {state: 'albumPage'}
   },
   {
     path: 'gallery/:title',
-    component: GalleryComponent
+    component: GalleryComponent,
+    data: {state: 'galleryTitlePage'}
   },
   {
     path: 'projects/:title',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    data: {state: 'projectsPage'}
   },
   // {
   //   path: 'gallery/:id',

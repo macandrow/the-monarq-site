@@ -3,7 +3,8 @@ import { Router, Scroll, NavigationEnd } from '@angular/router';
 import { Location, ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
 // import { trigger, transition, query, animateChild, stagger } from '@angular/animations';
-// import { fadeAnimation } from './animations';
+import { routerTransition } from './animations';
+import { RouterOutlet } from '@angular/router';
 
 
 
@@ -11,6 +12,7 @@ import { filter } from 'rxjs/operators';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [ routerTransition ],
   // animations: [
 	// 	trigger('list', [
 	// 		transition('* => *', [
@@ -72,7 +74,17 @@ import { filter } from 'rxjs/operators';
       //])
    // ]
 })
+
 export class AppComponent {
   title = 'The Monarq';
-  constructor() {}
+  // prepareRoute(outlet: RouterOutlet) {
+  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  // }
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
+  }
+  constructor() {
+
+  
+  }
 }
