@@ -4,38 +4,32 @@
     <p>I create under the moniker “the monarq” which is a multidisciplinary practice with a focus on analog photography, pattern making, and illustration. </p>
 </header>
 
-<div *ngIf="galleries"
-     class="galleries" >
-  <div *ngFor="let gallery of galleries;">
-    <div *ngIf="gallery.isProject == false"
-         class="row"
-         attr.data-color="{{gallery.title}}">
-      <div class="galleryPreview js-tilt"
-           data-tilt>
-        <a class="desc"
-           [routerLink]="['/gallery', gallery.title]">
-          <h1>{{gallery.title}}</h1>
-          <p>description</p>
-        </a>
-      </div>
-    </div>
-  </div>
+<div *ngIf="galleries" class="galleries">
+  <ul>
+    <ng-container *ngFor="let gallery of galleries;">
+      <li *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}">
+        <div class="galleryPreview js-tilt" data-tilt>
+          <a class="desc" [routerLink]="['/gallery', gallery.title]">
+            <h1>{{gallery.title}}</h1>
+            <p>description</p>
+          </a>
+        </div>
+      </li>
+    </ng-container>
 
-  <div *ngIf="projects">
-    <div *ngFor="let project of projects;"
-         class="row"
-         attr.data-color="{{project.title}}">
-      <div class="galleryPreview js-tilt"
-           data-tilt>
-        <a class="desc"
-           [routerLink]="['/projects', project.title]">
-          <h1>{{project.title}}</h1>
-          <p>description</p>
-        </a>
-      </div>
-    </div>
-  </div>
+    <ng-container *ngFor="let project of projects;">
+      <li *ngIf="projects" class="row" attr.data-color="{{project.title}}">
+        <div class="galleryPreview js-tilt" data-tilt>
+          <a class="desc" [routerLink]="['/projects', project.title]">
+            <h1>{{project.title}}</h1>
+            <p>description</p>
+          </a>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
 </div>
+
 
 <ul>
   <li>

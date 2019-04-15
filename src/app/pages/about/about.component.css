@@ -1,11 +1,7 @@
 header {
   position: relative;
   height: 60vh;
-}
-
-header .inner {
   background: url("https://picsum.photos/200/200/?random") center right no-repeat;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +14,7 @@ header .inner {
           justify-content: center;
 }
 
-header .inner p {
+header p {
   max-width: 690px;
 }
 

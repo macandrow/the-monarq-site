@@ -5,6 +5,9 @@
   // .gallery-info{
   //   margin-top: 80px;
   // }
+  header{
+    margin-top: 80px;
+  }
   ul{
     display: grid;
     grid-gap: 60px;
@@ -140,3 +143,8 @@
 //   }
 // }
 
+@media only screen and (min-width: 1080px) {
+  header.intro{
+    padding-top: 40px;
+  }
+}

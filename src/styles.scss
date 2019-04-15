@@ -173,8 +173,6 @@ h3{
 header.intro {
   height: 30vh;
   min-height: 240px;
-  padding-top: 0;
-  margin-top: 0;
   h1{
     margin: 0;
   }
@@ -220,10 +218,6 @@ a.link, nav a{
   // main{
   // 	padding: 80px 0;
   // }
-  header.intro{
-    margin-top: 80px;
-    padding-top: 40px;
-  }
   .inner {
     max-width: 1080px;
     padding: 0;

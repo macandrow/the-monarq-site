@@ -1,15 +1,16 @@
 header {
   position: relative;
   height: 60vh;
-  .inner {
-    background: url("https://picsum.photos/200/200/?random") center right no-repeat;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    p{
-      max-width: 690px;
-    }
+  background: url("https://picsum.photos/200/200/?random") center right no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin-top: 0;
+  // padding-top: 0;
+  p{
+    max-width: 690px;
+    // padding: 0;
+    // margin: 0;
   }
 }
 
