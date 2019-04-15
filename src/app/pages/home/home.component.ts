@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
       // selectors
       const $window = $(window),
-        $body = $('body'),
+        $body = $('body.home'),
         $panel = $('.row');
 
       // Change 33% earlier than scroll position so colour is there when you arrive.
@@ -78,7 +78,6 @@ export class HomeComponent implements OnInit, OnDestroy {
           $body.addClass('color-intro');
         }
       });
-
     }).scroll();
 
     // const body = document.getElementsByTagName('body')[0];

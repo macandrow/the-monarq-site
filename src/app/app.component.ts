@@ -1,11 +1,8 @@
-import { Component } from '@angular/core';
-import { Router, Scroll, NavigationEnd } from '@angular/router';
+import { Component, Renderer2 } from '@angular/core';
+import { Router, Scroll, NavigationEnd, NavigationStart, RouterOutlet } from '@angular/router';
 import { Location, ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
-// import { trigger, transition, query, animateChild, stagger } from '@angular/animations';
 import { routerTransition } from './animations';
-import { RouterOutlet } from '@angular/router';
-
 
 
 @Component({
@@ -76,6 +73,7 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent {
+  previousUrl: string;
   title = 'The Monarq';
   // prepareRoute(outlet: RouterOutlet) {
   //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
@@ -83,8 +81,28 @@ export class AppComponent {
   getState(outlet) {
     return outlet.activatedRouteData.state;
   }
-  constructor() {
+  constructor(private renderer: Renderer2, private router: Router) {
+    this.router.events
+      .subscribe((event) => {
 
-  
+
+        if (event instanceof NavigationStart) {
+          if (this.previousUrl) {
+            this.renderer.removeClass(document.body, this.previousUrl);
+          }
+          const currentUrlSlug = event.url.slice(1);
+          if (currentUrlSlug) {
+            this.renderer.addClass(document.body, currentUrlSlug);
+          } else {
+            this.renderer.addClass(document.body, "home");
+          }
+          this.previousUrl = currentUrlSlug;
+        }
+      });
+
+
   }
+
+
+
 }

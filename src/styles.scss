@@ -89,13 +89,6 @@ body {
   line-height: normal;
   // height: 100vh;
   background-color: #fff;
-  background-size: 60%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  &.color-intro {
-    background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
-  }
 
   // &.color-textures{
   // 	background-image: lightgrey;
@@ -225,9 +218,16 @@ a.link, nav a{
   h1 {
     font-size: 5rem;
   }
-  body {
+  body.home {
     // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
     // background-color: #fff;
+    background-size: 60%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.color-intro {
+      background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+    }
     &.color-fractures {
       background-image: url('src/assets/images/thumbs/thumb_pattern_full_img146.jpg');
     }
