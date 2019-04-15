@@ -137,7 +137,7 @@ a.link:before, nav a:before {
   font-size: .8em;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1080px) {
   .inner {
     max-width: 1080px;
   }

@@ -1,0 +1,68 @@
+footer {
+  padding: 20px 0;
+}
+
+footer .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  font-size: 12px;
+}
+
+footer .inner #backToTop {
+  cursor: pointer;
+}
+
+footer .inner .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+footer .inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  justify-items: center;
+}
+
+footer .inner ul li {
+  margin-left: 12px;
+}
+
+footer .inner ul li .ico {
+  width: 12px;
+}
+
+footer .inner ul li .socialIco {
+  width: 20px;
+}
+
+footer .inner ul li .ico, footer .inner ul li .socialIco {
+  height: auto;
+}
+
+footer .inner ul li a:hover {
+  opacity: .7;
+}
+/*# sourceMappingURL=footer.component.css.map */

@@ -35,7 +35,10 @@ import { ISlide } from '../../shared/gallery-slide';
 })
 export class GalleryComponent implements OnInit {
   //@HostBinding('@animate') animate = true;
-  //@HostBinding('class.happy') 
+  //@HostBinding('class.gallery-frame') 
+  // @HostBinding('class') className = 'gallery-frame';
+  @HostBinding('class.gallery-frame') true;
+
   @ViewChild('photoSwipe') photoSwipe: ElementRef;
 
   gallery: IGallery;

@@ -2,8 +2,12 @@
   z-index: 10;
   background-color: white;
   position: relative;
-  height: 60px;
+  height: 80px;
   width: 100%;
+}
+
+.navWrapper .inner {
+  padding: 0;
 }
 
 .navWrapper nav {
@@ -46,7 +50,6 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 60px;
 }
 
 .navWrapper nav .menu a {
