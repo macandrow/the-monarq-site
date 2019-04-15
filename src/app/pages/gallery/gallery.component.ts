@@ -22,13 +22,16 @@ import { ISlide } from '../../shared/_models/gallery-slide';
 export class GalleryComponent implements OnInit {
   @ViewChild('photoSwipe') photoSwipe: ElementRef;
 
+  objectKeys = Object.keys;
   gallery: IGallery;
   galleryTitles: string[];
   prev: string;
   next: string;
   album: string;
   albums: {};
-  activeSlides: {};
+  allSlides: ISlide[];
+  coverSlides: ISlide[];
+  decks: {};
   pswp: PhotoSwipe = null;
   firstImage: any;
 
@@ -97,18 +100,23 @@ export class GalleryComponent implements OnInit {
       ],
     };
 
-    this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, [slide], options);
-    this.pswp.init();
-  }
+    const deckSlides = this.allSlides.filter(x => x.deck === slide.deck).reverse();
 
-  getFirstImage(val) {
-    this.firstImage = this.gallery.slides.find(x => x.album === val);
-    return typeof this.firstImage !== 'undefined' ? this.firstImage.src : '';
+    this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, deckSlides, options);
+    this.pswp.init();
   }
 
   setActiveSlides() {
     if (this.gallery) {
-      this.activeSlides = this.gallery.slides.filter((slide) => slide.album === this.album);
+      this.allSlides = this.gallery.slides.filter(slide => slide.album === this.album);
+      this.decks = {};
+      this.coverSlides = [];
+      for (const slide of this.allSlides) {
+        this.decks['' + slide.deck] = 1 + this.decks['' + slide.deck] || 0;
+        if (this.decks['' + slide.deck] === 1) {
+          this.coverSlides.push(slide);
+        }
+      }
     }
   }
 

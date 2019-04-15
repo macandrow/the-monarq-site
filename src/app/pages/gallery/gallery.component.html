@@ -14,7 +14,7 @@
       <!-- Use figure for a more semantic html -->
 
       <div class="slide_thumbs"
-           *ngFor="let slide of activeSlides;">
+           *ngFor="let slide of coverSlides;">
         <div *ngIf="slide.album === '' || album === slide.album">
           <figure itemprop="associatedMedia"
                   itemscope
@@ -22,11 +22,11 @@
             <!-- Link to the big image, not mandatory, but useful when there is no JS -->
             <div (click)="openGallery(slide)">
               <!-- Thumbnail -->
-              <img src="{{ slide.src }}"
+              <img [src]="slide.src"
                    itemprop="thumbnail"
-                   alt="Image description"
-                   width="{{ slide.w * .9}}"
-                   height="{{ slide.h * .9}}">
+                   [alt]="slide.title"
+                   [width]="slide.w * .9"
+                   [height]="slide.h * .9">
             </div>
           </figure>
         </div>
@@ -41,7 +41,8 @@
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div theme="light" class="pswp-overlay">
+<div theme="dark"
+     class="pswp-overlay">
   <div class="pswp"
        tabindex="-1"
        role="dialog"
@@ -97,6 +98,7 @@
 
         <button class="pswp__button pswp__button--arrow--left"
                 title="Previous (arrow left)"></button>
+
         <button class="pswp__button pswp__button--arrow--right"
                 title="Next (arrow right)"></button>
 
