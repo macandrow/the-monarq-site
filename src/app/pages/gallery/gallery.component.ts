@@ -100,7 +100,9 @@ export class GalleryComponent implements OnInit {
       ],
     };
 
-    const deckSlides = this.allSlides.filter(x => x.deck === slide.deck).reverse();
+    const deckSlides = slide.deck
+      ? this.allSlides.filter(x => x.deck === slide.deck).reverse()
+      : [slide];
 
     this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, deckSlides, options);
     this.pswp.init();
@@ -112,8 +114,12 @@ export class GalleryComponent implements OnInit {
       this.decks = {};
       this.coverSlides = [];
       for (const slide of this.allSlides) {
-        this.decks['' + slide.deck] = 1 + this.decks['' + slide.deck] || 0;
-        if (this.decks['' + slide.deck] === 1) {
+        if (slide.deck) {
+          this.decks['' + slide.deck] = 1 + this.decks['' + slide.deck] || 0;
+          if (this.decks['' + slide.deck] === 1) {
+            this.coverSlides.push(slide);
+          }
+        } else {
           this.coverSlides.push(slide);
         }
       }

@@ -13,7 +13,6 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Sea side, south shore',
-        deck: 0,
         album: 'default'
       },
       {
@@ -21,7 +20,6 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption 1',
-        deck: 0,
         album: 'default'
       },
       {
@@ -29,7 +27,6 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption 2',
-        deck: 0,
         album: 'default'
       },
       {
@@ -37,7 +34,6 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption 2',
-        deck: 0,
         album: 'second'
       },
       {
@@ -45,7 +41,6 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption 2',
-        deck: 0,
         album: 'second'
       }
     ]

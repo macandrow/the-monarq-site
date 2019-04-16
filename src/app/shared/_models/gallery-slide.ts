@@ -4,6 +4,6 @@ export interface ISlide {
   h: number;
   title: string;
   album: string;
-  deck: number;
+  deck?: number;
 }
 
