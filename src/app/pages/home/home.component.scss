@@ -1,5 +1,6 @@
 ul{
   list-style: none;
+  padding: 0;
 }
 // .tile {
 //   display: block;
@@ -40,7 +41,17 @@ header h1 {
   // 	width: 100%;
   // 	height: 100%;
   // }
-
+  li{
+    &[data-color="fractures"] .galleryPreview{
+      background-image: url('src/assets/images/thumbs/thumb_fractures.jpg');
+    }
+    &[data-color="photography"] .galleryPreview{
+      background-image: url('src/assets/images/thumbs/thumb_photography.jpg');
+    }
+    &[data-color="portraits"] .galleryPreview{
+      background-image: url('src/assets/images/thumbs/thumb_portraits.jpg');
+    }
+  }
 
   .row {
     // display: flex;
@@ -53,22 +64,18 @@ header h1 {
     justify-content: center;
     align-items: center;
     display: flex;
-    
-
     .galleryPreview {
       margin: 0 auto;
       position: relative;
       display: flex;
       justify-content: center;
-      align-items: center;
-      background-image: url('src/assets/images/thumbs/thumb_fractures.jpg');
+      align-items: center;      
       background-size: 350px 350px;
       background-position: center;
       background-repeat: no-repeat;
       width: 350px;
       height: 350px;
       transform-style: preserve-3d;
-
       a.desc {
         text-decoration: none;
         transform: translateZ(20px);
@@ -82,7 +89,6 @@ header h1 {
         position: relative;
         // text-align: center;
         color: #1c1818;
-
         &:hover {
           cursor: pointer;
         }
