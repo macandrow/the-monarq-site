@@ -1,6 +1,7 @@
 @charset "UTF-8";
 ul {
   list-style: none;
+  padding: 0;
 }
 
 header h1 {
@@ -16,6 +17,18 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.galleries li[data-color="fractures"] .galleryPreview {
+  background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
+}
+
+.galleries li[data-color="photography"] .galleryPreview {
+  background-image: url("src/assets/images/thumbs/thumb_photography.jpg");
+}
+
+.galleries li[data-color="portraits"] .galleryPreview {
+  background-image: url("src/assets/images/thumbs/thumb_portraits.jpg");
 }
 
 .galleries .row {
@@ -45,7 +58,6 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
   background-size: 350px 350px;
   background-position: center;
   background-repeat: no-repeat;
