@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { IGallery } from 'src/app/shared/gallery-info';
-import { GalleryService } from 'src/app/services/gallery.service';
 import * as typeformEmbed from '@typeform/embed'
 
 
@@ -11,13 +9,9 @@ import * as typeformEmbed from '@typeform/embed'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  galleries: IGallery[];
 
+  constructor() { }
 
-  constructor(private galleryService: GalleryService) { }
-  ngOnInit() {
-    this.galleryService.getGalleries().subscribe(galleries => this.galleries = galleries);
-  }
   ngAfterViewInit(): void {
     const contactForm = typeformEmbed.makePopup(
       'https://themonarq.typeform.com/to/zsyz1K', 

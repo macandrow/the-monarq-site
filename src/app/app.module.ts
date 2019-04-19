@@ -14,7 +14,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
-import { ContactComponent } from './pages/contact/contact.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { AppServicesModule } from './services/app.services.module';
