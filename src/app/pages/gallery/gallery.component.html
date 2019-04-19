@@ -5,35 +5,47 @@
       <p>{{gallery.description}}</p>
     </header>
     <!-- Galley wrapper that contains all items -->
-    <div class="gallery-frame inner">
-      <ul *ngIf="gallery !== undefined" id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <div *ngIf="gallery !== undefined"
+         id="gallery"
+         class="gallery"
+         itemscope
+         itemtype="http://schema.org/ImageGallery">
+      <!-- Use figure for a more semantic html -->
 
-        <!-- Use figure for a more semantic html -->
-        <li class="slide_thumbs" *ngFor="let slide of activeSlides;  let l = count">
-          <div *ngIf="slide.album === '' || album === slide.album">
-            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-              <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-              <div (click)="openGallery(slide)">
-                <!-- Thumbnail -->
-                <img src="{{ slide.src }}" itemprop="thumbnail" alt="Image description" width="{{ slide.w * .9}}"
-                  height="{{ slide.h * .9}}">
-              </div>
-            </figure>
-          </div>
-        </li>
-      </ul>    
+      <div class="slide_thumbs"
+           *ngFor="let slide of coverSlides;">
+        <div *ngIf="slide.album === '' || album === slide.album">
+          <figure itemprop="associatedMedia"
+                  itemscope
+                  itemtype="http://schema.org/ImageObject">
+            <!-- Link to the big image, not mandatory, but useful when there is no JS -->
+            <div (click)="openGallery(slide)">
+              <!-- Thumbnail -->
+              <img [src]="slide.src"
+                   itemprop="thumbnail"
+                   [alt]="slide.title"
+                   [width]="slide.w * .9"
+                   [height]="slide.h * .9">
+            </div>
+          </figure>
+        </div>
+      </div>
     </div>
     <!-- Some spacing -->
     <div class="spacer"></div>
     <app-footer></app-footer>
 
   </div>
-</div> <!-- end gallery wrapper-->
-  
-  
-<!-- Root element of 45332. Must have class pswp. -->
-<div class="pswp-overlay">
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" #photoSwipe>
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div theme="dark"
+     class="pswp-overlay">
+  <div class="pswp"
+       tabindex="-1"
+       role="dialog"
+       aria-hidden="true"
+       #photoSwipe>
 
     <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
     <div class="pswp__bg"></div>
@@ -74,8 +86,11 @@
           <div class="pswp__share-tooltip"></div>
         </div>
 
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <button class="pswp__button pswp__button--arrow--left"
+                title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right"
+                title="Next (arrow right)"></button>
 
         <div class="pswp__caption">
           <div class="pswp__caption__center"></div>

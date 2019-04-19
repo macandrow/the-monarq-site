@@ -57,6 +57,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 0,
         album: 'texture-on-polaroid'
       },
       {
@@ -64,6 +65,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 0,
         album: 'texture-on-polaroid'
       },
       {
@@ -71,6 +73,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 1,
         album: 'texture-on-polaroid'
       },
       {
@@ -78,6 +81,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 1,
         album: 'texture-on-polaroid'
       },
       {
@@ -85,6 +89,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 2,
         album: 'texture-on-polaroid'
       },
       {
@@ -92,6 +97,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 2,
         album: 'texture-on-polaroid'
       },
       {
@@ -99,6 +105,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 3,
         album: 'texture-on-polaroid'
       },
       {
@@ -106,6 +113,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 3,
         album: 'texture-on-polaroid'
       },
       {
@@ -113,6 +121,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 3,
         album: 'texture-on-polaroid'
       },
       {
@@ -120,6 +129,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 3,
         album: 'texture-on-polaroid'
       },
       {
@@ -127,6 +137,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 3,
         album: 'texture-on-polaroid'
       },
       {
@@ -134,6 +145,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 4,
         album: 'texture-on-polaroid'
       },
       {
@@ -141,6 +153,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 4,
         album: 'texture-on-polaroid'
       },
       {
@@ -148,6 +161,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 4,
         album: 'texture-on-polaroid'
       },
       {
@@ -155,6 +169,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 4,
         album: 'texture-on-polaroid'
       },
       {
@@ -162,6 +177,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 4,
         album: 'texture-on-polaroid'
       },
       {
@@ -169,6 +185,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 5,
         album: 'texture-on-polaroid'
       },
       {
@@ -176,6 +193,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 5,
         album: 'texture-on-polaroid'
       },
       {
@@ -183,6 +201,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 6,
         album: 'texture-on-polaroid'
       },
       {
@@ -190,6 +209,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 6,
         album: 'texture-on-polaroid'
       },
       {
@@ -197,6 +217,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
+        deck: 7,
         album: 'texture-on-polaroid'
       },
       {
@@ -204,6 +225,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Aura',
+        deck: 0,
         album: 'aura'
       },
       {
@@ -211,6 +233,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'at-home'
       },
       {
@@ -218,6 +241,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'at-home'
       },
       {
@@ -225,6 +249,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'at-home'
       },
       {
@@ -232,6 +257,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'at-home'
       },
       {
@@ -239,6 +265,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'at-home'
       },
       {
@@ -246,6 +273,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'at-home'
       },
       {
@@ -253,6 +281,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'by-train'
       },
       {
@@ -260,6 +289,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'by-train'
       },
       {
@@ -267,6 +297,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
+        deck: 0,
         album: 'by-train'
       }
     ]
@@ -283,6 +314,7 @@ export const GALLERIES: IGallery[] = [
         w: 464,
         h: 696,
         title: 'Sea side, south shore',
+        deck: 0,
         album: 'default'
       },
       {
@@ -290,6 +322,7 @@ export const GALLERIES: IGallery[] = [
         w: 714,
         h: 746,
         title: 'Image Caption 1',
+        deck: 0,
         album: 'default'
       },
       {
@@ -297,6 +330,7 @@ export const GALLERIES: IGallery[] = [
         w: 400,
         h: 500,
         title: 'Image Caption 2',
+        deck: 0,
         album: 'default'
       },
       {
@@ -304,6 +338,7 @@ export const GALLERIES: IGallery[] = [
         w: 334,
         h: 501,
         title: 'Image Caption 2',
+        deck: 0,
         album: 'default'
       },
       {
@@ -311,6 +346,7 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption 2',
+        deck: 0,
         album: 'default'
       }
     ]

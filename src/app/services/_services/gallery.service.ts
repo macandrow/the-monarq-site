@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IGallery } from 'src/app/shared/gallery-info';
-import { GALLERIES } from 'src/app/shared/galleries';
+import { IGallery } from 'src/app/shared/_models/gallery-info';
+import { GALLERIES } from 'src/app/shared/_models/galleries';
 import { Observable } from 'rxjs';
 import 'rxjs-compat/add/observable/of';
 

@@ -1,15 +1,18 @@
 import { Component, ElementRef, OnInit, ViewChild, HostBinding } from '@angular/core';
-import { ActivatedRoute, Event, NavigationEnd, Params, Router } from '@angular/router';
+import {
+  ActivatedRoute,
+  Event,
+  NavigationEnd,
+  Params,
+  Router
+} from '@angular/router';
 import { Location } from '@angular/common';
 import PhotoSwipe from 'photoswipe/dist/photoswipe.min.js';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default.js';
 import 'rxjs/add/operator/switchMap';
-import { GalleryService } from 'src/app/services/gallery.service';
-import { IGallery } from 'src/app/shared/gallery-info';
-import { ISlide } from '../../shared/gallery-slide';
-//import { trigger, transition, style, animate , query, stagger, animateChild, keyframes} from '@angular/animations';
-
-
+import { GalleryService } from 'src/app/services/_services/gallery.service';
+import { IGallery } from 'src/app/shared/_models/gallery-info';
+import { ISlide } from '../../shared/_models/gallery-slide';
 
 @Component({
   selector: 'app-gallery',
@@ -41,18 +44,21 @@ export class GalleryComponent implements OnInit {
 
   @ViewChild('photoSwipe') photoSwipe: ElementRef;
 
+  objectKeys = Object.keys;
   gallery: IGallery;
   galleryTitles: string[];
   prev: string;
   next: string;
   album: string;
   albums: {};
-  activeSlides: {};
+  allSlides: ISlide[];
+  coverSlides: ISlide[];
+  decks: {};
   pswp: PhotoSwipe = null;
   firstImage: any;
   // figures = [];
 
-  constructor(private galleryservice: GalleryService,
+  constructor(private galleryService: GalleryService,
               private route: ActivatedRoute,
               private router: Router,
               private location: Location) {
@@ -66,15 +72,17 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.galleryservice.getGalleryTitles().subscribe(galleryTitles => this.galleryTitles = galleryTitles);
+    this.galleryService.getGalleryTitles().subscribe(
+      galleryTitles => this.galleryTitles = galleryTitles);
 
     this.route.params.switchMap((params: Params) =>
-      this.galleryservice.getGalleryByTitle(params['title'])).subscribe(gallery => {
-      this.albums = this.galleryservice.getGalleryAlbums(gallery.title, gallery);
-      this.gallery = gallery;
-      this.setActiveSlides();
-      this.setPrevNext(gallery.title);
-    });
+      this.galleryService.getGalleryByTitle(params['title'])).subscribe(
+      gallery => {
+        this.albums = this.galleryService.getGalleryAlbums(gallery.title, gallery);
+        this.gallery = gallery;
+        this.setActiveSlides();
+        this.setPrevNext(gallery.title);
+      });
 
   }
 
@@ -83,8 +91,8 @@ export class GalleryComponent implements OnInit {
     const options = {
       index: 0,
       showHideOpacity: true,
-      hideAnimationDuration: 0,
-      showAnimationDuration: 0,
+      hideAnimationDuration: 333,
+      showAnimationDuration: 333,
       loop: false,
       pinchToClose: false,
       closeOnVerticalDrag: false,
@@ -92,6 +100,7 @@ export class GalleryComponent implements OnInit {
       maxSpreadZoom: 1,
       focus: false,
       modal: true,
+      zoomEl: false,
       getDoubleTapZoom: (isMouseClick, item) => {
         return item.initialZoomLevel;
       },
@@ -114,18 +123,29 @@ export class GalleryComponent implements OnInit {
       ],
     };
 
-    this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, [slide], options);
-    this.pswp.init();
-  }
+    const deckSlides = slide.deck
+      ? this.allSlides.filter(x => x.deck === slide.deck).reverse()
+      : [slide];
 
-  getFirstImage(val) {
-    this.firstImage = this.gallery.slides.find(x => x.album === val);
-    return typeof this.firstImage !== 'undefined' ? this.firstImage.src : '';
+    this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, deckSlides, options);
+    this.pswp.init();
   }
 
   setActiveSlides() {
     if (this.gallery) {
-      this.activeSlides = this.gallery.slides.filter((slide) => slide.album === this.album);
+      this.allSlides = this.gallery.slides.filter(slide => slide.album === this.album);
+      this.decks = {};
+      this.coverSlides = [];
+      for (const slide of this.allSlides) {
+        if (slide.deck) {
+          this.decks['' + slide.deck] = 1 + this.decks['' + slide.deck] || 0;
+          if (this.decks['' + slide.deck] === 1) {
+            this.coverSlides.push(slide);
+          }
+        } else {
+          this.coverSlides.push(slide);
+        }
+      }
     }
   }
 
@@ -139,4 +159,5 @@ export class GalleryComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
 }

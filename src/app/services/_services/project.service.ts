@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IProject } from 'src/app/shared/project-info';
-import { PROJECTS } from 'src/app/shared/projects';
+import { IProject } from 'src/app/shared/_models/project-info';
+import { PROJECTS } from 'src/app/shared/_models/projects';
 import { Observable } from 'rxjs';
 import 'rxjs-compat/add/observable/of';
 
