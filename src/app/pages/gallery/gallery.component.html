@@ -1,11 +1,12 @@
 <div class="gallery-wrapper">
   <div class="gallery-scroller">
+    
     <header *ngIf="gallery !== undefined" class="intro inner">
       <h1 class="text-center"> {{gallery.title}} </h1>
       <p>{{gallery.description}}</p>
     </header>
     <!-- Galley wrapper that contains all items -->
-    <div class="gallery-frame inner">
+    <div class="inner">
       <ul *ngIf="gallery !== undefined"
           id="gallery"
           class="gallery"

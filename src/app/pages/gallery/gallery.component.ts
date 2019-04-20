@@ -62,8 +62,7 @@ export class GalleryComponent implements OnInit {
         this.gallery = gallery;
         this.setActiveSlides();
         this.setPrevNext(gallery.title);
-      });
-
+      });     
   }
 
   openGallery(slide: ISlide) {
