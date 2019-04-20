@@ -51,7 +51,11 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    var btn = $('#backToTop');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('.gallery-scroller').animate({scrollTop:0}, '300');
+    });
     this.galleryService.getGalleryTitles().subscribe(
       galleryTitles => this.galleryTitles = galleryTitles);
 
