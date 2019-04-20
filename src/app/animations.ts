@@ -60,10 +60,10 @@ function stepper(){
       animate('0.5s ease-in-out', style({ opacity: 0}))
       ], optional),
   
-      query('.gallery-wrapper header *, .slide_thumbs, footer', style({ opacity: 0 })
+      query('.gallery-wrapper header *, .slide_thumbs, footer, .backToTop', style({ opacity: 0 })
       , optional),
   
-      query(':enter .gallery-wrapper header *, .slide_thumbs, footer', stagger(100, [
+      query(':enter .gallery-wrapper header *, .slide_thumbs, footer, .backToTop', stagger(100, [
       style({ transform: 'translateY(100px)' }),
       animate('1s cubic-bezier(0.7, 0, 0.3, 1)', style({ transform: 'translateY(0px)', opacity: 1 })),
       ]), optional),
@@ -76,7 +76,7 @@ function galleryAway(){
   return[
     //transition(':leave', [
     group([
-      query(':leave .gallery-wrapper header *, .slide_thumbs, footer', stagger(10, [
+      query(':leave .gallery-wrapper header *, .slide_thumbs, footer, .backToTop', stagger(10, [
         style({ transform: 'translateY(0px)', opacity: 1 }),
         animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(100px)', opacity: 0})),
       ]), optional),  
@@ -101,7 +101,7 @@ function projectsEnter(){
   return[
     //transition(':leave', [
     group([
-      query(':leave .gallery-wrapper header *, .slide_thumbs, footer', stagger(10, [
+      query(':leave .gallery-wrapper header *, .slide_thumbs, footer, .backToTop', stagger(10, [
         style({ transform: 'translateY(0px)', opacity: 1 }),
         animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(100px)', opacity: 0})),
       ]), optional),  

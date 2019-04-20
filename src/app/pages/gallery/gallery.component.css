@@ -2,6 +2,15 @@
   margin-top: 80px;
 }
 
+.gallery-wrapper .btn_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .gallery-wrapper ul {
   display: -ms-grid;
   display: grid;
@@ -10,6 +19,7 @@
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   padding: 0;
   list-style: none;
+  margin-bottom: 60px;
 }
 
 .gallery-wrapper ul li {

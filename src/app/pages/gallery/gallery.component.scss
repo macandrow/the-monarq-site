@@ -1,12 +1,13 @@
 // :host{ position: relative; }
 // .gallery-frame{ flex: 1;}
 .gallery-wrapper {
-  // padding: 2rem;
-  // .gallery-info{
-  //   margin-top: 80px;
-  // }
+
   header{
     margin-top: 80px;
+  }
+  .btn_holder{
+    display: flex;
+    justify-content: center;
   }
   ul{
     display: grid;
@@ -15,6 +16,7 @@
     // grid-gap: 1rem;
     padding: 0;
     list-style: none;
+    margin-bottom: 60px;
     li {
       border: 1px solid #E2E2E2;
       border-radius: .5rem;

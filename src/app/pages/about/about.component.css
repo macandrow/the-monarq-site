@@ -47,10 +47,6 @@ header p {
   padding-bottom: 30px;
 }
 
-.content.cv .inner a.btn {
-  margin-top: 45px;
-}
-
 .content.cv .inner h1, .content.cv .inner h3, .content.cv .inner .collectionList {
   -webkit-box-flex: 1;
       -ms-flex: 1 100%;
