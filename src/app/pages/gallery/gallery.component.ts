@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, HostBinding } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {
   ActivatedRoute,
   Event,
@@ -35,7 +35,7 @@ export class GalleryComponent implements OnInit {
   coverSlides: ISlide[];
   decks: {};
   pswp: PhotoSwipe = null;
-  firstImage: any;
+
   // figures = [];
 
   constructor(private galleryService: GalleryService,
@@ -51,10 +51,10 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    var btn = $('.backToTop');
-    btn.on('click', function(e) {
+    const btn = $('.backToTop');
+    btn.on('click', function (e) {
       e.preventDefault();
-      $('.gallery-scroller').animate({scrollTop:0}, '300');
+      $('.gallery-scroller').animate({ scrollTop: 0 }, '300');
     });
     this.galleryService.getGalleryTitles().subscribe(
       galleryTitles => this.galleryTitles = galleryTitles);
@@ -66,7 +66,7 @@ export class GalleryComponent implements OnInit {
         this.gallery = gallery;
         this.setActiveSlides();
         this.setPrevNext(gallery.title);
-      });     
+      });
   }
 
   openGallery(slide: ISlide) {
@@ -106,8 +106,9 @@ export class GalleryComponent implements OnInit {
       ],
     };
 
-    const deckSlides = slide.deck
-      ? this.allSlides.filter(x => x.deck === slide.deck).reverse()
+    const deckSlides = slide.deck !== undefined
+      ? this.allSlides.filter(x => x.deck === slide.deck).sort(
+        (a, b) => { return (a.position || 0) - (b.position || 0); })
       : [slide];
 
     this.pswp = new PhotoSwipe(this.photoSwipe.nativeElement, PhotoSwipeUI_Default, deckSlides, options);
@@ -116,13 +117,22 @@ export class GalleryComponent implements OnInit {
 
   setActiveSlides() {
     if (this.gallery) {
-      this.allSlides = this.gallery.slides.filter(slide => slide.album === this.album);
+
+      this.allSlides = this.gallery.slides.filter(slide => {
+        return slide.album === this.album;
+      });
+
       this.decks = {};
       this.coverSlides = [];
-      for (const slide of this.allSlides) {
-        if (slide.deck) {
-          this.decks['' + slide.deck] = 1 + this.decks['' + slide.deck] || 0;
-          if (this.decks['' + slide.deck] === 1) {
+      const slides = this.allSlides.sort((a, b) => {
+          return (b.position || 0) - (a.position || 0);
+        }
+      );
+      for (const slide of slides) {
+        if (slide.deck !== undefined) {
+          const iDeck = '' + slide.deck;
+          this.decks[iDeck] = 1 + this.decks[iDeck] || 0;
+          if (this.decks[iDeck] === 1) {
             this.coverSlides.push(slide);
           }
         } else {

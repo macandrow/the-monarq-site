@@ -58,6 +58,7 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Texture on Polariod',
         deck: 0,
+        position: 0,
         album: 'texture-on-polaroid'
       },
       {
@@ -66,6 +67,7 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Texture on Polariod',
         deck: 0,
+        position: 1,
         album: 'texture-on-polaroid'
       },
       {
@@ -74,6 +76,7 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Texture on Polariod',
         deck: 1,
+        position: 1,
         album: 'texture-on-polaroid'
       },
       {
@@ -82,6 +85,7 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Texture on Polariod',
         deck: 1,
+        position: 0,
         album: 'texture-on-polaroid'
       },
       {
@@ -234,6 +238,7 @@ export const GALLERIES: IGallery[] = [
         h: 900,
         title: 'Image Caption',
         deck: 0,
+        position: 0,
         album: 'at-home'
       },
       {
@@ -241,7 +246,8 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
-        deck: 0,
+        deck: 1,
+        position: 0,
         album: 'at-home'
       },
       {
@@ -249,7 +255,8 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
-        deck: 0,
+        deck: 1,
+        position: 1,
         album: 'at-home'
       },
       {
@@ -257,7 +264,8 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
-        deck: 0,
+        deck: 1,
+        position: 3,
         album: 'at-home'
       },
       {
@@ -265,7 +273,8 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
-        deck: 0,
+        deck: 1,
+        position: 2,
         album: 'at-home'
       },
       {
@@ -273,7 +282,8 @@ export const GALLERIES: IGallery[] = [
         w: 1200,
         h: 900,
         title: 'Image Caption',
-        deck: 0,
+        deck: 1,
+        position: 6,
         album: 'at-home'
       },
       {
