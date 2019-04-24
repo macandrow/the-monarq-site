@@ -84,6 +84,7 @@ export class GalleryComponent implements OnInit {
       focus: false,
       modal: true,
       zoomEl: false,
+      shareEl: false, // Hides the share buttons
       getDoubleTapZoom: (isMouseClick, item) => {
         return item.initialZoomLevel;
       },
