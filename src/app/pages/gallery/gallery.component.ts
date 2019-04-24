@@ -132,7 +132,7 @@ export class GalleryComponent implements OnInit {
         if (slide.deck !== undefined) {
           const iDeck = '' + slide.deck;
           this.decks[iDeck] = 1 + this.decks[iDeck] || 0;
-          if (this.decks[iDeck] === 1) {
+          if (this.decks[iDeck] === 0) {
             this.coverSlides.push(slide);
           }
         } else {
