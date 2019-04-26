@@ -157,11 +157,8 @@ export class GalleryComponent implements OnInit {
 
   getFbShareLink(): string {
     const appId = environment.facebookAppId;
-    const href = encodeURI(this.router.url);
-    const redirectUrl = encodeURI(this.router.url);
     return `https://www.facebook.com/dialog/feed`
       + `?app_id=${appId}`
-      + `&href=${href}`
-      + `&redirect_uri=${redirectUrl}`;
+      + `&href={{url}}`;
   }
 }
