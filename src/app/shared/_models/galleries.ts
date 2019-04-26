@@ -104,7 +104,7 @@ export const GALLERIES: IGallery[] = [
         h: 750,
         title: 'Fracture 10',
         deck: 4,
-        position: 0,
+        position: 1,
         album: 'default'
       },
       {
@@ -112,8 +112,8 @@ export const GALLERIES: IGallery[] = [
         w: 1000,
         h: 750,
         title: 'Fracture 10',
-        deck: 5,
-        position: 0,
+        deck: 4,
+        position: 2,
         album: 'default'
       },
       {
@@ -121,8 +121,8 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Fracture 10',
-        deck: 6,
-        position: 0,
+        deck: 4,
+        position: 3,
         album: 'default'
       },
       {
@@ -221,7 +221,7 @@ export const GALLERIES: IGallery[] = [
         h: 750,
         title: 'Fracture 10',
         deck: 6,
-        position: 0,
+        position: 1,
         album: 'default'
       },
       {
@@ -230,7 +230,7 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Fracture 10',
         deck: 6,
-        position: 0,
+        position: 2,
         album: 'default'
       },
       
