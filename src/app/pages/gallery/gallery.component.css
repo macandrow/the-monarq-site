@@ -22,11 +22,6 @@
   margin-bottom: 60px;
 }
 
-.gallery-wrapper ul li {
-  border: 1px solid #E2E2E2;
-  border-radius: .5rem;
-}
-
 .gallery-wrapper ul li figure {
   overflow: hidden;
   position: relative;

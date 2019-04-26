@@ -9,40 +9,231 @@ export const GALLERIES: IGallery[] = [
     isProject: false,
     slides: [
       {
-        src: 'https://media.gettyimages.com/photos/son-looking-at-photos-on-smartphone-with-dad-picture-id902907098',
-        w: 1200,
+        src: '/assets/images/fractures/pattern_img117.jpg',
+        w: 900,
         h: 900,
-        title: 'Sea side, south shore',
+        title: 'Fracture 10',
+        deck: 0,
+        position: 3,
         album: 'default'
       },
       {
-        src: 'https://media.gettyimages.com/photos/rainbow-colored-fan-picture-id172980469',
-        w: 1200,
-        h: 900,
-        title: 'Image Caption 1',
+        src: '/assets/images/fractures/repeat_img117.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 0,
+        position: 1,
         album: 'default'
       },
       {
-        src: 'https://media.gettyimages.com/photos/young-couple-choosing-the-right-color-for-their-wall-while-renovating-picture-id922010262',
-        w: 1200,
-        h: 900,
-        title: 'Image Caption 2',
+        src: '/assets/images/fractures/org_img117.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 0,
+        position: 0,
         album: 'default'
       },
       {
-        src: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80',
-        w: 1200,
+        src: '/assets/images/fractures/pattern_img157.jpg',
+        w: 900,
         h: 900,
-        title: 'Image Caption 2',
-        album: 'second'
+        title: 'Fracture 10',
+        deck: 1,
+        position: 0,
+        album: 'default'
       },
       {
-        src: 'https://images.unsplash.com/photo-1543508282-5c1f427f023f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80',
-        w: 1200,
+        src: '/assets/images/fractures/repeat_img157.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 1,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img157.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 1,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img146.jpg',
+        w: 900,
         h: 900,
-        title: 'Image Caption 2',
-        album: 'second'
-      }
+        title: 'Fracture 10',
+        deck: 3,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img146.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img146.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img042.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 4,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img042.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 4,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img042_b.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 5,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img042.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img166.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 5,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img166.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 5,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img166.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 5,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img059.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img059.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img059.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img087_1.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img087_1.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img087_1.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img157.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img157.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img157.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 6,
+        position: 0,
+        album: 'default'
+      },
+      
     ]
   },
   {
@@ -228,7 +419,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/texture_on_polaroid/img116.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura',
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
         deck: 0,
         album: 'aura'
       },
@@ -357,6 +548,50 @@ export const GALLERIES: IGallery[] = [
         h: 900,
         title: 'Image Caption 2',
         deck: 0,
+        album: 'default'
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: 'fractures  two',
+    description: '123SC',
+    thumbnail: 'sfsfd',
+    isProject: false,
+    slides: [
+      {
+        src: '/assets/images/fractures/pattern_img117.jpg',
+        w: 900,
+        h: 900,
+        title: 'Sea side, south shore',
+        album: 'default'
+      },
+      {
+        src: 'https://media.gettyimages.com/photos/rainbow-colored-fan-picture-id172980469',
+        w: 1200,
+        h: 900,
+        title: 'Image Caption 1',
+        album: 'default'
+      },
+      {
+        src: 'https://media.gettyimages.com/photos/young-couple-choosing-the-right-color-for-their-wall-while-renovating-picture-id922010262',
+        w: 1200,
+        h: 900,
+        title: 'Image Caption 2',
+        album: 'default'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80',
+        w: 1200,
+        h: 900,
+        title: 'Image Caption 2',
+        album: 'default'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1543508282-5c1f427f023f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80',
+        w: 1200,
+        h: 900,
+        title: 'Image Caption 2',
         album: 'default'
       }
     ]
