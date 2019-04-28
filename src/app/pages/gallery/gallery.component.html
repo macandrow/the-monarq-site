@@ -10,7 +10,7 @@
       <ul *ngIf="gallery !== undefined"
           id="gallery"
           class="gallery"
-          [ngClass]="gallery.title ? gallery.title : ''"
+          [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']"
           itemscope
           itemtype="http://schema.org/ImageGallery">
         <!-- Use figure for a more semantic html -->

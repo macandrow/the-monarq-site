@@ -13,6 +13,7 @@ import 'rxjs/add/operator/switchMap';
 import { GalleryService } from 'src/app/services/_services/gallery.service';
 import { IGallery } from 'src/app/shared/_models/gallery-info';
 import { ISlide } from '../../shared/_models/gallery-slide';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-gallery',
@@ -84,7 +85,7 @@ export class GalleryComponent implements OnInit {
       focus: false,
       modal: true,
       zoomEl: false,
-      shareEl: false, // Hides the share buttons
+      shareEl: true, // Hides the share buttons
       getDoubleTapZoom: (isMouseClick, item) => {
         return item.initialZoomLevel;
       },
@@ -92,7 +93,7 @@ export class GalleryComponent implements OnInit {
         {
           id: 'facebook',
           label: 'Share on Facebook',
-          url: 'https://www.facebook.com/sharer/sharer.php?u={{url}}'
+          url: this.getFbShareLink()
         },
         {
           id: 'twitter',
@@ -126,7 +127,7 @@ export class GalleryComponent implements OnInit {
       this.decks = {};
       this.coverSlides = [];
       const slides = this.allSlides.sort((a, b) => {
-          return (b.position || 0) - (a.position || 0);
+          return (a.position || 0) - (b.position || 0);
         }
       );
       for (const slide of slides) {
@@ -154,4 +155,10 @@ export class GalleryComponent implements OnInit {
     this.location.back();
   }
 
+  getFbShareLink(): string {
+    const appId = environment.facebookAppId;
+    return `https://www.facebook.com/dialog/feed`
+      + `?app_id=${appId}`
+      + `&href={{url}}`;
+  }
 }
