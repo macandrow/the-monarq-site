@@ -1,76 +1,86 @@
-        <span *ngIf="gallery !== undefined">
-            <h1 class="text-center">
-                {{gallery.title | uppercase}}
-            </h1>
-          <p>{{gallery.description}}</p>
-          <!--<div *ngIf="albums && album === 'default'">
-            <h4>Gallery Albums</h4>
-            &lt;!&ndash;<p *ngFor="let alb of albums"><a [routerLink]="['/gallery',gallery.title,alb]">{{alb}}</a></p>&ndash;&gt;
-          </div>-->
-        </span>
+<div class="gallery-wrapper">
+  <div class="gallery-scroller">
+    
+    <header *ngIf="gallery !== undefined" class="intro inner">
+      <h1 class="text-center"> {{gallery.title}} </h1>
+      <p>{{gallery.description}}</p>
+    </header>
+    <!-- Galley wrapper that contains all items -->
+    <div class="inner">
+      <ul *ngIf="gallery !== undefined"
+          id="gallery"
+          class="gallery"
+          [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']"
+          itemscope
+          itemtype="http://schema.org/ImageGallery">
+        <!-- Use figure for a more semantic html -->
+
+        <li class="slide_thumbs"
+            *ngFor="let slide of coverSlides;">
+          <div *ngIf="slide.album === '' || album === slide.album">
+            <figure itemprop="associatedMedia"
+                    itemscope
+                    itemtype="http://schema.org/ImageObject">
+              <!-- Link to the big image, not mandatory, but useful when there is no JS -->
+              <div (click)="openGallery(slide)">
+                <!-- Thumbnail -->
+                <img [src]="slide.src"
+                    itemprop="thumbnail"
+                    [alt]="slide.title"
+                    [width]="slide.w * .9"
+                    [height]="slide.h * .9">
+              </div>
+            </figure>
+          </div>
+        </li>
+      </ul>
+      <div class="btn_holder">
+        <button class="backToTop"> <img src="/assets/images/ico-arrowUp.svg" alt="Back to Top" class="ico"/> Back to Top</button>
+      </div>
+    </div>
+    <!-- Some spacing -->
+    <div class="spacer"></div>
+    
+    <app-footer></app-footer>
+
+  </div>
   
-        <!-- Galley wrapper that contains all items -->
-        <div *ngIf="gallery !== undefined" id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          <!-- Use figure for a more semantic html -->
+</div>
 
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div theme="dark"
+     class="pswp-overlay">
+  <div class="pswp"
+       tabindex="-1"
+       role="dialog"
+       aria-hidden="true"
+       #photoSwipe>
 
-          <span class="slide_thumbs" *ngFor="let slide of activeSlides; let i = index;">
-            <span *ngIf="slide.album == 'default'">
-              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
-                <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                <a [href]="" (click)="carousel(i)"  attr.data-caption="{{slide.title}}>" data-width="1200" data-height="900" itemprop="contentUrl">
-                  <!-- Thumbnail -->
-                  <img [src]="slide.src" itemprop="thumbnail" alt="Image description">
-                </a>
-              </figure>
-            </span>
-          </span>
-          <span *ngIf="albums.length > 1 && albums[0] !== ''">
-            <span class="slide_thumbs" *ngFor="let alb2 of albums; let j = index;">
-
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
-                  <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                  <a [href]="" (click)="galleryCarousel(alb2)"  attr.data-caption="{{alb}}>" data-width="1200" data-height="900" itemprop="contentUrl">
-                    <!-- Thumbnail -->
-                    <img [src]="getFirstImage(alb2)" itemprop="thumbnail" alt="Image description">
-                  </a>
-                </figure>
-              </span>
-            </span>
-
-        </div>
-
-<hr>
-
-  <!-- Some spacing 😉 -->
-  <div class="spacer"></div>
-  
-  
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-             It's a separate element as animating opacity is faster than rgba(). -->
+    <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
     <div class="pswp__bg"></div>
+
     <!-- Slides wrapper with overflow:hidden. -->
     <div class="pswp__scroll-wrap">
-      <!-- Container that holds slides. 
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
+
+      <!-- Container that holds slides. PhotoSwipe keeps only 3 of them in the DOM to save memory. Don't modify these 3 pswp__item elements, data is added later on. -->
       <div class="pswp__container">
         <div class="pswp__item"></div>
         <div class="pswp__item"></div>
         <div class="pswp__item"></div>
       </div>
+
       <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
       <div class="pswp__ui pswp__ui--hidden">
         <div class="pswp__top-bar">
+
           <!--  Controls are self-explanatory. Order can be changed. -->
           <div class="pswp__counter"></div>
+
           <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
           <button class="pswp__button pswp__button--share" title="Share"></button>
           <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-          <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
           <!-- element will get class pswp__preloader--active when preloader is running -->
           <div class="pswp__preloader">
             <div class="pswp__preloader__icn">
@@ -80,19 +90,21 @@
             </div>
           </div>
         </div>
+
         <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
           <div class="pswp__share-tooltip"></div>
         </div>
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-        </button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-        </button>
+
+        <button class="pswp__button pswp__button--arrow--left"
+                title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right"
+                title="Next (arrow right)"></button>
+
         <div class="pswp__caption">
           <div class="pswp__caption__center"></div>
         </div>
       </div>
     </div>
   </div>
-
-  
-  
+</div><!---end photoswipe-->

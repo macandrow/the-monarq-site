@@ -1,1 +1,71 @@
-/* No CSS *//*# sourceMappingURL=about.component.css.map */
+header {
+  position: relative;
+  height: 60vh;
+  background: url("https://picsum.photos/200/200/?random") center right no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header p {
+  max-width: 690px;
+}
+
+.content.cv {
+  background-color: #eae4e4;
+}
+
+.content.cv h1 {
+  color: #ffffff;
+}
+
+.content.cv .inner {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+.content.cv .inner h1, .content.cv .inner h3, .content.cv .inner .collectionList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+
+.content.cv .inner .date {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 20%;
+          flex: 1 20%;
+}
+
+.content.cv .inner .event {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 80%;
+          flex: 2 80%;
+}
+
+.collectionList {
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=about.component.css.map */

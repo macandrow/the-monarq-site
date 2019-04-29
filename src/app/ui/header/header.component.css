@@ -1,1 +1,63 @@
-/* No CSS *//*# sourceMappingURL=header.component.css.map */
+.navWrapper {
+  z-index: 10;
+  background-color: white;
+  position: relative;
+  height: 80px;
+  width: 100%;
+}
+
+.navWrapper .inner {
+  padding: 0;
+}
+
+.navWrapper nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navWrapper nav .logo {
+  background-color: #1c1818;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: white;
+}
+
+.navWrapper nav .logo h1 {
+  font-family: 'salomeregular', Georgia, Serif;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.navWrapper nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navWrapper nav .menu a {
+  padding: .6em 1em;
+  font-size: 13px;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1c1818;
+}
+/*# sourceMappingURL=header.component.css.map */

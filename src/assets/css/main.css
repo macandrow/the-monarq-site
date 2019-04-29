@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #1c1818;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -99,38 +99,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body{
-    -webkit-transition: background .5s ease-out;
-    -moz-transition: background .5s ease-out;
-    -o-transition: background .5s ease-out;
-    transition: background .5s ease-out;
-}
-
-/* colours */
-/*.color-intro{
-    background: url("https://images.unsplash.com/photo-1543363950-725dc7180660?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80");
-}
-.color-tkb {
-  background: url("../images/fractures/Kal_img059-1.jpg") repeat top left;
-}
-.color-huddle {
-  background: url("../images/fractures/Kal_img059-2.jpg")  repeat top left;
-}
-.color-monarq {
-  background: url("../images/fractures/Kal_img059-3.jpg") repeat top left;
-}*/
-
-@font-face {
-    font-family: 'salomeregular';
-    src: url('fonts/salome-webfont.eot');
-    src: url('fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/salome-webfont.woff2') format('woff2'),
-         url('fonts/salome-webfont.woff') format('woff'),
-         url('fonts/salome-webfont.ttf') format('truetype'),
-         url('fonts/salome-webfont.svg#salomeregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* ==========================================================================
    Helper classes

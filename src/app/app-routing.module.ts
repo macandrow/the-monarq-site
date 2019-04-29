@@ -1,50 +1,76 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
-import {GalleryComponent} from './pages/gallery/gallery.component';
+
 
 const routes: Routes = [
-  { path: 'home',  component: HomeComponent },
+  { 
+    path: 'home', 
+    component: HomeComponent,
+    data: {state: 'homePage'} 
+  },
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {state: 'homePage'}
+  },
+
+  {
+    path: 'gallery',
+    pathMatch: 'full',
+    component: HomeComponent,
+    data: {state: 'galleryPage'}
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {state: 'aboutPage'}
   },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'gallery/:title/default',
-    redirectTo: 'gallery/:title'
-  },
+//   {
+//     path: 'gallery/:title/default',
+//     redirectTo: 'gallery/:title'
+//   },
   {
     path: 'gallery/:title/:album',
-    component: GalleryComponent
+    component: GalleryComponent,
+    data: {state: 'albumPage'}
   },
   {
     path: 'gallery/:title',
-    component: GalleryComponent
+    component: GalleryComponent,
+    data: {state: 'galleryTitlePage'}
   },
-  
+  {
+    path: 'projects/:title',
+    component: ProjectsComponent,
+    data: {state: 'projectsPage'}
+  },
   // {
   //   path: 'gallery/:id',
   //   component: GalleryComponent
   // }
 ];
 
+// const routerOptions: ExtraOptions = {
+//   useHash: false,
+//   anchorScrolling: 'enabled',
+//   // ...any other options you'd like to use
+// };
+
+
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+    }),
     HttpClientModule
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

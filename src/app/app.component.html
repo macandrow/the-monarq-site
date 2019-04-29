@@ -1,8 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- header -->
-<app-header></app-header>
+    <app-header></app-header>
 
-<main>
-    <!-- routes will be rendered here -->
-    <router-outlet></router-outlet>
-</main>
+    <!-- <main>
+      <router-outlet></router-outlet>
+    </main> -->
+    <!-- <main [@routeAnimations]="prepareRoute(outlet)" >
+    <router-outlet #outlet="outlet"></router-outlet>
+    </main>  -->
+    <!-- <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+      <router-outlet #o="outlet"></router-outlet>
+    </main> -->
+      <main [@routerTransition]="getState(o)">
+        
+          <router-outlet #o="outlet"></router-outlet>
+      </main>
+
+
+          <!-- <main [@routerTransition]="prepareRoute(outlet)" class="content">
+        <router-outlet #outlet="outlet"></router-outlet>
+      </main> -->
+

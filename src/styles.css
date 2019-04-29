@@ -1,86 +1,154 @@
-@import url(/Applications/MAMP/htdocs/the-monarq-app/src/assets/css/main.css);
-@import url(/Applications/MAMP/htdocs/the-monarq-app/src/assets/css/normalize.css);
+@import url(/Applications/MAMP/htdocs/the-monarq-site/src/assets/css/main.css);
+@import url(/Applications/MAMP/htdocs/the-monarq-site/src/assets/css/normalize.css);
+@font-face {
+  font-family: 'salomeregular';
+  src: url("assets/css/fonts/salome-webfont.eot");
+  src: url("assets/css/fonts/salome-webfont.eot?#iefix") format("embedded-opentype"), url("assets/css/fonts/salome-webfont.woff2") format("woff2"), url("assets/css/fonts/salome-webfont.woff") format("woff"), url("assets/css/fonts/salome-webfont.ttf") format("truetype"), url("assets/css/fonts/salome-webfont.svg#salomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: brandon-grotesque,sans-serif;
+  transition: background-image .2s ease-out;
+  -o-transition: background-image .2s ease-out;
+  -moz-transition: background-image .2s ease-out;
+  -webkit-transition: background-image .2s ease-out;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden;
+  font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: white;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  /* For IE8 and earlier */
+  line-height: normal;
+  background-color: #fff;
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-body.color-fractures {
-  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg");
+body.color-intro {
+  background-image: url("https://dummyimage.com/2500x2500/ffffff/fff.png");
 }
 
-body.color-photography {
-  background: url("src/assets/images/thumbs/bg_img143.jpg");
+h1 {
+  transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  margin: 0.3em 0;
 }
 
-body.color-textures {
-  background-color: lightgrey;
+h1 {
+  font-family: 'salomeregular', Georgia, Serif;
 }
 
-body.color-paintings {
-  background-color: ivory;
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
-.wrapper {
-  max-width: 1230px;
+a.btn {
+  margin-right: 10px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12px;
+  -webkit-box-shadow: 0px 10px 30px -10px rgba(210, 209, 209, 0.5);
+          box-shadow: 0px 10px 30px -10px rgba(210, 209, 209, 0.5);
+  cursor: pointer;
+  color: #1c1818;
+  padding: 0.75rem 1rem;
+  -webkit-transition: -webkit-box-shadow 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+  transition: -webkit-box-shadow 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+  transition: box-shadow 0.2s ease 0s, transform 0.2s ease 0s;
+  transition: box-shadow 0.2s ease 0s, transform 0.2s ease 0s, -webkit-box-shadow 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.19);
+  border: 1px solid rgba(28, 24, 24, 0.15);
+}
+
+a.btn img.ico {
+  height: 15px;
+  margin-right: 6px;
+}
+
+a.btn:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0px 12px 50px -10px rgba(210, 209, 209, 0.8);
+          box-shadow: 0px 12px 50px -10px rgba(210, 209, 209, 0.8);
+}
+
+h3 {
+  font-weight: 700;
+}
+
+.inner {
   margin: 0 auto;
-}
-
-.row {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  /*pointer-events: none;*/
 }
 
 header {
   height: 30vh;
-  background-color: pink;
+  min-height: 240px;
 }
 
-.flex-start {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+h1 {
+  font-size: 2rem;
+  font-family: 'salomeregular', Georgia, Serif;
 }
 
-.flex-end {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+a.link, nav a {
+  position: relative;
 }
 
-.center {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+a.link:hover, nav a:hover {
+  opacity: .7;
 }
 
-.baseline {
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
+a.link:after, nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -.4em;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: #eae4e4;
+  -webkit-transition: all ease .2s;
+  transition: all ease .2s;
 }
 
-.stretch {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+a.link:hover:after, nav a:hover:after {
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+a.link:before, nav a:before {
+  position: absolute;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  left: -10px;
+  color: #eee;
+  opacity: .3;
+  font-weight: 100;
+  font-size: .8em;
+}
+
+@media only screen and (min-width: 1080px) {
+  .inner {
+    max-width: 1080px;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  body.color-fractures {
+    background-image: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg");
+  }
+  body.color-photography {
+    background-image: url("src/assets/images/thumbs/bg_img143.jpg");
+  }
 }
 /*# sourceMappingURL=styles.css.map */

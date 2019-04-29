@@ -1,51 +1,238 @@
-@import "assets/css/main.css"; 
-@import "assets/css/normalize.css"; 
-// @import '../node_modules/photoswipe/dist/photoswipe.css';
-// @import '../node_modules/photoswipe/dist/default-skin/default-skin.css';
+@import "assets/css/main.css";
+@import "assets/css/normalize.css";
+@import "~src/assets/css/photoswipe/main.scss";
+@import "~src/photoswipe-theme";
 
-body{
-	font-family: brandon-grotesque,sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	background-color: white;
- // opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
-	&.color-fractures{
-		background:url('src/assets/images/thumbs/thumb_pattern_full_img146.jpg');
-	}
-	&.color-photography{
-		background:url('src/assets/images/thumbs/bg_img143.jpg');
-	}
-	&.color-textures{
-		background-color: lightgrey;
-	}
-	&.color-paintings{
-		background-color:ivory;
-	}
+@font-face {
+  font-family: 'salomeregular';
+  src: url('assets/css/fonts/salome-webfont.eot');
+  src: url('assets/css/fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/css/fonts/salome-webfont.woff2') format('woff2'),
+  url('assets/css/fonts/salome-webfont.woff') format('woff'),
+  url('assets/css/fonts/salome-webfont.ttf') format('truetype'),
+  url('assets/css/fonts/salome-webfont.svg#salomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-.wrapper {
-  max-width: 1230px;
+
+html, body {
+  // width: 100%;
+  // height: 100%;
+  min-height: 100vh;
+  height: auto;
+  // margin: 0;
+}
+// div[ng-view]{
+//   height: 100%;
+// }
+// :host { 
+//   min-height: 100%;
+//   display: flex;
+// }
+// :host{
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
+// }
+
+// :host *{
+//   flex: 1;
+// }
+body, main {
+  display: flex;
+  flex-direction: column;
+}
+
+// app-root, body, 
+// main{
+//   min-height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: stretch;
+//   position: absolute;
+//   top: 80px;
+//   left: 0px;
+//   width: 100%;
+// }
+// p{ margin-top: 0;}
+// router-outlet ~ * {
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+// }
+
+// main {
+//   flex-grow: 1;
+// }
+// .happy{
+//   display: flex;
+//   flex-direction: column;
+//   align-items: stretch;
+//   background: pink;
+//   height: 100vh;
+// }
+// .navWrapper, main, app-footer {
+//   flex-shrink: 0;
+// }
+
+// .wrap-container {
+//   flex: 1 0 auto;
+// }
+// app-footer {
+//   flex-shrink: 0;
+// }
+
+body {
+  transition: background-image .2s ease-out;
+  -o-transition: background-image .2s ease-out;
+  -moz-transition: background-image .2s ease-out;
+  -webkit-transition: background-image .2s ease-out;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden !important;
+  // -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  background-color: #fff;
+}
+
+h1 {
+  transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  margin: 0.3em 0;
+  font-family: 'salomeregular', Georgia, Serif;
+}
+
+a{
+  text-decoration: none;
+  color: currentColor;
+  transition: opacity .2s ease-out;
+  -o-transition: opacity .2s ease-out;
+  -moz-transition: opacity .2s ease-out;
+  -webkit-transition: opacity .2s ease-out;
+}
+
+button{
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 0px 10px 30px -10px rgba(210, 209, 209, 0.5);
+  cursor: pointer;
+  color: #1c1818;
+  padding: 0.75rem 1rem;
+  transition: box-shadow 0.2s ease 0s, transform 0.2s ease 0s;
+  border-radius: 3px;
+  background:rgba(255, 255, 255, 0.19);
+  border: 1px solid rgba(28, 24, 24, 0.15);
+  &:hover, &:focus{
+    transform: translateY(-1px);
+    box-shadow: 0px 12px 50px -10px rgba(210, 209, 209, 0.8);
+  }
+  .ico{
+    height: 15px;
+    margin-right: 6px;
+  }
+}
+
+h3{
+  font-weight: 700;
+}
+
+.inner {
   margin: 0 auto;
+  padding: 0 20px;
 }
-.row{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100vh;
-	min-height: 600px;
-	/*pointer-events: none;*/
+
+header.intro {
+  height: 30vh;
+  min-height: 240px;
+  h1{
+    margin: 0;
+  }
 }
-header{
-	height: 30vh;
-	background-color: pink;
+
+h1 {
+  font-size: 2rem;
+  font-family: 'salomeregular', Georgia, Serif;
 }
-.flex-start { align-self: flex-start; }
-.flex-end { align-self: flex-end; }
-.center { align-self: center; }
-.baseline { align-self: baseline; }
-.stretch { align-self: stretch; }
+
+a.link, nav a{
+  position: relative;
+  &:hover{
+    opacity: .7;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -.4em;
+    left: 50%;
+    right: 50%;
+    height: 1px;
+    background:#eae4e4; // system color
+    transition: all ease .2s;
+  } 
+  &:hover:after {
+    left: 0;
+    right: 0;
+    height: 2px;
+  } 
+  &:before {
+    position: absolute;
+    transform: translateX(-100%);
+    left: -10px;
+    color: #eee;
+    opacity: .3;
+    font-weight: 100;
+    font-size: .8em;
+  }    
+}
+
+@media only screen and (min-width: 1080px) {
+  // main{
+  // 	padding: 80px 0;
+  // }
+  .inner {
+    max-width: 1080px;
+    padding: 0;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  body.home {
+    // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+    // background-color: #fff;
+    background-size: 60%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.color-intro {
+      background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+    }
+    &.color-fractures {
+      background-image: url('src/assets/images/thumbs/bg_fractures.jpg');
+    }
+    &.color-portraits {
+      background-image: url('src/assets/images/thumbs/bg_portraits.jpg');
+    }
+    &.color-photography {
+      background-image: url('src/assets/images/thumbs/bg_photography.jpg');
+    }
+  }
 
 
+}
+
+.pswp--zoom-allowed .pswp__img {
+  cursor: default !important
+}

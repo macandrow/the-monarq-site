@@ -1,37 +1,109 @@
 @charset "UTF-8";
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 header h1 {
   text-align: center;
-  margin-top: 16vh;
-  margin-bottom: 21vh;
 }
 
-.row {
-  background-size: contain;
+.galleries {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.row[data-color="fractures"] .gallery_img {
-  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+.galleries li[data-color="fractures"] .galleryPreview {
+  background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
 }
 
-.row[data-color="photography"] .gallery_img {
-  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+.galleries li[data-color="photography"] .galleryPreview {
+  background-image: url("src/assets/images/thumbs/thumb_photography.jpg");
 }
 
-.row[data-color="textures"] .gallery_img {
-  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+.galleries li[data-color="portraits"] .galleryPreview {
+  background-image: url("src/assets/images/thumbs/thumb_portraits.jpg");
 }
 
-.row[data-color="paintings"] .gallery_img {
-  background: url("src/assets/images/thumbs/thumb_pattern_full_img146.jpg") repeat top left;
+.galleries .row {
+  height: 60vh;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.galleries .row .galleryPreview {
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 350px 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 350px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.galleries .row .galleryPreview a.desc {
+  text-decoration: none;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 100%;
+  margin-left: calc(-50% + 50%);
+  position: relative;
+  color: #1c1818;
+}
+
+.galleries .row .galleryPreview a.desc:hover {
+  cursor: pointer;
+}
+
+.galleries .row .galleryPreview a.desc h1 {
+  margin: 0;
+}
+
+.galleries .row .galleryPreview a.desc p {
+  font-size: 1.5rem;
 }
 
 .gallery {
-  position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 30%;
-  height: calc(100vh - 16rem);
   background-size: cover;
 }
 
@@ -40,32 +112,15 @@ header h1 {
   height: 100%;
 }
 
-.gallery .desc {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 5rem;
-  right: -15vw;
-  text-align: right;
-  width: 100%;
-}
-
-.gallery .desc h1 {
-  font-size: 5rem;
-  margin: 0;
-  font-family: 'salomeregular', Georgia, Serif;
-}
-
-.gallery .desc p {
-  font-size: 1.5rem;
-}
-
-.gallery.odd .desc {
-  text-align: right;
-  right: -15vw;
-}
-
-.gallery.even .desc {
-  text-align: left;
-  left: -15vw;
+@media only screen and (min-width: 1080px) {
+  .galleries .row {
+    height: 90vh;
+  }
+  .galleries .row .desc {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=home.component.css.map */
