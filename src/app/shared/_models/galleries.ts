@@ -529,7 +529,126 @@ export const GALLERIES: IGallery[] = [
         album: 'texture-on-polaroid'
       },
       {
-        src: '/assets/images/texture_on_polaroid/img116.jpg',
+        src: '/assets/images/aura/org_img050.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img051.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img052.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img068.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img075.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img076.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img077.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img083.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img085.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img097.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img099.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img101.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img102.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img103.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img110.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img111.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img112.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'aura'
+      },
+      {
+        src: '/assets/images/aura/org_img115.jpg',
         w: 900,
         h: 1067,
         title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
