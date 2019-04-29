@@ -13,7 +13,7 @@ export const PROJECTS: IProject[] = [
         name: 'aura',
       },
       {
-        name: 'at-home',
+        name: 'pnw-wonderland',
       },
     ]
   },
