@@ -9,65 +9,11 @@ export const GALLERIES: IGallery[] = [
     isProject: false,
     slides: [
       {
-        src: '/assets/images/fractures/pattern_img117.jpg',
-        w: 900,
-        h: 900,
-        title: 'Fracture 10',
-        deck: 0,
-        position: 3,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/repeat_img117.jpg',
-        w: 1000,
-        h: 750,
-        title: 'Fracture 10',
-        deck: 0,
-        position: 1,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/org_img117.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Fracture 10',
-        deck: 0,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/pattern_img157.jpg',
-        w: 900,
-        h: 900,
-        title: 'Fracture 10',
-        deck: 1,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/repeat_img157.jpg',
-        w: 1000,
-        h: 750,
-        title: 'Fracture 10',
-        deck: 1,
-        position: 1,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/org_img157.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Fracture 10',
-        deck: 1,
-        position: 2,
-        album: 'default'
-      },
-      {
         src: '/assets/images/fractures/pattern_img146.jpg',
         w: 900,
         h: 900,
         title: 'Fracture 10',
-        deck: 3,
+        deck: 0,
         position: 0,
         album: 'default'
       },
@@ -76,8 +22,8 @@ export const GALLERIES: IGallery[] = [
         w: 1000,
         h: 750,
         title: 'Fracture 10',
-        deck: 3,
-        position: 0,
+        deck: 0,
+        position: 1,
         album: 'default'
       },
       {
@@ -85,8 +31,8 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Fracture 10',
-        deck: 3,
-        position: 0,
+        deck: 0,
+        position: 2,
         album: 'default'
       },
       {
@@ -94,7 +40,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 900,
         title: 'Fracture 10',
-        deck: 4,
+        deck: 1,
         position: 0,
         album: 'default'
       },
@@ -103,7 +49,7 @@ export const GALLERIES: IGallery[] = [
         w: 1000,
         h: 750,
         title: 'Fracture 10',
-        deck: 4,
+        deck: 1,
         position: 1,
         album: 'default'
       },
@@ -112,7 +58,7 @@ export const GALLERIES: IGallery[] = [
         w: 1000,
         h: 750,
         title: 'Fracture 10',
-        deck: 4,
+        deck: 1,
         position: 2,
         album: 'default'
       },
@@ -121,7 +67,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Fracture 10',
-        deck: 4,
+        deck: 1,
         position: 3,
         album: 'default'
       },
@@ -130,7 +76,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 900,
         title: 'Fracture 10',
-        deck: 5,
+        deck: 2,
         position: 0,
         album: 'default'
       },
@@ -139,8 +85,8 @@ export const GALLERIES: IGallery[] = [
         w: 1000,
         h: 750,
         title: 'Fracture 10',
-        deck: 5,
-        position: 0,
+        deck: 2,
+        position: 1,
         album: 'default'
       },
       {
@@ -148,8 +94,134 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: 'Fracture 10',
+        deck: 2,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img081.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img081_set.png',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img081_3.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img081.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 3,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img081_2.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 4,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img081_3.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 5,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img081_4.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 6,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img081.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 3,
+        position: 7,
+        album: 'default'
+      },      
+      {
+        src: '/assets/images/fractures/pattern_img087_1.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 4,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img087_1.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 4,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img087_1.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 4,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img157.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
         deck: 5,
         position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img157.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 5,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img157.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 5,
+        position: 2,
         album: 'default'
       },
       {
@@ -167,7 +239,7 @@ export const GALLERIES: IGallery[] = [
         h: 750,
         title: 'Fracture 10',
         deck: 6,
-        position: 0,
+        position: 1,
         album: 'default'
       },
       {
@@ -176,64 +248,144 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Fracture 10',
         deck: 6,
-        position: 0,
+        position: 2,
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/pattern_img087_1.jpg',
+        src: '/assets/images/fractures/pattern_img117.jpg',
         w: 900,
         h: 900,
         title: 'Fracture 10',
-        deck: 6,
+        deck: 7,
         position: 0,
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/repeat_img087_1.jpg',
+        src: '/assets/images/fractures/repeat_img117.jpg',
         w: 1000,
         h: 750,
         title: 'Fracture 10',
-        deck: 6,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/org_img087_1.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Fracture 10',
-        deck: 6,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/pattern_img157.jpg',
-        w: 900,
-        h: 900,
-        title: 'Fracture 10',
-        deck: 6,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/repeat_img157.jpg',
-        w: 1000,
-        h: 750,
-        title: 'Fracture 10',
-        deck: 6,
+        deck: 7,
         position: 1,
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/org_img157.jpg',
+        src: '/assets/images/fractures/org_img117.jpg',
         w: 900,
         h: 1067,
         title: 'Fracture 10',
-        deck: 6,
+        deck: 7,
         position: 2,
         album: 'default'
       },
-      
+      {
+        src: '/assets/images/fractures/pattern_img191.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 8,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img191.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 8,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img191.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 8,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img119.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 9,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img119.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 9,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img119.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 9,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img163.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 10,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img163.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 10,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img163.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 10,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img172.jpg',
+        w: 900,
+        h: 900,
+        title: 'Fracture 10',
+        deck: 11,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img172.jpg',
+        w: 1000,
+        h: 750,
+        title: 'Fracture 10',
+        deck: 11,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img172.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Fracture 10',
+        deck: 11,
+        position: 2,
+        album: 'default'
+      },
     ]
   },
   {
@@ -293,14 +445,6 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         title: 'Texture on Polariod',
         deck: 2,
-        album: 'texture-on-polaroid'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img042.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Texture on Polariod',
-        deck: 3,
         album: 'texture-on-polaroid'
       },
       {
