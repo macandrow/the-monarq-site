@@ -655,45 +655,37 @@ export const GALLERIES: IGallery[] = [
     isProject: false,
     slides: [
       {
-        src: 'https://images.unsplash.com/photo-1530785602389-07594beb8b73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80',
-        w: 464,
-        h: 696,
+        src: '/assets/images/portraits/portraits_1_2018.jpg',
+        w: 1000,
+        h: 1264,
         title: 'Sea side, south shore',
         deck: 0,
         album: 'default'
       },
       {
-        src: 'https://images.unsplash.com/photo-1547944409-0c3ef40a5c48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-        w: 714,
-        h: 746,
+        src: '/assets/images/portraits/portraits_2_b.jpg',
+        w: 1000,
+        h: 1237,
         title: 'Image Caption 1',
-        deck: 0,
+        deck: 1,
         album: 'default'
       },
       {
-        src: 'https://images.unsplash.com/photo-1552014947-5f72866c1e93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80',
-        w: 400,
-        h: 500,
+        src: '/assets/images/portraits/portraits_3.jpg',
+        w: 1000,
+        h: 1262,
         title: 'Image Caption 2',
-        deck: 0,
+        deck: 2,
         album: 'default'
       },
       {
-        src: 'https://images.unsplash.com/photo-1490855894936-79de3ac55bd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
-        w: 334,
-        h: 501,
+        src: '/assets/images/portraits/portraits_4.jpg',
+        w: 1000,
+        h: 1262,
         title: 'Image Caption 2',
-        deck: 0,
+        deck: 3,
         album: 'default'
       },
-      {
-        src: 'https://images.unsplash.com/photo-1543508282-5c1f427f023f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80',
-        w: 1200,
-        h: 900,
-        title: 'Image Caption 2',
-        deck: 0,
-        album: 'default'
-      }
     ]
   },
   {
