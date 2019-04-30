@@ -47,6 +47,7 @@ export class GalleryComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.album = route.snapshot.paramMap.get('album') !== null ? route.snapshot.paramMap.get('album') : 'default';
         this.setActiveSlides();
+        
       }
     });
   }

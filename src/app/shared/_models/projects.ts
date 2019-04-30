@@ -8,12 +8,15 @@ export const PROJECTS: IProject[] = [
     albums: [
       {
         name: 'texture-on-polaroid',
+        description: " texture desc here"
       },
       {
         name: 'aura',
+        description: " aura desc here"
       },
       {
         name: 'pnw-wonderland',
+        description: " pnw desc here"
       },
     ]
   },
