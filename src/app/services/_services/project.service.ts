@@ -29,9 +29,9 @@ export class ProjectService {
   getProjectAlbums(title: string, project) {
     return Array.from(new Set(project.albums.map(album => album.name)));
   }
-  getDescriptions(title: string, project) {
-    return Array.from(new Set(project.albums.map(album => album.description)));
-  }
+  // getDescriptions(title: string, project) {
+  //   return Array.from(new Set(project.albums.map(album => album.description)));
+  // }
   // getDescriptions(): Observable<string[]> {
   //   return Array.from(new Set(project.albums.map(album => album.description)));
   // }
