@@ -1,11 +1,9 @@
-<div class="inner">
-  <h1> {{project.title}}</h1>
-  <ul *ngIf="albums">
-    <li *ngFor="let album of albums;" attr.class="{{album}}">
-      <a [routerLink]="['/gallery', project.title, album]">
-        <h2>{{album}}</h2>
-      </a>
-    </li>
-  </ul>
+<h1> {{project.title}}</h1>
+<div *ngIf="albums">
+  <div *ngFor="let album of albums;" attr.data-color="{{project.title}}">
+    <a [routerLink]="['/gallery', project.title, album]">
+      <p>{{album}}</p>
+    </a>
+  </div>
 </div>
 <app-footer></app-footer>   

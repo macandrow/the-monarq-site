@@ -659,7 +659,7 @@ export const GALLERIES: IGallery[] = [
   {
     id: 2,
     title: 'portraits',
-    description: 'add link back to projects pages on project galleries',
+    description: '123SC',
     thumbnail: 'sfsfd',
     isProject: false,
     slides: [
