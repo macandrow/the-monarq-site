@@ -83,15 +83,15 @@ body, main {
 // }
 
 body {
-  transition: background-image .2s ease-out;
-  -o-transition: background-image .2s ease-out;
-  -moz-transition: background-image .2s ease-out;
-  -webkit-transition: background-image .2s ease-out;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  backface-visibility: hidden !important;
+  // transition: background-image .2s ease-out;
+  // -o-transition: background-image .2s ease-out;
+  // -moz-transition: background-image .2s ease-out;
+  // -webkit-transition: background-image .2s ease-out;
+  // transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
+  // backface-visibility: hidden !important;
   // -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+  // -webkit-backface-visibility: hidden;
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -100,12 +100,12 @@ body {
 }
 
 h1 {
-  transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-  -webkit-transition: all .2s ease-out;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
+  // transition: all .2s ease-out;
+  // -o-transition: all .2s ease-out;
+  // -moz-transition: all .2s ease-out;
+  // -webkit-transition: all .2s ease-out;
+  // transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
   margin: 0.3em 0;
   font-family: 'salomeregular', Georgia, Serif;
 }
@@ -209,28 +209,26 @@ a.link, nav a{
   h1 {
     font-size: 5rem;
   }
-  body.home {
-    // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
-    // background-color: #fff;
-    background-size: 60%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    &.color-intro {
-      background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
-    }
-    &.color-fractures {
-      background-image: url('src/assets/images/thumbs/bg_fractures.jpg');
-    }
-    &.color-portraits {
-      background-image: url('src/assets/images/thumbs/bg_portraits.jpg');
-    }
-    &.color-photography {
-      background-image: url('src/assets/images/thumbs/bg_photography.jpg');
-    }
-  }
-
-
+  // body.home {
+  //   // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+  //   // background-color: #fff;
+  //   background-size: 60%;
+  //   background-attachment: fixed;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   &.color-intro {
+  //     background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+  //   }
+  //   &.color-fractures {
+  //     background-image: url('src/assets/images/thumbs/bg_fractures.jpg');
+  //   }
+  //   &.color-portraits {
+  //     background-image: url('src/assets/images/thumbs/bg_portraits.jpg');
+  //   }
+  //   &.color-photography {
+  //     background-image: url('src/assets/images/thumbs/bg_photography.jpg');
+  //   }
+  // }
 }
 
 .pswp--zoom-allowed .pswp__img {

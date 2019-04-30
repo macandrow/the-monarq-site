@@ -4,19 +4,18 @@
     <p>I create under the moniker “the monarq” which is a multidisciplinary practice with a focus on analog photography, pattern making, and illustration. </p>
 </header>
 
-<div *ngIf="galleries" class="galleries">
+<div *ngIf="galleries" class="galleries inner">
   <ul>
     <ng-container *ngFor="let gallery of galleries;">
-      <li *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}">
-        <div class="galleryPreview js-tilt" data-tilt>
-          <a class="desc" [routerLink]="['/gallery', gallery.title]">
-            <h1>{{gallery.title}}</h1>
-          </a>
-        </div>
+      <!-- <li *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}"> -->
+      <li class="galleryPreview js-tilt" [ngClass]="[ gallery.title ]" data-tilt>
+        <a class="desc" [routerLink]="['/gallery', gallery.title]">
+          <h2>{{gallery.title}}</h2>
+        </a>
       </li>
     </ng-container>
 
-    <ng-container *ngFor="let project of projects;">
+    <!-- <ng-container *ngFor="let project of projects;">
       <li *ngIf="projects" class="row" attr.data-color="{{project.title}}">
         <div class="galleryPreview js-tilt" data-tilt>
           <a class="desc" [routerLink]="['/projects', project.title]">
@@ -24,7 +23,7 @@
           </a>
         </div>
       </li>
-    </ng-container>
+    </ng-container> -->
   </ul>
 </div>
 

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 ul {
   list-style: none;
   padding: 0;
@@ -19,108 +18,63 @@ header h1 {
           flex-direction: column;
 }
 
-.galleries li[data-color="fractures"] .galleryPreview {
-  background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
+.galleries ul {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 60px;
+  -ms-grid-columns: minmax(320px, 1fr) [auto-fill];
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  -ms-grid-rows: 320px;
+      grid-template-rows: 320px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 60px;
 }
 
-.galleries li[data-color="photography"] .galleryPreview {
-  background-image: url("src/assets/images/thumbs/thumb_photography.jpg");
-}
-
-.galleries li[data-color="portraits"] .galleryPreview {
-  background-image: url("src/assets/images/thumbs/thumb_portraits.jpg");
-}
-
-.galleries .row {
-  height: 60vh;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.galleries .row .galleryPreview {
-  margin: 0 auto;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.galleries ul li {
   background-size: 350px 350px;
   background-position: center;
   background-repeat: no-repeat;
-  width: 350px;
-  height: 350px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-}
-
-.galleries .row .galleryPreview a.desc {
-  text-decoration: none;
-  -webkit-transform: translateZ(20px);
-          transform: translateZ(20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.galleries ul li.fractures {
+  background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
+}
+
+.galleries ul li.photography {
+  background-image: url("src/assets/images/thumbs/thumb_photography.jpg");
+}
+
+.galleries ul li.portraits {
+  background-image: url("src/assets/images/thumbs/thumb_portraits.jpg");
+}
+
+.galleries ul li h2 {
+  font-family: 'salomeregular', Georgia, Serif;
+}
+
+.galleries ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 12em;
+          flex: 1 0 12em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 200px;
-  width: 100%;
-  margin-left: calc(-50% + 50%);
-  position: relative;
-  color: #1c1818;
-}
-
-.galleries .row .galleryPreview a.desc:hover {
-  cursor: pointer;
-}
-
-.galleries .row .galleryPreview a.desc h1 {
-  margin: 0;
-}
-
-.galleries .row .galleryPreview a.desc p {
-  font-size: 1.5rem;
-}
-
-.gallery {
-  background-size: cover;
-}
-
-.gallery   .gallery_img {
-  width: 100%;
-  height: 100%;
-}
-
-@media only screen and (min-width: 1080px) {
-  .galleries .row {
-    height: 90vh;
-  }
-  .galleries .row .desc {
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
-    height: auto;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=home.component.css.map */
