@@ -6,7 +6,6 @@ export const GALLERIES: IGallery[] = [
     title: 'fractures',
     description: '123SC',
     thumbnail: 'sfsfd',
-    isProject: false,
     slides: [
       {
         src: '/assets/images/fractures/pattern_img146.jpg',
@@ -390,10 +389,9 @@ export const GALLERIES: IGallery[] = [
   },
   {
     id: 1,
-    title: 'photography',
+    title: 'texture-on-polaroid',
     description: 'for images with no prints add link to request a print links to contact form. I will be photography',
     thumbnail: ' hello',
-    isProject: true,
     slides: [
       {
         src: '/assets/images/texture_on_polaroid/img146.jpg',
@@ -528,6 +526,54 @@ export const GALLERIES: IGallery[] = [
         title: 'Texture on Polariod',
         album: 'texture-on-polaroid'
       },
+    ]
+  },
+  {
+    id: 2,
+    title: 'portraits',
+    description: '123SC',
+    thumbnail: 'sfsfd',
+    slides: [
+      {
+        src: '/assets/images/portraits/portraits_1_2018.jpg',
+        w: 1000,
+        h: 1264,
+        title: 'Sea side, south shore',
+        deck: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/portraits/portraits_2_b.jpg',
+        w: 1000,
+        h: 1237,
+        title: 'Image Caption 1',
+        deck: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/portraits/portraits_3.jpg',
+        w: 1000,
+        h: 1262,
+        title: 'Image Caption 2',
+        deck: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/portraits/portraits_4.jpg',
+        w: 1000,
+        h: 1262,
+        title: 'Image Caption 2',
+        deck: 3,
+        album: 'default'
+      },
+    ]
+  },
+  {
+    id: 3,
+    title: 'aura',
+    description: '123SC',
+    thumbnail: 'sfsfd',
+    slides: [
       {
         src: '/assets/images/aura/org_img050.jpg',
         w: 900,
@@ -655,46 +701,5 @@ export const GALLERIES: IGallery[] = [
         album: 'aura'
       },
     ]
-  },
-  {
-    id: 2,
-    title: 'portraits',
-    description: '123SC',
-    thumbnail: 'sfsfd',
-    isProject: false,
-    slides: [
-      {
-        src: '/assets/images/portraits/portraits_1_2018.jpg',
-        w: 1000,
-        h: 1264,
-        title: 'Sea side, south shore',
-        deck: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/portraits/portraits_2_b.jpg',
-        w: 1000,
-        h: 1237,
-        title: 'Image Caption 1',
-        deck: 1,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/portraits/portraits_3.jpg',
-        w: 1000,
-        h: 1262,
-        title: 'Image Caption 2',
-        deck: 2,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/portraits/portraits_4.jpg',
-        w: 1000,
-        h: 1262,
-        title: 'Image Caption 2',
-        deck: 3,
-        album: 'default'
-      },
-    ]
-  },
+  }
 ];

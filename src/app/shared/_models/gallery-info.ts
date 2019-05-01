@@ -5,6 +5,5 @@ export class IGallery {
   title: string;
   description: string;
   thumbnail: string;
-  isProject: boolean;
   slides: ISlide[];
 }

@@ -22,10 +22,9 @@ header h1 {
   display: -ms-grid;
   display: grid;
   grid-gap: 60px;
-  -ms-grid-columns: minmax(320px, 1fr) [auto-fill];
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  -ms-grid-rows: 320px;
-      grid-template-rows: 320px;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 320px;
   padding: 0;
   list-style: none;
   margin-bottom: 60px;
@@ -48,15 +47,19 @@ header h1 {
 }
 
 .galleries ul li.fractures {
-  background-image: url("src/assets/images/thumbs/thumb_fractures.jpg");
-}
-
-.galleries ul li.photography {
-  background-image: url("src/assets/images/thumbs/thumb_photography.jpg");
+  background-image: url("/assets/images/thumbs/thumb_fractures.jpg");
 }
 
 .galleries ul li.portraits {
-  background-image: url("src/assets/images/thumbs/thumb_portraits.jpg");
+  background-image: url("/assets/images/thumbs/thumb_portraits.jpg");
+}
+
+.galleries ul li.texture-on-polaroid {
+  background-image: url("/assets/images/thumbs/thumb_texture_on_polaroid.jpg");
+}
+
+.galleries ul li.aura {
+  background-image: url("/assets/images/thumbs/thumb_aura.jpg");
 }
 
 .galleries ul li h2 {
