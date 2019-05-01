@@ -161,7 +161,6 @@ header.intro {
     margin: 0;
   }
 }
-
 h1 {
   font-size: 2rem;
   font-family: 'salomeregular', Georgia, Serif;
@@ -209,6 +208,10 @@ a.link, nav a{
   h1 {
     font-size: 5rem;
   }
+  header{
+   padding:0;
+  }
+  
   // body.home {
   //   // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
   //   // background-color: #fff;

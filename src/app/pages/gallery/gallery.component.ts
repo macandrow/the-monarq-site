@@ -68,6 +68,13 @@ export class GalleryComponent implements OnInit {
         this.setActiveSlides();
         this.setPrevNext(gallery.title);
       });
+
+    $(document).ready(function () {
+      $('.prettify').each(function() {
+        var $this = $(this);
+        $this.text($this.text().replace(/-/g, ' '));
+      })
+    })
   }
 
   openGallery(slide: ISlide) {

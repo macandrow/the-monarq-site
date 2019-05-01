@@ -1,5 +1,5 @@
 .gallery-wrapper header {
-  margin-top: 80px;
+  padding-top: 160px;
 }
 
 .gallery-wrapper .btn_holder {
@@ -86,11 +86,5 @@
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-}
-
-@media only screen and (min-width: 1080px) {
-  header.intro {
-    padding-top: 40px;
-  }
 }
 /*# sourceMappingURL=gallery.component.css.map */

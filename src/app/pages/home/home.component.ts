@@ -36,10 +36,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.projectService.getProjects().subscribe(projects => this.projects = projects);
 
     $(document).ready(function () {
-      // $('.prettify').each(function() {
-      //   var $this = $(this);
-      //   $this.text($this.text().replace(/-/g, ' '));
-      // })
+      $('.prettify').each(function() {
+        var $this = $(this);
+        $this.text($this.text().replace(/-/g, ' '));
+      })
       $('.js-tilt').tilt({
         scale: 1,
         perspective: 500,

@@ -1,29 +1,18 @@
 <div class="gallery-wrapper">
+
   <div class="gallery-scroller">
-    
     <header *ngIf="gallery !== undefined" class="intro inner">
       <h1 class="prettify">{{gallery.title}}</h1>
       <p>{{gallery.description}}</p>
-      <!-- <h1 *ngIf=" album == 'default'" class="text-center"> {{gallery.title}} </h1>
-      <h1 *ngIf=" album !== 'default'">{{album}} helloo</h1> -->
-      <!-- need to add is project not project logic to gallery component for h1s to work -->
-      <!-- Need to learn more about mapping arrays for correct desc -->
-      <!-- <h1 *ngIf="!album">what</h1> -->
-      <!-- <ng-container *ngIf=" album">
-          
-            <p *ngFor="let d of album" > yeshekiiii {{d.name}}</p>
-        </ng-container> -->
-       
-      <!-- <p>{{gallery.description}}</p> -->
-     
     </header>
     
     <!-- Galley wrapper that contains all items -->
+    <!-- add this if adding back album classes [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']" -->
     <div class="inner">
       <ul *ngIf="gallery !== undefined"
           id="gallery"
           class="gallery"
-          [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']"
+          [ngClass]="[ gallery.title ? gallery.title : '']"
           itemscope
           itemtype="http://schema.org/ImageGallery">
         <!-- Use figure for a more semantic html -->
@@ -51,13 +40,11 @@
         <button class="backToTop"> <img src="/assets/images/ico-arrowUp.svg" alt="Back to Top" class="ico"/> Back to Top</button>
       </div>
     </div>
+    
     <!-- Some spacing -->
     <div class="spacer"></div>
-    
     <app-footer></app-footer>
-
   </div>
-  
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
