@@ -10,7 +10,7 @@
       <!-- <li *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}"> -->
       <li class="js-tilt" [ngClass]="[ gallery.title ]" data-tilt>
         <a class="desc" [routerLink]="['/gallery', gallery.title]">
-          <h2>{{gallery.title}}</h2>
+          <h2 class="prettify">{{gallery.title}}</h2>
         </a>
       </li>
     </ng-container>
