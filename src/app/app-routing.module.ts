@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -19,7 +18,6 @@ const routes: Routes = [
     component: HomeComponent,
     data: {state: 'homePage'}
   },
-
   {
     path: 'gallery',
     pathMatch: 'full',
@@ -35,21 +33,21 @@ const routes: Routes = [
 //     path: 'gallery/:title/default',
 //     redirectTo: 'gallery/:title'
 //   },
-  {
-    path: 'gallery/:title/:album',
-    component: GalleryComponent,
-    data: {state: 'albumPage'}
-  },
+  // {
+  //   path: 'gallery/:title/:album',
+  //   component: GalleryComponent,
+  //   data: {state: 'albumPage'}
+  // },
   {
     path: 'gallery/:title',
     component: GalleryComponent,
     data: {state: 'galleryTitlePage'}
   },
-  {
-    path: 'projects/:title',
-    component: ProjectsComponent,
-    data: {state: 'projectsPage'}
-  },
+  // {
+  //   path: 'projects/:title',
+  //   component: ProjectsComponent,
+  //   data: {state: 'projectsPage'}
+  // },
   // {
   //   path: 'gallery/:id',
   //   component: GalleryComponent
