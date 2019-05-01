@@ -3,7 +3,7 @@ ul {
   padding: 0;
 }
 
-header h1 {
+header {
   text-align: center;
 }
 
@@ -71,11 +71,11 @@ li, a {
   background-image: url("/assets/images/thumbs/thumb_aura.png");
 }
 
-.galleries ul li h2 {
-  font-family: 'salomeregular', Georgia, Serif;
-}
-
 .galleries ul li a {
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-align: center;
+  font-size: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { GalleryService, ProjectService } from './_services';
+import { GalleryService } from './_services';
 
 @NgModule({
   imports: [
@@ -10,7 +10,6 @@ import { GalleryService, ProjectService } from './_services';
   ],
   providers: [
     GalleryService,
-    ProjectService,
   ]
 })
 export class AppServicesModule {}

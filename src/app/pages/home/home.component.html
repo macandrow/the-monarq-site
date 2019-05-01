@@ -1,15 +1,15 @@
-<header class="row intro inner"
-       data-color="intro">
-    <h3>the monarq is a multidisciplinary artist and designer from Chicago now based in Seattle.</h3>
-    <p>I create under the moniker “the monarq” which is a multidisciplinary practice with a focus on analog photography, pattern making, and illustration. </p>
+<header class="intro inner" >
+  <h1>the monarq</h1>
+    <p>is a multidisciplinary artist and designer from Chicago now based in Seattle.</p>
+    <!-- <p>I create under the moniker “the monarq” which is a multidisciplinary practice with a focus on analog photography, pattern making, and illustration. </p> -->
 </header>
 
 <div *ngIf="galleries" class="galleries inner">
   <ul>
     <ng-container *ngFor="let gallery of galleries;">
       <li class="js-tilt" [ngClass]="[ gallery.title ]" data-tilt>
-        <a class="desc" [routerLink]="['/gallery', gallery.title]">
-          <h2 class="prettify">{{gallery.title}}</h2>
+        <a class="desc prettify" [routerLink]="['/gallery', gallery.title]">
+          <p>{{gallery.title}}</p>
         </a>
       </li>
     </ng-container>

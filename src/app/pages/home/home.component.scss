@@ -3,7 +3,7 @@ ul{
   padding: 0;
 }
 
-header h1 {
+header {
   text-align: center;
 }
 
@@ -49,10 +49,15 @@ li, a{
       &.aura{
         background-image: url("/assets/images/thumbs/thumb_aura.png");
       }
-      h2{
-        font-family: 'salomeregular', Georgia, Serif;
-      }
+      // h2{
+      //       text-transform: uppercase;
+      // }
       a{
+        // text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing:.06em;
+        text-align: center;
+        font-size: 1.2em;
         display: flex;
         flex: 1 0 12em;
         align-items: center;
