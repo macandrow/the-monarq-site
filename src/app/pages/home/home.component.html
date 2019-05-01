@@ -8,7 +8,7 @@
   <ul>
     <ng-container *ngFor="let gallery of galleries;">
       <!-- <li *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}"> -->
-      <li class="galleryPreview js-tilt" [ngClass]="[ gallery.title ]" data-tilt>
+      <li class="js-tilt" [ngClass]="[ gallery.title ]" data-tilt>
         <a class="desc" [routerLink]="['/gallery', gallery.title]">
           <h2>{{gallery.title}}</h2>
         </a>
@@ -40,6 +40,9 @@
   </li>
   <li>
     <del> add tilt.js to home</del>
+  </li>
+  <li>
+      https://www.youtube.com/watch?v=KRV9jZwl0Ig&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ&index=26
   </li>
   <li>
     <del>fix routes to galleries to huse ng-href https://angular.io/guide/ajs-quick-reference#ng-href</del>
