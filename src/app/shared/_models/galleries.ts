@@ -5,7 +5,6 @@ export const GALLERIES: IGallery[] = [
     id: 0,
     title: 'fractures',
     description: '123SC',
-    thumbnail: 'sfsfd',
     slides: [
       {
         src: '/assets/images/fractures/pattern_img146.jpg',
@@ -391,7 +390,6 @@ export const GALLERIES: IGallery[] = [
     id: 1,
     title: 'texture-on-polaroid',
     description: 'for images with no prints add link to request a print links to contact form. I will be photography',
-    thumbnail: ' hello',
     slides: [
       {
         src: '/assets/images/texture_on_polaroid/img146.jpg',
@@ -532,7 +530,6 @@ export const GALLERIES: IGallery[] = [
     id: 2,
     title: 'portraits',
     description: '123SC',
-    thumbnail: 'sfsfd',
     slides: [
       {
         src: '/assets/images/portraits/portraits_1_2018.jpg',
@@ -572,7 +569,6 @@ export const GALLERIES: IGallery[] = [
     id: 3,
     title: 'aura',
     description: '123SC',
-    thumbnail: 'sfsfd',
     slides: [
       {
         src: '/assets/images/aura/org_img050.jpg',
@@ -695,6 +691,167 @@ export const GALLERIES: IGallery[] = [
       },
       {
         src: '/assets/images/aura/org_img115.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+    ]
+  },
+  {
+    id: 4,
+    title: 'verdant',
+    description: '123SC',
+    slides: [
+      {
+        src: '/assets/images/verdant/org_img120.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img121.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img122.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img123.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img124.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img125.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img127.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img129.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img130.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img131.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img133.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img134.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img135.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img136.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img138.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img141.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img142.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img143.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img144.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img146.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img152.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/verdant/org_img154.jpg',
         w: 900,
         h: 1067,
         title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
