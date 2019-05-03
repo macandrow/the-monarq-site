@@ -85,7 +85,7 @@ export class GalleryComponent implements OnInit {
       focus: false,
       modal: true,
       zoomEl: false,
-      shareEl: true, // Hides the share buttons
+      shareEl: true,
       getDoubleTapZoom: (isMouseClick, item) => {
         return item.initialZoomLevel;
       },
@@ -159,6 +159,8 @@ export class GalleryComponent implements OnInit {
     const appId = environment.facebookAppId;
     return `https://www.facebook.com/dialog/feed`
       + `?app_id=${appId}`
-      + `&href={{url}}`;
+      + `&display=popup`
+      + `&link={{url}}`
+      + `&redirectUri=${window.location}`;
   }
 }
