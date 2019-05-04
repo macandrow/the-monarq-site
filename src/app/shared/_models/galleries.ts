@@ -390,6 +390,7 @@ export const GALLERIES: IGallery[] = [
     id: 1,
     title: 'texture-on-polaroid',
     description: 'for images with no prints add link to request a print links to contact form. I will be photography',
+    link: 'https://www.saatchiart.com/art-collection/Photography/Texture-on-Polaroids/1103381/243393/view',
     slides: [
       {
         src: '/assets/images/texture_on_polaroid/img146.jpg',
@@ -449,6 +450,27 @@ export const GALLERIES: IGallery[] = [
       },
       {
         src: '/assets/images/texture_on_polaroid/img117_2.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Texture on Polariod',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/org_img063.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Texture on Polariod',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/org_img087.jpg',
+        w: 900,
+        h: 1067,
+        title: 'Texture on Polariod',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/org_img069_CL.jpg',
         w: 900,
         h: 1067,
         title: 'Texture on Polariod',
@@ -568,132 +590,183 @@ export const GALLERIES: IGallery[] = [
   {
     id: 3,
     title: 'aura',
-    description: '123SC',
+    description: 'This project is an exporation of light and shadow in an analog form.',
+    link: 'https://www.saatchiart.com/art-collection/Photography/Aura/1103381/286067/view',
     slides: [
       {
-        src: '/assets/images/aura/org_img050.jpg',
+        src: '/assets/images/aura/org_img115.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img051.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img052.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img068.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img075.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img076.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img077.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img083.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img085.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img097.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img099.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img101.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
         album: 'default'
       },
       {
         src: '/assets/images/aura/org_img102.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
         album: 'default'
       },
       {
         src: '/assets/images/aura/org_img103.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
-        album: 'default'
-      },
-      {
-        src: '/assets/images/aura/org_img110.jpg',
-        w: 900,
-        h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
         album: 'default'
       },
       {
         src: '/assets/images/aura/org_img111.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img101.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img097.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
         album: 'default'
       },
       {
         src: '/assets/images/aura/org_img112.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
         album: 'default'
       },
       {
-        src: '/assets/images/aura/org_img115.jpg',
+        src: '/assets/images/aura/org_img110.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img099.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img050.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img051.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img052.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img068.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img075.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img076.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img077.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img083.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img085.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img096.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img094.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        deck:1,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img095.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        deck:1,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img093.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img069.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        deck:1,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img084.jpg',
+        w: 900,
+        h: 1067,
+        title: ' ',
+        deck:1,
+        position: 1,
         album: 'default'
       },
     ]
@@ -701,13 +774,14 @@ export const GALLERIES: IGallery[] = [
   {
     id: 4,
     title: 'verdant',
-    description: '123SC',
+    description: 'Analog photography project focused on capturing lush, green subjects.',
+    link: 'https://www.saatchiart.com/art-collection/Photography/Verdant/1103381/262621/view',
     slides: [
       {
         src: '/assets/images/verdant/org_img120.jpg',
         w: 900,
         h: 1067,
-        title: 'Aura <a href="http://yahoo.com"> link </a> <p> other text </p>',
+        title: ' ',
         album: 'default'
       },
       {

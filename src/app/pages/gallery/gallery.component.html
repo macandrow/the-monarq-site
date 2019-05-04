@@ -4,6 +4,7 @@
     <header *ngIf="gallery !== undefined" class="intro inner">
       <h1 class="prettify">{{gallery.title}}</h1>
       <p>{{gallery.description}}</p>
+      <a *ngIf="gallery.link" class="btn" href="{{gallery.link}}" target="_blank">Prints Available</a>
     </header>
     
     <!-- Galley wrapper that contains all items -->
