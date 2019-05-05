@@ -1,10 +1,12 @@
 header {
   position: relative;
   height: 60vh;
-  background: url("https://picsum.photos/200/200/?random") center right no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  &.intro{
+    min-height: 500px;
+  }
   // margin-top: 0;
   // padding-top: 0;
   p{
@@ -55,8 +57,9 @@ header {
   margin-bottom: 30px;
 }
 
-// @media only screen and (min-width: 1080px) {
-//   header{
-//     height: 60vh;
-//   }
-// }
+@media only screen and (min-width: 1080px) {
+  header{
+    background: url("/assets/images/bio_pic.jpg") center right no-repeat;
+    background-size: 65%;
+  }
+}

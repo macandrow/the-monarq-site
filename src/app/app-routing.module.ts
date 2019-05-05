@@ -3,26 +3,32 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component'
 import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
-  { 
-    path: 'home', 
-    component: HomeComponent,
-    data: {state: 'homePage'} 
-  },
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent,
     data: {state: 'homePage'}
   },
+  { 
+    path: 'home', 
+    component: HomeComponent,
+    data: {state: 'homePage'} 
+  },
   {
     path: 'gallery',
     pathMatch: 'full',
     component: HomeComponent,
     data: {state: 'galleryPage'}
+  },
+  {
+    path: 'gallery/:title',
+    component: GalleryComponent,
+    data: {state: 'galleryTitlePage'}
   },
   {
     path: 'about',
@@ -38,11 +44,6 @@ const routes: Routes = [
   //   component: GalleryComponent,
   //   data: {state: 'albumPage'}
   // },
-  {
-    path: 'gallery/:title',
-    component: GalleryComponent,
-    data: {state: 'galleryTitlePage'}
-  },
   // {
   //   path: 'projects/:title',
   //   component: ProjectsComponent,
@@ -52,6 +53,11 @@ const routes: Routes = [
   //   path: 'gallery/:id',
   //   component: GalleryComponent
   // }
+  {
+    path: "**",
+    component: PageNotFoundComponent,
+    data: {state: '404Page'}
+  },
 ];
 
 // const routerOptions: ExtraOptions = {

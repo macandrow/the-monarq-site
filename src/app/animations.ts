@@ -16,6 +16,8 @@ export const routerTransition = trigger('routerTransition', [
   transition('aboutPage <=> homePage', pageTransition() ),
   transition('* => galleryTitlePage', stepper()),
   transition('galleryTitlePage => *', galleryAway()),
+  transition('* => 404Page', pageTransition()),
+  transition('404Page => *', pageTransition()),
 ])  
 
 function pageTransition() {

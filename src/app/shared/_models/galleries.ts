@@ -551,7 +551,7 @@ export const GALLERIES: IGallery[] = [
   {
     id: 2,
     title: 'portraits',
-    description: '123SC',
+    description: '<i>From Artist Statement:</i> Fully titled "Portraits of Black Women I Have Yet to Name" etc',
     slides: [
       {
         src: '/assets/images/portraits/portraits_1_2018.jpg',

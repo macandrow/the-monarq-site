@@ -18,6 +18,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { AppServicesModule } from './services/app.services.module';
 import { ThemeModule } from './theme/theme.module';
 import { darkTheme, lightTheme } from './theme/themes';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { darkTheme, lightTheme } from './theme/themes';
     HomeComponent,
     AboutComponent,
     GalleryComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
