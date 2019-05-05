@@ -14,6 +14,8 @@ import { GalleryService } from 'src/app/services/_services/gallery.service';
 import { IGallery } from 'src/app/shared/_models/gallery-info';
 import { ISlide } from '../../shared/_models/gallery-slide';
 import { environment } from '../../../environments/environment';
+// import { DomSanitizer } from '@angular/platform-browser';
+// import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',

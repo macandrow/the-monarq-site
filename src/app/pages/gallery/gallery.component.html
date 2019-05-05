@@ -3,7 +3,7 @@
   <div class="gallery-scroller">
     <header *ngIf="gallery !== undefined" class="intro inner">
       <h1 class="prettify">{{gallery.title}}</h1>
-      <p>{{gallery.description}}</p>
+      <p class="desc" [innerHtml]="gallery.description"></p>
       <a *ngIf="gallery.link" class="btn" href="{{gallery.link}}" target="_blank"><img src="/assets/images/icons/ico-shop.svg" alt="shop" class="ico"/>  Prints Available</a>
     </header>
     
