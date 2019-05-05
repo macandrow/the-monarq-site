@@ -107,8 +107,8 @@ export const GALLERIES: IGallery[] = [
       },
       {
         src: '/assets/images/fractures/pattern_img081_set.png',
-        w: 1000,
-        h: 750,
+        w: 2000,
+        h: 644,
         title: 'Fracture 10',
         deck: 3,
         position: 1,
@@ -116,8 +116,8 @@ export const GALLERIES: IGallery[] = [
       },
       {
         src: '/assets/images/fractures/pattern_img081_3.jpg',
-        w: 1000,
-        h: 750,
+        w: 900,
+        h: 900,
         title: 'Fracture 10',
         deck: 3,
         position: 2,
@@ -756,7 +756,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: ' ',
-        deck:1,
+        deck:2,
         position: 0,
         album: 'default'
       },
@@ -765,7 +765,7 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         title: ' ',
-        deck:1,
+        deck:2,
         position: 1,
         album: 'default'
       },
