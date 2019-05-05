@@ -4,7 +4,7 @@ export const GALLERIES: IGallery[] = [
   {
     id: 0,
     title: 'fractures',
-    description: '123SC',
+    description: 'The base of each fracture is an analog photo. With each I work to create a seamless pattern by rotating, cropping, and repositioning each slice into a collage. When the seamless pattern is applied at a larger scale the effect can be dizzying, mimicking the moments when the balance shifts, where we may stumble for a time. ',
     slides: [
       {
         src: '/assets/images/fractures/pattern_img146.jpg',
@@ -389,7 +389,7 @@ export const GALLERIES: IGallery[] = [
   {
     id: 1,
     title: 'texture-on-polaroid',
-    description: 'for images with no prints add link to request a print links to contact form. I will be photography',
+    description: '<i> From Artist Statement: </i> Images encountered in daily life—of foliage, of a shelf of books—appear through reflective surfaces that texture and distort. They speak to how true selfhood is multifaceted. It has fractures but also patterns in ways of being. In this way, my artwork articulates a modulating identity in search of new modes of expression.',
     link: 'https://www.saatchiart.com/art-collection/Photography/Texture-on-Polaroids/1103381/243393/view',
     slides: [
       {
@@ -551,7 +551,7 @@ export const GALLERIES: IGallery[] = [
   {
     id: 2,
     title: 'portraits',
-    description: '<i>From Artist Statement:</i> Fully titled "Portraits of Black Women I Have Yet to Name" etc',
+    description: 'Fully titled <strong> "Portraits of Black Women I Have Yet to Name". </strong> </br> <i>From Artist Statement:</i> "In my portraits I also explore the multiform self through an array of characters and emotions. In particular, I depict African American women in their many guises—their exuberance and sensuality, their confidence and vulnerability."',
     slides: [
       {
         src: '/assets/images/portraits/portraits_1_2018.jpg',

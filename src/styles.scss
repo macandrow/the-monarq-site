@@ -117,6 +117,9 @@ a{
   -o-transition: opacity .2s ease-out;
   -moz-transition: opacity .2s ease-out;
   -webkit-transition: opacity .2s ease-out;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 button, a.btn{
@@ -128,7 +131,6 @@ button, a.btn{
   text-align: center;
   font-size: 12px;
   box-shadow: 0px 10px 30px -10px rgba(210, 209, 209, 0.5);
-  cursor: pointer;
   color: #1c1818;
   padding: 0.75rem 1rem;
   transition: box-shadow 0.2s ease 0s, transform 0.2s ease 0s;
@@ -138,6 +140,7 @@ button, a.btn{
   &:hover, &:focus{
     transform: translateY(-1px);
     box-shadow: 0px 12px 50px -10px rgba(210, 209, 209, 0.8);
+    cursor: pointer;
   }
   .ico{
     height: 15px;
@@ -156,7 +159,6 @@ h3{
 
 header.intro {
   height: 30vh;
-  min-height: 240px;
   h1{
     margin: 0;
   }
