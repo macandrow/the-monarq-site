@@ -2,10 +2,9 @@
   z-index: 10;
   background-color: white;
   position: relative;
-  // max-width: 1230px;
   height: 80px;
   width: 100%;
-  // margin-bottom: 80px;
+  margin-bottom: 80px;
   .inner{
     padding: 0;
   }
@@ -14,22 +13,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    // position: fixed;
-    // width: 100%;
     .logo{
       background-color: #1c1818;
       width: 80px;
       height: 80px;
       text-align: center;
       color:white;
+      clip-path: circle(100% at 50% 0);
+      -webkit-clip-path: circle(100% at 50% 0);
       h1{
         font-family: 'salomeregular', Georgia, Serif;
         font-size: 3rem;
-        margin-bottom: 0;
+        margin: 0.2em 0 0;
       }
-      // h1{
-      //   font-size: 3rem !important;
-      // }
     }
     .menu {
       display: flex;

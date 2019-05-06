@@ -1,16 +1,23 @@
 <div class="gallery-wrapper">
+
   <div class="gallery-scroller">
-    
     <header *ngIf="gallery !== undefined" class="intro inner">
-      <h1 class="text-center"> {{gallery.title}} </h1>
-      <p>{{gallery.description}}</p>
+      <h1 class="prettify" [innerHtml]="gallery.title"></h1>
+      <p class="desc" [innerHtml]="gallery.description"></p>
+      <a *ngIf="gallery.link" class="btn" href="{{gallery.link}}" target="_blank"><img src="/assets/images/icons/ico-shop.svg" alt="shop" class="ico"/>  Prints Available</a>
     </header>
+    <!-- <section ng-controller="MyCtrl">
+        <button ng-click="previous()">previous</button>
+        <button ng-click="next()">next</button>
+        <div>{{current.name}}</div>
+    </section> -->
     <!-- Galley wrapper that contains all items -->
+    <!-- add this if adding back album classes [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']" -->
     <div class="inner">
       <ul *ngIf="gallery !== undefined"
           id="gallery"
           class="gallery"
-          [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']"
+          [ngClass]="[ gallery.title ? gallery.title : '']"
           itemscope
           itemtype="http://schema.org/ImageGallery">
         <!-- Use figure for a more semantic html -->
@@ -35,16 +42,16 @@
         </li>
       </ul>
       <div class="btn_holder">
-        <button class="backToTop"> <img src="/assets/images/ico-arrowUp.svg" alt="Back to Top" class="ico"/> Back to Top</button>
+        <button (click)="goPrevious()"><img src="/assets/images/icons/ico-arrowBack.svg" alt="previous" class="ico"/> <strong>Previous:</strong> {{this.prev}} </button>
+        <button class="backToTop" (click)="scrollToTop()"> <img src="/assets/images/icons/ico-arrowUp.svg" alt="Back to Top" class="ico"/> Back to Top</button>
+        <button (click)="goNext()"> <strong>Next:</strong> {{this.next}} <img src="/assets/images/icons/ico-arrowForward.svg" alt="next" class="ico"/> </button>
       </div>
     </div>
+    
     <!-- Some spacing -->
     <div class="spacer"></div>
-    
     <app-footer></app-footer>
-
   </div>
-  
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->

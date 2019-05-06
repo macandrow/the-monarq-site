@@ -83,15 +83,15 @@ body, main {
 // }
 
 body {
-  transition: background-image .2s ease-out;
-  -o-transition: background-image .2s ease-out;
-  -moz-transition: background-image .2s ease-out;
-  -webkit-transition: background-image .2s ease-out;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  backface-visibility: hidden !important;
+  // transition: background-image .2s ease-out;
+  // -o-transition: background-image .2s ease-out;
+  // -moz-transition: background-image .2s ease-out;
+  // -webkit-transition: background-image .2s ease-out;
+  // transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
+  // backface-visibility: hidden !important;
   // -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+  // -webkit-backface-visibility: hidden;
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -100,12 +100,12 @@ body {
 }
 
 h1 {
-  transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
-  -webkit-transition: all .2s ease-out;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
+  // transition: all .2s ease-out;
+  // -o-transition: all .2s ease-out;
+  // -moz-transition: all .2s ease-out;
+  // -webkit-transition: all .2s ease-out;
+  // transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
   margin: 0.3em 0;
   font-family: 'salomeregular', Georgia, Serif;
 }
@@ -117,9 +117,12 @@ a{
   -o-transition: opacity .2s ease-out;
   -moz-transition: opacity .2s ease-out;
   -webkit-transition: opacity .2s ease-out;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
-button{
+button, a.btn{
   display: inline-block;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -128,7 +131,6 @@ button{
   text-align: center;
   font-size: 12px;
   box-shadow: 0px 10px 30px -10px rgba(210, 209, 209, 0.5);
-  cursor: pointer;
   color: #1c1818;
   padding: 0.75rem 1rem;
   transition: box-shadow 0.2s ease 0s, transform 0.2s ease 0s;
@@ -138,6 +140,12 @@ button{
   &:hover, &:focus{
     transform: translateY(-1px);
     box-shadow: 0px 12px 50px -10px rgba(210, 209, 209, 0.8);
+    cursor: pointer;
+  }
+  &.dark{
+    background: #1c1818;
+    color:#eae4e4;
+    box-shadow: 0px 10px 30px -10px rgba(70, 70, 70, 0.5);
   }
   .ico{
     height: 15px;
@@ -156,12 +164,10 @@ h3{
 
 header.intro {
   height: 30vh;
-  min-height: 240px;
   h1{
     margin: 0;
   }
 }
-
 h1 {
   font-size: 2rem;
   font-family: 'salomeregular', Georgia, Serif;
@@ -193,7 +199,7 @@ a.link, nav a{
     left: -10px;
     color: #eee;
     opacity: .3;
-    font-weight: 100;
+    font-weight: 300;
     font-size: .8em;
   }    
 }
@@ -209,28 +215,30 @@ a.link, nav a{
   h1 {
     font-size: 5rem;
   }
-  body.home {
-    // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
-    // background-color: #fff;
-    background-size: 60%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    &.color-intro {
-      background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
-    }
-    &.color-fractures {
-      background-image: url('src/assets/images/thumbs/bg_fractures.jpg');
-    }
-    &.color-portraits {
-      background-image: url('src/assets/images/thumbs/bg_portraits.jpg');
-    }
-    &.color-photography {
-      background-image: url('src/assets/images/thumbs/bg_photography.jpg');
-    }
+  header{
+   padding:0;
   }
-
-
+  
+  // body.home {
+  //   // background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+  //   // background-color: #fff;
+  //   background-size: 60%;
+  //   background-attachment: fixed;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   &.color-intro {
+  //     background-image: url('https://dummyimage.com/2500x2500/ffffff/fff.png');
+  //   }
+  //   &.color-fractures {
+  //     background-image: url('src/assets/images/thumbs/bg_fractures.jpg');
+  //   }
+  //   &.color-portraits {
+  //     background-image: url('src/assets/images/thumbs/bg_portraits.jpg');
+  //   }
+  //   &.color-photography {
+  //     background-image: url('src/assets/images/thumbs/bg_photography.jpg');
+  //   }
+  // }
 }
 
 .pswp--zoom-allowed .pswp__img {

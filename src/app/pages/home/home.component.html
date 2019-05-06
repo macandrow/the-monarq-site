@@ -1,70 +1,17 @@
-<header class="row intro inner"
-       data-color="intro">
-    <h3>the monarq is a multidisciplinary artist and designer from Chicago now based in Seattle.</h3>
-    <p>I create under the moniker “the monarq” which is a multidisciplinary practice with a focus on analog photography, pattern making, and illustration. </p>
+<header class="intro inner" >
+  <h1>the monarq</h1>
+    <!-- <p>is a multidisciplinary artist and designer from Chicago now based in Seattle.</p> -->
 </header>
 
-<div *ngIf="galleries" class="galleries">
+<div *ngIf="galleries" class="galleries inner">
   <ul>
     <ng-container *ngFor="let gallery of galleries;">
-      <li *ngIf="gallery.isProject == false" class="row" attr.data-color="{{gallery.title}}">
-        <div class="galleryPreview js-tilt" data-tilt>
-          <a class="desc" [routerLink]="['/gallery', gallery.title]">
-            <h1>{{gallery.title}}</h1>
-          </a>
-        </div>
-      </li>
-    </ng-container>
-
-    <ng-container *ngFor="let project of projects;">
-      <li *ngIf="projects" class="row" attr.data-color="{{project.title}}">
-        <div class="galleryPreview js-tilt" data-tilt>
-          <a class="desc" [routerLink]="['/projects', project.title]">
-            <h1>{{project.title}}</h1>
-          </a>
-        </div>
+      <li class="js-tilt" [ngClass]="[ gallery.title ]" data-tilt>
+        <a class="desc prettify" [routerLink]="['/gallery', gallery.title]">
+          <p>{{gallery.title}}</p>
+        </a>
       </li>
     </ng-container>
   </ul>
 </div>
-
-
-<ul>
-  <li>
-    todo list:
-  </li>
-  <li>
-    need min heights on percentage divs
-  </li>
-  <li>
-    <del>fix w/h of link to galleries from home for desktop and mobile</del>
-  </li>
-  <li>
-    <del> add tilt.js to home</del>
-  </li>
-  <li>
-    <del>fix routes to galleries to huse ng-href https://angular.io/guide/ajs-quick-reference#ng-href</del>
-  </li>
-  <li>
-    build server error pages, 404 etc
-  </li>
-  <li>
-    page transitions
-  </li>
-  <li>
-    - shape overlays example in dls
-  </li>
-  <li>
-    - mobile menu
-  </li>
-  <li>
-    - style galleries
-  </li>
-  <li>
-    - contact form
-  </li>
-  <li>
-    - about page design with cv
-  </li>
-</ul>
 <app-footer></app-footer>   

@@ -1,7 +1,6 @@
 header {
   position: relative;
   height: 60vh;
-  background: url("https://picsum.photos/200/200/?random") center right no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +11,10 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+header.intro {
+  min-height: 500px;
 }
 
 header p {
@@ -67,5 +70,12 @@ header p {
 
 .collectionList {
   margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1080px) {
+  header {
+    background: url("/assets/images/bio_pic.jpg") center right no-repeat;
+    background-size: 65%;
+  }
 }
 /*# sourceMappingURL=about.component.css.map */

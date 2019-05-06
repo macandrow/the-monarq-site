@@ -15,10 +15,11 @@ import { FooterComponent } from './ui/footer/footer.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
 import { AppServicesModule } from './services/app.services.module';
 import { ThemeModule } from './theme/theme.module';
 import { darkTheme, lightTheme } from './theme/themes';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,9 @@ import { darkTheme, lightTheme } from './theme/themes';
     HomeComponent,
     AboutComponent,
     GalleryComponent,
-    ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent,
+    QuickLinksComponent
   ],
   imports: [
     BrowserModule,

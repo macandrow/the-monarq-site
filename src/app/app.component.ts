@@ -19,27 +19,5 @@ export class AppComponent {
   getState(outlet) {
     return outlet.activatedRouteData.state;
   }
-  constructor(private renderer: Renderer2, private router: Router) {
-    this.router.events
-      .subscribe((event) => {
-
-        if (event instanceof NavigationStart) {
-          if (this.previousUrl) {
-            this.renderer.removeClass(document.body, this.previousUrl);
-          }
-          const currentUrlSlug = event.url.slice(1);
-          if (currentUrlSlug) {
-            this.renderer.addClass(document.body, currentUrlSlug);
-          } else {
-            this.renderer.addClass(document.body, "home");
-          }
-          this.previousUrl = currentUrlSlug;
-        }
-      });
-
-
-  }
-
-
-
+  constructor() {}
 }

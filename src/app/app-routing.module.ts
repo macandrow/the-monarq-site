@@ -3,23 +3,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
+import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
+import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component'
 import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
-  { 
-    path: 'home', 
-    component: HomeComponent,
-    data: {state: 'homePage'} 
-  },
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent,
     data: {state: 'homePage'}
   },
-
+  { 
+    path: 'home', 
+    component: HomeComponent,
+    data: {state: 'homePage'} 
+  },
   {
     path: 'gallery',
     pathMatch: 'full',
@@ -27,33 +27,43 @@ const routes: Routes = [
     data: {state: 'galleryPage'}
   },
   {
-    path: 'about',
-    component: AboutComponent,
-    data: {state: 'aboutPage'}
-  },
-//   {
-//     path: 'gallery/:title/default',
-//     redirectTo: 'gallery/:title'
-//   },
-  {
-    path: 'gallery/:title/:album',
-    component: GalleryComponent,
-    data: {state: 'albumPage'}
-  },
-  {
     path: 'gallery/:title',
     component: GalleryComponent,
     data: {state: 'galleryTitlePage'}
   },
   {
-    path: 'projects/:title',
-    component: ProjectsComponent,
-    data: {state: 'projectsPage'}
+    path: 'about',
+    component: AboutComponent,
+    data: {state: 'aboutPage'}
   },
+  {
+    path: 'quick-links',
+    component: QuickLinksComponent,
+    data: {state: 'quickLinksPage'}
+  },
+//   {
+//     path: 'gallery/:title/default',
+//     redirectTo: 'gallery/:title'
+//   },
+  // {
+  //   path: 'gallery/:title/:album',
+  //   component: GalleryComponent,
+  //   data: {state: 'albumPage'}
+  // },
+  // {
+  //   path: 'projects/:title',
+  //   component: ProjectsComponent,
+  //   data: {state: 'projectsPage'}
+  // },
   // {
   //   path: 'gallery/:id',
   //   component: GalleryComponent
   // }
+  {
+    path: "**",
+    component: PageNotFoundComponent,
+    data: {state: '404Page'}
+  },
 ];
 
 // const routerOptions: ExtraOptions = {

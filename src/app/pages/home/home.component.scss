@@ -2,159 +2,82 @@ ul{
   list-style: none;
   padding: 0;
 }
-// .tile {
-//   display: block;
-//   width: 300px;
-//   height: 300px;
-//   background: -webkit-linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
-//   background: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
-//   box-shadow: 0 3px 47px rgba(0, 0, 0, 0.2);
-//   transform-style: preserve-3d;
-//   position: relative;
 
-//   .inner {
-//     display: block;
-//     width: 200px;
-//     height: 40px;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translateZ(20px) translateX(-50%) translateY(-50%);
-//     background: transparent;
-//     text-align: center;
-//     font-size: 40px;
-//     line-height: 40px;
-//     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-//     color: white;
-//   }
-// }
-
-header h1 {
+header {
   text-align: center;
+}
+
+li, a{
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .galleries {
   position: relative;
   display: flex;
   flex-direction: column;
-  // html {
-  // 	width: 100%;
-  // 	height: 100%;
-  // }
-  li{
-    &[data-color="fractures"] .galleryPreview{
-      background-image: url('src/assets/images/thumbs/thumb_fractures.jpg');
-    }
-    &[data-color="photography"] .galleryPreview{
-      background-image: url('src/assets/images/thumbs/thumb_photography.jpg');
-    }
-    &[data-color="portraits"] .galleryPreview{
-      background-image: url('src/assets/images/thumbs/thumb_portraits.jpg');
-    }
-  }
-
-  .row {
-    // display: flex;
-    // flex: 1 1 auto;
-    // justify-content: center;
-    // align-items: center;
-    height: 60vh;
-    margin-bottom: 10px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    .galleryPreview {
-      margin: 0 auto;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;      
-      background-size: 350px 350px;
-      background-position: center;
+  ul {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 160px;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 60px;
+    li{
+      overflow-y: hidden;
       background-repeat: no-repeat;
-      width: 350px;
-      height: 350px;
       transform-style: preserve-3d;
-      a.desc {
-        text-decoration: none;
-        transform: translateZ(20px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        width: 100%;
-        margin-left: calc(-50% + 50%);
-        position: relative;
-        // text-align: center;
-        color: #1c1818;
-        &:hover {
-          cursor: pointer;
-        }
-        h1 {
-          margin: 0;
-        }
-        p {
-          font-size: 1.5rem;
-        }
+      background-position: top center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &:hover {
+        background-position: bottom center;
       }
-
-      // .galleryPreview{
-      // 	background-image: url('src/assets/images/thumbs/thumb_fractures.jpg');
-      // 	background-size: 350px 350px;
-      // 	background-position: center;
-      // 	background-repeat: no-repeat;
-      // 	width: 350px;
-      // 	height: 350px;
+      &.fractures{
+        background-image: url('/assets/images/thumbs/thumb_fractures.png');
+      }
+      &.portraits{
+        background-image: url('/assets/images/thumbs/thumb_portraits.png');
+      }
+      &.texture-on-polaroid{
+        background-image: url("/assets/images/thumbs/thumb_texture_on_polaroid.png");
+      }
+      &.aura{
+        background-image: url("/assets/images/thumbs/thumb_aura.png");
+      }
+      &.verdant{
+        background-image: url("/assets/images/thumbs/thumb_verdant.png");
+      }
+      // h2{
+      //       text-transform: uppercase;
       // }
-      // .desc{
-      // 	text-align: center;
-      // 	text-decoration: none;
-      // 	color: #222;
-      // 	display: flex;
-      // 	flex:1;
-      // 	// flex: 1 1 auto;
-      // 	flex-direction: column;
-      // 	justify-content: center;
-      // 	// align-items: center;
-      // 	height: 100%;
-      // 	h1{
-      // 		margin: 0;
-      // 		font-family: 'salomeregular', Georgia, Serif;
-      // 	}
-      // 	p{
-      // 		font-size: 1.5rem;
-      // 	}
-    }
-  }
-}
-
-
-.gallery {
-  background-size: cover;
-
-    .gallery_img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
-@media only screen and (min-width: 1080px) {
-  .galleries {
-    .row {
-      height: 90vh;
-
-      .desc {
-        flex: none;
-        // background-color: pink;
-        height: auto;
-        // flex:1;
+      a{
+        // text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing:.06em;
+        text-align: center;
+        font-size: 1.2em;
+        display: flex;
+        flex: 1 0 12em;
+        align-items: center;
+        justify-content: center;
+        background-color:rgba(255, 255, 255, 0.65);
+        &:hover{
+          background-color:rgba(255, 255, 255, 0);
+        }
       }
     }
   }
 }
+
+
+// @media only screen and (min-width: 1080px) {
+
+// }
 
 
 

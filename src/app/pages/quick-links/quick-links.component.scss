@@ -1,0 +1,27 @@
+.wrapper.inner{
+  max-width: 500px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .btn.dark{
+    font-size: 18px;
+    margin: 0;
+  }
+  .insta-pic{
+    max-width: 75px;
+    margin: 20px auto;
+    height: auto;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    li{
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

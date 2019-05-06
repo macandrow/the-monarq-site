@@ -16,6 +16,8 @@ export const routerTransition = trigger('routerTransition', [
   transition('aboutPage <=> homePage', pageTransition() ),
   transition('* => galleryTitlePage', stepper()),
   transition('galleryTitlePage => *', galleryAway()),
+  transition('* => 404Page', pageTransition()),
+  transition('404Page => *', pageTransition()),
 ])  
 
 function pageTransition() {
@@ -60,10 +62,10 @@ function stepper(){
       animate('0.5s ease-in-out', style({ opacity: 0}))
       ], optional),
   
-      query('.gallery-wrapper header *, .slide_thumbs, footer, .backToTop', style({ opacity: 0 })
+      query('.gallery-wrapper header *, ul.gallery, footer, .backToTop', style({ opacity: 0 })
       , optional),
   
-      query(':enter .gallery-wrapper header *, .slide_thumbs, footer, .backToTop', stagger(100, [
+      query(':enter .gallery-wrapper header *, ul.gallery, footer, .backToTop', stagger(100, [
       style({ transform: 'translateY(100px)' }),
       animate('1s cubic-bezier(0.7, 0, 0.3, 1)', style({ transform: 'translateY(0px)', opacity: 1 })),
       ]), optional),
