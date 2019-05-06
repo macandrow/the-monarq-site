@@ -4,7 +4,6 @@ import {
     style,
     query,
     group,
-    animateChild,
     animate,
     keyframes,
     stagger,
@@ -74,31 +73,6 @@ function stepper(){
 }
 
 function galleryAway(){
-  const optional = { optional: true };
-  return[
-    //transition(':leave', [
-    group([
-      query(':leave .gallery-wrapper header *, .slide_thumbs, footer, .backToTop', stagger(10, [
-        style({ transform: 'translateY(0px)', opacity: 1 }),
-        animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(100px)', opacity: 0})),
-      ]), optional),  
-      query(':enter',  [
-        style({ opacity: 0,position: 'fixed', width:'100%'}),
-        //animateChild(),
-        //query('.copyright', style({ background: 'pink' }), { optional: true }), 
-        animate(
-          '2s cubic-bezier(0.7, 0, 0.3, 1)', keyframes([
-            //style({ transform: 'translateX(0%)', opacity: 1 })
-            style({	opacity: 0,  transform: 'translateY(2%)' }),
-            style({	opacity: 1,  transform: 'translateY(0%)' })
-          ])
-        )
-      ],optional),      
-    ])
-  ]
-}
-
-function projectsEnter(){
   const optional = { optional: true };
   return[
     //transition(':leave', [

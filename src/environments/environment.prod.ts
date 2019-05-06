@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: false,
+  facebookAppId: '851817398501961'
 };
