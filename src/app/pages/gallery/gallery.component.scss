@@ -9,7 +9,8 @@
   }
   .btn_holder{
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    justify-content: space-between;
   }
   ul{
     display: grid;

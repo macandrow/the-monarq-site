@@ -54,11 +54,7 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const btn = $('.backToTop');
-    btn.on('click', function (e) {
-      e.preventDefault();
-      $('.gallery-scroller').animate({ scrollTop: 0 }, '300');
-    });
+  
     this.galleryService.getGalleryTitles().subscribe(
       galleryTitles => this.galleryTitles = galleryTitles);
 
@@ -77,8 +73,11 @@ export class GalleryComponent implements OnInit {
         $this.text($this.text().replace(/-/g, ' '));
       })
     })
+    
   }
-
+  scrollToTop(){
+    $('.gallery-scroller').animate({ scrollTop: 0 }, 700);
+  }
   openGallery(slide: ISlide) {
 
     const options = {
@@ -153,12 +152,34 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+
+  // goPrevious(){
+  //   let previousId = this.galleryService.getGalleryByTitle(params['id']) -1;
+  //   this.router.navigate(['/gallery', previousId]);
+  // }
+  // goNext(){
+  //   let nextId =this.departmentId -1;
+  //   this.router.navigate(['/gallery', nextId]);
+  // }
+
   setPrevNext(galleryId: string) {
     const index = this.galleryTitles.indexOf(galleryId);
     this.prev = this.galleryTitles[(this.galleryTitles.length + index - 1) % this.galleryTitles.length];
     this.next = this.galleryTitles[(this.galleryTitles.length + index + 1) % this.galleryTitles.length];
+    // console.log("previous is " + this.prev);
+    // console.log("next is " + this.next);
+
   }
 
+  goPrevious(){
+    this.router.navigate(['/gallery', this.prev]);
+    this.scrollToTop();
+  }
+  
+  goNext(){
+    this.router.navigate(['/gallery', this.next]);
+    this.scrollToTop();
+  }
 
   goBack(): void {
     this.location.back();
