@@ -19,6 +19,7 @@ import { AppServicesModule } from './services/app.services.module';
 import { ThemeModule } from './theme/theme.module';
 import { darkTheme, lightTheme } from './theme/themes';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     AboutComponent,
     GalleryComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    QuickLinksComponent
   ],
   imports: [
     BrowserModule,

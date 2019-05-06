@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component'
 import { HttpClientModule } from '@angular/common/http';
 
@@ -34,6 +35,11 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     data: {state: 'aboutPage'}
+  },
+  {
+    path: 'quick-links',
+    component: QuickLinksComponent,
+    data: {state: 'quickLinksPage'}
   },
 //   {
 //     path: 'gallery/:title/default',
