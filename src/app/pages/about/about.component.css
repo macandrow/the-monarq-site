@@ -1,6 +1,5 @@
 header {
   position: relative;
-  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,10 +10,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-header.intro {
-  min-height: 500px;
+  padding-bottom: 60px;
 }
 
 header p {

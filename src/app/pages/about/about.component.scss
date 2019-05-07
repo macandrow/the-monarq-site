@@ -1,12 +1,13 @@
 header {
   position: relative;
-  height: 60vh;
+  // height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  &.intro{
-    min-height: 500px;
-  }
+  padding-bottom: 60px;
+  // &.intro{
+  //   min-height: 500px;
+  // }
   // margin-top: 0;
   // padding-top: 0;
   p{

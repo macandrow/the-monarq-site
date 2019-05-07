@@ -487,13 +487,12 @@ export const GALLERIES: IGallery[] = [
   {
     id: 2,
     title: 'portraits',
-    description: 'Fully titled <strong> "Portraits of Black Women I Have Yet to Name". </strong> </br> <i>From Artist Statement:</i> "In my portraits I also explore the multiform self through an array of characters and emotions. In particular, I depict African American women in their many guises—their exuberance and sensuality, their confidence and vulnerability."',
+    description: 'Fully titled <strong> "Portraits of Black Women I Have Yet to Name". </strong> <i>From Artist Statement:</i> "In my portraits I also explore the multiform self through an array of characters and emotions. In particular, I depict African American women in their many guises—their exuberance and sensuality, their confidence and vulnerability."',
     slides: [
       {
         src: '/assets/images/portraits/portraits_1_2018.jpg',
         w: 1000,
         h: 1264,
-        title: 'Sea side, south shore',
         deck: 0,
         album: 'default'
       },
@@ -501,7 +500,6 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/portraits/portraits_2_b.jpg',
         w: 1000,
         h: 1237,
-        title: 'Image Caption 1',
         deck: 1,
         album: 'default'
       },
@@ -509,7 +507,6 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/portraits/portraits_3.jpg',
         w: 1000,
         h: 1262,
-        title: 'Image Caption 2',
         deck: 2,
         album: 'default'
       },
@@ -517,7 +514,6 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/portraits/portraits_4.jpg',
         w: 1000,
         h: 1262,
-        title: 'Image Caption 2',
         deck: 3,
         album: 'default'
       },

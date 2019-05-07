@@ -4,7 +4,6 @@
   position: relative;
   height: 80px;
   width: 100%;
-  margin-bottom: 80px;
 }
 
 .navWrapper .inner {
@@ -41,6 +40,10 @@
   margin: 0.2em 0 0;
 }
 
+.navWrapper nav .toggle {
+  display: none;
+}
+
 .navWrapper nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,5 +65,59 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #1c1818;
+}
+
+@media only screen and (max-width: 500px) {
+  .navWrapper nav .toggle {
+    display: block;
+  }
+  .navWrapper nav .menu {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navWrapper nav .menu.active {
+    display: block;
+  }
+  .navWrapper nav .menu .noStyle {
+    color: #fff;
+  }
+  .navWrapper nav .menu li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .navWrapper nav .menu li.toggle {
+    display: block;
+  }
+  .navWrapper nav .menu li.close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .navWrapper nav .menu li a {
+    color: #fff;
+    font-size: 20px;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=header.component.css.map */

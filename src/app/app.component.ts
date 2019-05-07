@@ -2,7 +2,7 @@ import { Component, Renderer2 } from '@angular/core';
 import { Router, Scroll, NavigationEnd, NavigationStart, RouterOutlet } from '@angular/router';
 import { Location, ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
-import { routerTransition } from './animations';
+import { routerTransition } from 'src/app/shared/animations';
 
 
 @Component({

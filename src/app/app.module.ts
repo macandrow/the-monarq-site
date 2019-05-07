@@ -20,6 +20,7 @@ import { ThemeModule } from './theme/theme.module';
 import { darkTheme, lightTheme } from './theme/themes';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
     GalleryComponent,
     FooterComponent,
     PageNotFoundComponent,
-    QuickLinksComponent
+    QuickLinksComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,

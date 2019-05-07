@@ -1,0 +1,42 @@
+.wrapper.inner {
+  max-width: 500px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.wrapper.inner .btn.dark {
+  font-size: 18px;
+  margin: 0;
+}
+
+.wrapper.inner .insta-pic {
+  max-width: 75px;
+  margin: 20px auto;
+  height: auto;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+.wrapper.inner ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper.inner ul li {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=quick-links.component.css.map */

@@ -10,7 +10,23 @@ import * as typeformEmbed from '@typeform/embed'
 })
 export class HeaderComponent {
 
-  constructor() { }
+  onClickMe() {
+    var navMenu = document.getElementById("navMenu"); 
+    if (navMenu.classList.contains("active")) { 
+      navMenu.classList.remove("active");
+    } 
+  }
+
+  constructor() { 
+   
+  }
+  ngOnInit() {
+    var $btn = $('.toggle');
+    
+    $btn.click(function(){
+      $('#navMenu').toggleClass('active');
+    })
+  }
 
   ngAfterViewInit(): void {
     const contactForm = typeformEmbed.makePopup(

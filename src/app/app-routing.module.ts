@@ -5,7 +5,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { QuickLinksComponent } from './pages/quick-links/quick-links.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component'
+import {PrivacyPolicyComponent} from './pages/privacy-policy/privacy-policy.component'
+
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 const routes: Routes = [
@@ -40,6 +43,11 @@ const routes: Routes = [
     path: 'quick-links',
     component: QuickLinksComponent,
     data: {state: 'quickLinksPage'}
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent,
+    data: {state: 'privacyPolicyPage'}
   },
 //   {
 //     path: 'gallery/:title/default',
