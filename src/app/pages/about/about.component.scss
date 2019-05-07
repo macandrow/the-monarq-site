@@ -1,19 +1,11 @@
 header {
   position: relative;
-  // height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 60px;
-  // &.intro{
-  //   min-height: 500px;
-  // }
-  // margin-top: 0;
-  // padding-top: 0;
   p{
     max-width: 690px;
-    // padding: 0;
-    // margin: 0;
   }
 }
 
@@ -40,9 +32,6 @@ header {
     align-items: stretch;
     justify-content: flex-start;
     padding-bottom: 30px;
-    // a.btn{
-    //   margin-top: 45px;
-    // }
     h1, h3, .collectionList {
       flex: 1 100%;
     }

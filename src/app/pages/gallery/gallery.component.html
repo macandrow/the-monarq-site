@@ -6,11 +6,6 @@
       <p class="desc" [innerHtml]="gallery.description"></p>
       <a *ngIf="gallery.link" class="btn" href="{{gallery.link}}" target="_blank"><img src="/assets/images/icons/ico-shop.svg" alt="shop" class="ico"/>  Prints Available</a>
     </header>
-    <!-- <section ng-controller="MyCtrl">
-        <button ng-click="previous()">previous</button>
-        <button ng-click="next()">next</button>
-        <div>{{current.name}}</div>
-    </section> -->
     <!-- Galley wrapper that contains all items -->
     <!-- add this if adding back album classes [ngClass]="[ gallery.title ? gallery.title : '', album ? album : '']" -->
     <div class="inner">
