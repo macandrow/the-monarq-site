@@ -1,10 +1,11 @@
-ul{
-  list-style: none;
-  padding: 0;
-}
 
 header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.7em;
 }
 
 li, a{
@@ -67,5 +68,11 @@ li, a{
         }
       }
     }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  header{
+    min-height: 250px;
   }
 }
