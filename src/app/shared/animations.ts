@@ -53,7 +53,7 @@ export const routerTransition =
         query('.gallery-wrapper header *, ul.gallery, footer, .backToTop', style({ opacity: 0 })
         , optional),
     
-        query(':enter .gallery-wrapper header *, ul.gallery, footer, .backToTop', stagger(100, [
+        query(':enter .gallery-wrapper header *, ul.gallery, .btn_holder, footer', stagger(100, [
         style({ transform: 'translateY(100px)' }),
         animate('1s cubic-bezier(0.7, 0, 0.3, 1)', style({ transform: 'translateY(0px)', opacity: 1 })),
         ]), optional),
@@ -61,7 +61,7 @@ export const routerTransition =
     ]),
     transition('galleryTitlePage => *', [
       group([
-        query(':leave .gallery-wrapper header *, .slide_thumbs, footer, .backToTop', stagger(10, [
+        query(':leave .gallery-wrapper header *, .slide_thumbs, .btn_holder, footer', stagger(10, [
           style({ transform: 'translateY(0px)', opacity: 1 }),
           animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({transform: 'translateY(100px)', opacity: 0})),
         ]), optional),  

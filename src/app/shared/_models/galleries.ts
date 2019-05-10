@@ -103,14 +103,6 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/pattern_img081_3.jpg',
-        w: 900,
-        h: 900,
-        deck: 3,
-        position: 2,
-        album: 'default'
-      },
-      {
         src: '/assets/images/fractures/repeat_img081.jpg',
         w: 1000,
         h: 750,
@@ -127,7 +119,7 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/repeat_img081_3.jpg',
+        src: '/assets/images/fractures/repeat_img081_4.jpg',
         w: 1000,
         h: 750,
         deck: 3,
@@ -135,13 +127,13 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/repeat_img081_4.jpg',
-        w: 1000,
-        h: 750,
+        src: '/assets/images/fractures/org_img081.jpg',
+        w: 900,
+        h: 1067,
         deck: 3,
         position: 6,
         album: 'default'
-      },
+      }, 
       {
         src: '/assets/images/fractures/org_img081.jpg',
         w: 900,
@@ -175,7 +167,7 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/pattern_img157.jpg',
+        src: '/assets/images/fractures/pattern_img081_3.jpg',
         w: 900,
         h: 900,
         deck: 5,
@@ -183,7 +175,7 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/repeat_img157.jpg',
+        src: '/assets/images/fractures/repeat_img081_3.jpg',
         w: 1000,
         h: 750,
         deck: 5,
@@ -191,42 +183,18 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/org_img157.jpg',
+        src: '/assets/images/fractures/org_img081.jpg',
         w: 900,
         h: 1067,
         deck: 5,
         position: 2,
         album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/pattern_img059.jpg',
-        w: 900,
-        h: 900,
-        deck: 6,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/repeat_img059.jpg',
-        w: 1000,
-        h: 750,
-        deck: 6,
-        position: 1,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/org_img059.jpg',
-        w: 900,
-        h: 1067,
-        deck: 6,
-        position: 2,
-        album: 'default'
-      },
+      }, 
       {
         src: '/assets/images/fractures/pattern_img117.jpg',
         w: 900,
         h: 900,
-        deck: 7,
+        deck: 6,
         position: 0,
         album: 'default'
       },
@@ -234,7 +202,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/repeat_img117.jpg',
         w: 1000,
         h: 750,
-        deck: 7,
+        deck: 6,
         position: 1,
         album: 'default'
       },
@@ -242,7 +210,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/org_img117.jpg',
         w: 900,
         h: 1067,
-        deck: 7,
+        deck: 6,
         position: 2,
         album: 'default'
       },
@@ -250,7 +218,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/pattern_img191.jpg',
         w: 900,
         h: 900,
-        deck: 8,
+        deck: 7,
         position: 0,
         album: 'default'
       },
@@ -258,7 +226,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/repeat_img191.jpg',
         w: 1000,
         h: 750,
-        deck: 8,
+        deck: 7,
         position: 1,
         album: 'default'
       },
@@ -266,55 +234,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/org_img191.jpg',
         w: 900,
         h: 1067,
-        deck: 8,
-        position: 2,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/pattern_img119.jpg',
-        w: 900,
-        h: 900,
-        deck: 9,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/repeat_img119.jpg',
-        w: 1000,
-        h: 750,
-        deck: 9,
-        position: 1,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/org_img119.jpg',
-        w: 900,
-        h: 1067,
-        deck: 9,
-        position: 2,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/pattern_img163.jpg',
-        w: 900,
-        h: 900,
-        deck: 10,
-        position: 0,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/repeat_img163.jpg',
-        w: 1000,
-        h: 750,
-        deck: 10,
-        position: 1,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/fractures/org_img163.jpg',
-        w: 900,
-        h: 1067,
-        deck: 10,
+        deck: 7,
         position: 2,
         album: 'default'
       },
@@ -322,7 +242,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/pattern_img172.jpg',
         w: 900,
         h: 900,
-        deck: 11,
+        deck: 8,
         position: 0,
         album: 'default'
       },
@@ -330,7 +250,7 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/repeat_img172.jpg',
         w: 1000,
         h: 750,
-        deck: 11,
+        deck: 8,
         position: 1,
         album: 'default'
       },
@@ -338,10 +258,107 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/fractures/org_img172.jpg',
         w: 900,
         h: 1067,
+        deck: 8,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img157.jpg',
+        w: 900,
+        h: 900,
+        deck: 9,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img157.jpg',
+        w: 1000,
+        h: 750,
+        deck: 9,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img157.jpg',
+        w: 900,
+        h: 1067,
+        deck: 9,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img119.jpg',
+        w: 900,
+        h: 900,
+        deck: 10,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img119.jpg',
+        w: 1000,
+        h: 750,
+        deck: 10,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img119.jpg',
+        w: 900,
+        h: 1067,
+        deck: 10,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img163.jpg',
+        w: 900,
+        h: 900,
+        deck: 11,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img163.jpg',
+        w: 1000,
+        h: 750,
+        deck: 11,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img163.jpg',
+        w: 900,
+        h: 1067,
         deck: 11,
         position: 2,
         album: 'default'
       },
+      {
+        src: '/assets/images/fractures/pattern_img059.jpg',
+        w: 900,
+        h: 900,
+        deck: 12,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img059.jpg',
+        w: 1000,
+        h: 750,
+        deck: 12,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img059.jpg',
+        w: 900,
+        h: 1067,
+        deck: 12,
+        position: 2,
+        album: 'default'
+      },
+
     ]
   },
   {
