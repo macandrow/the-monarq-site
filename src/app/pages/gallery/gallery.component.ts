@@ -25,7 +25,7 @@ import { environment } from '../../../environments/environment';
 export class GalleryComponent implements OnInit {
   // @HostBinding('class.gallery-frame') true;
 
-  @ViewChild('photoSwipe') photoSwipe: ElementRef;
+  @ViewChild('photoSwipe', {static: true}) photoSwipe: ElementRef;
 
   objectKeys = Object.keys;
   gallery: IGallery;
