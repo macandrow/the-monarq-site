@@ -4,7 +4,7 @@ export const GALLERIES: IGallery[] = [
   {
     id: 0,
     title: 'fractures',
-    description: 'The base of each fracture is an analog photo. With each I work to create a seamless pattern by rotating, cropping, and repositioning each slice into a collage. When the seamless pattern is applied at a larger scale the effect can be dizzying, mimicking the moments when the balance shifts, where we may stumble for a time. ',
+    description: 'The base of each fracture is an analog photo. With each I work to create a seamless pattern by rotating, cropping, and repositioning each slice into a collage. When the seamless pattern is applied at a larger scale the effect can be dizzying, mimicking the moments when the balance shifts, where we may stumble for a time. Open each to see the pattern at scale and the original polaroid base.',
     slides: [
       {
         src: '/assets/images/fractures/pattern_img146.jpg',
