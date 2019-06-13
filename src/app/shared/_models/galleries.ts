@@ -510,29 +510,36 @@ export const GALLERIES: IGallery[] = [
         src: '/assets/images/portraits/portraits_1_2018.jpg',
         w: 1000,
         h: 1264,
-        deck: 0,
-        album: 'default'
+        album: 'default',
+        title: " Gouache, Acryla Gouache, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_2_b.jpg',
         w: 1000,
         h: 1237,
-        deck: 1,
-        album: 'default'
+        album: 'default',
+        title: " Gouache, Acryla Gouache, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_3.jpg',
         w: 1000,
         h: 1262,
-        deck: 2,
-        album: 'default'
+        album: 'default',
+        title: " Gouache and Acryla Gouache"
       },
       {
         src: '/assets/images/portraits/portraits_4.jpg',
         w: 1000,
         h: 1262,
-        deck: 3,
-        album: 'default'
+        album: 'default',
+        title: " Gouache and Acryla Gouache"
+      },
+      {
+        src: '/assets/images/portraits/portraits_5.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
       },
     ]
   },
@@ -542,6 +549,66 @@ export const GALLERIES: IGallery[] = [
     description: 'This project is an exporation of light and shadow in an analog form.',
     link: 'https://www.saatchiart.com/art-collection/Photography/Aura/1103381/286067/view',
     slides: [
+      {
+        src: '/assets/images/aura/org_img414.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img407.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img406.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img408.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img413.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      // {
+      //   src: '/assets/images/aura/org_img415.jpg',
+      //   w: 900,
+      //   h: 1067,
+      //   album: 'default'
+      // },
+      {
+        src: '/assets/images/aura/org_img410.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img411.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img412.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img409.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
       {
         src: '/assets/images/aura/org_img115.jpg',
         w: 900,
