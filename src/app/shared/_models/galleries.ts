@@ -358,193 +358,10 @@ export const GALLERIES: IGallery[] = [
         position: 2,
         album: 'default'
       },
-
     ]
   },
   {
     id: 1,
-    title: 'texture-on-polaroid',
-    description: '<i> From Artist Statement: </i> Images encountered in daily life—of foliage, of a shelf of books—appear through reflective surfaces that texture and distort. They speak to how true selfhood is multifaceted. It has fractures but also patterns in ways of being. In this way, my artwork articulates a modulating identity in search of new modes of expression.',
-    link: 'https://www.saatchiart.com/art-collection/Photography/Texture-on-Polaroids/1103381/243393/view',
-    slides: [
-      {
-        src: '/assets/images/texture_on_polaroid/img146.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img157.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img160.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img192.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img116.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img132.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img113.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img114.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img117_2.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/org_img063.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/org_img087.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/org_img069_CL.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img184.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img179.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img166.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img172.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img112.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img158.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img153.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img152.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img129.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-      {
-        src: '/assets/images/texture_on_polaroid/img119.jpg',
-        w: 900,
-        h: 1067,
-        album: 'default'
-      },
-    ]
-  },
-  {
-    id: 2,
-    title: 'portraits',
-    description: 'Fully titled <strong> "Portraits of Black Women I Have Yet to Name". </strong> <i>From Artist Statement:</i> "In my portraits I also explore the multiform self through an array of characters and emotions. In particular, I depict African American women in their many guises—their exuberance and sensuality, their confidence and vulnerability."',
-    slides: [
-      {
-        src: '/assets/images/portraits/portraits_1_2018.jpg',
-        w: 1000,
-        h: 1264,
-        album: 'default',
-        title: " Gouache, Acryla Gouache, and collage mixed media"
-      },
-      {
-        src: '/assets/images/portraits/portraits_2_b.jpg',
-        w: 1000,
-        h: 1237,
-        album: 'default',
-        title: " Gouache, Acryla Gouache, and collage mixed media"
-      },
-      {
-        src: '/assets/images/portraits/portraits_3.jpg',
-        w: 1000,
-        h: 1262,
-        album: 'default',
-        title: " Gouache and Acryla Gouache"
-      },
-      {
-        src: '/assets/images/portraits/portraits_4.jpg',
-        w: 1000,
-        h: 1262,
-        album: 'default',
-        title: " Gouache and Acryla Gouache"
-      },
-      {
-        src: '/assets/images/portraits/portraits_5.jpg',
-        w: 1000,
-        h: 1262,
-        album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
-      },
-    ]
-  },
-  {
-    id: 3,
     title: 'aura',
     description: 'This project is an exporation of light and shadow in an analog form.',
     link: 'https://www.saatchiart.com/art-collection/Photography/Aura/1103381/286067/view',
@@ -759,6 +576,189 @@ export const GALLERIES: IGallery[] = [
         h: 1067,
         deck:2,
         position: 1,
+        album: 'default'
+      },
+    ]
+  },
+  {
+    id: 2,
+    title: 'portraits',
+    description: 'Fully titled <strong> "Portraits of Black Women I Have Yet to Name". </strong> <i>From Artist Statement:</i> "In my portraits I also explore the multiform self through an array of characters and emotions. In particular, I depict African American women in their many guises—their exuberance and sensuality, their confidence and vulnerability."',
+    link: "https://www.inprnt.com/collections/themonarq/portraits-of-black-women-i-have-yet-to-name/",
+    slides: [
+      {
+        src: '/assets/images/portraits/portraits_1_2018.jpg',
+        w: 1000,
+        h: 1264,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_2_b.jpg',
+        w: 1000,
+        h: 1237,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_3.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache and Acryla Gouache"
+      },
+      {
+        src: '/assets/images/portraits/portraits_4.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache and Acryla Gouache"
+      },
+      {
+        src: '/assets/images/portraits/portraits_5.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+      },
+    ]
+  },
+  {
+    id: 3,
+    title: 'texture-on-polaroid',
+    description: '<i> From Artist Statement: </i> Images encountered in daily life—of foliage, of a shelf of books—appear through reflective surfaces that texture and distort. They speak to how true selfhood is multifaceted. It has fractures but also patterns in ways of being. In this way, my artwork articulates a modulating identity in search of new modes of expression.',
+    link: 'https://www.saatchiart.com/art-collection/Photography/Texture-on-Polaroids/1103381/243393/view',
+    slides: [
+      {
+        src: '/assets/images/texture_on_polaroid/img146.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img157.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img160.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img192.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img116.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img132.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img113.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img114.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img117_2.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/org_img063.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/org_img087.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/org_img069_CL.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img184.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img179.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img166.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img172.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img112.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img158.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img153.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img152.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img129.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/texture_on_polaroid/img119.jpg',
+        w: 900,
+        h: 1067,
         album: 'default'
       },
     ]
