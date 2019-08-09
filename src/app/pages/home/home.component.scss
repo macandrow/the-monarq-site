@@ -63,6 +63,9 @@ li, a{
         align-items: center;
         justify-content: center;
         background-color:rgba(255, 255, 255, 0.65);
+        font-family: futura-pt, sans-serif;
+        font-weight: 600;
+        font-style: normal;
         &:hover{
           background-color:rgba(255, 255, 255, 0);
         }
@@ -71,8 +74,8 @@ li, a{
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  header{
-    min-height: 250px;
-  }
-}
+// @media only screen and (min-width: 1080px) {
+//   header{
+//     min-height: 250px;
+//   }
+// }

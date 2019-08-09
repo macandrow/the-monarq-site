@@ -35,6 +35,11 @@ header {
     h1, h3, .collectionList {
       flex: 1 100%;
     }
+    h1, h3{
+      font-family: futura-pt-bold,sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
     .date {
       flex: 1 20%;
     }
