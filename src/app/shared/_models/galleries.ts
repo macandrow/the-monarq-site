@@ -141,9 +141,9 @@ export const GALLERIES: IGallery[] = [
         deck: 3,
         position: 7,
         album: 'default'
-      },      
+      },  
       {
-        src: '/assets/images/fractures/pattern_img087_1.jpg',
+        src: '/assets/images/fractures/pattern_img322.jpg',
         w: 900,
         h: 900,
         deck: 4,
@@ -151,7 +151,7 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/repeat_img087_1.jpg',
+        src: '/assets/images/fractures/repeat_img322.jpg',
         w: 1000,
         h: 750,
         deck: 4,
@@ -159,13 +159,13 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/fractures/org_img087_1.jpg',
+        src: '/assets/images/fractures/org_img322.jpg',
         w: 900,
         h: 1067,
         deck: 4,
         position: 2,
         album: 'default'
-      },
+      },    
       {
         src: '/assets/images/fractures/pattern_img081_3.jpg',
         w: 900,
@@ -355,6 +355,30 @@ export const GALLERIES: IGallery[] = [
         w: 900,
         h: 1067,
         deck: 12,
+        position: 2,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/pattern_img087_1.jpg',
+        w: 900,
+        h: 900,
+        deck: 13,
+        position: 0,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/repeat_img087_1.jpg',
+        w: 1000,
+        h: 750,
+        deck: 13,
+        position: 1,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/fractures/org_img087_1.jpg',
+        w: 900,
+        h: 1067,
+        deck: 13,
         position: 2,
         album: 'default'
       },
@@ -594,7 +618,7 @@ export const GALLERIES: IGallery[] = [
         title: " Gouache, Acryla Gouache, and collage mixed media"
       },
       {
-        src: '/assets/images/portraits/portraits_2_b.jpg',
+        src: '/assets/images/portraits/portraits_2.jpg',
         w: 1000,
         h: 1237,
         album: 'default',
@@ -616,6 +640,34 @@ export const GALLERIES: IGallery[] = [
       },
       {
         src: '/assets/images/portraits/portraits_5.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_6.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_7.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_8.jpg',
+        w: 1000,
+        h: 1262,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_9.jpg',
         w: 1000,
         h: 1262,
         album: 'default',
