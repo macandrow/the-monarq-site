@@ -20,13 +20,16 @@
       color:white;
       clip-path: circle(100% at 50% 0);
       -webkit-clip-path: circle(100% at 50% 0);
-      h1{
-        // font-family: 'salomeregular', Georgia, Serif;
-        font-size: 3rem;
-        margin: 0.2em 0 0;
-        font-family: futura-pt-bold,sans-serif;
-        font-weight: 700;
-        font-style: normal;
+      // h1{
+      //   // font-family: 'salomeregular', Georgia, Serif;
+      //   font-size: 3rem;
+      //   margin: 0.2em 0 0;
+      //   font-family: futura-pt-bold,sans-serif;
+      //   font-weight: 700;
+      //   font-style: normal;
+      // }
+      img{
+        margin: 17%;
       }
     }
     .toggle{
