@@ -59,9 +59,10 @@
 }
 
 .navWrapper nav .menu a {
-  padding: .6em 1em;
-  font-size: 13px;
+  padding: .6em 1em !important;
+  font-size: 13px !important;
   line-height: 1.6em;
+  text-decoration: none !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #1c1818;
@@ -115,7 +116,7 @@
             align-items: flex-end;
   }
   .navWrapper nav .menu li a {
-    color: #fff;
+    color: #fff !important;
     font-size: 20px;
     padding: 0;
   }
