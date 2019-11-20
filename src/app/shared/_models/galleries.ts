@@ -648,7 +648,7 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 5,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_6.jpg',
@@ -656,7 +656,7 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 6,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_7.jpg',
@@ -664,7 +664,7 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 7,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_8_a.jpg',
@@ -673,7 +673,7 @@ export const GALLERIES: IGallery[] = [
         deck: 8,
         position: 0,
         album: 'default',
-        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_8_b.jpg',
@@ -682,13 +682,37 @@ export const GALLERIES: IGallery[] = [
         deck: 8,
         position: 1,
         album: 'default',
-        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_9.jpg',
         w: 1000,
         h: 1262,
         deck: 9,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_10.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 10,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_11.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 11,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_12.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 12,
         album: 'default',
         title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
       },
