@@ -673,13 +673,13 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/aura/org_img093.jpg',
+        src: '/assets/images/aura/org_img514.jpg',
         w: 900,
         h: 1067,
         album: 'default'
       },
       {
-        src: '/assets/images/aura/org_img514.jpg',
+        src: '/assets/images/aura/org_img093.jpg',
         w: 900,
         h: 1067,
         album: 'default'
