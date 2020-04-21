@@ -409,6 +409,60 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
+        src: '/assets/images/aura/org_img517.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img526.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img510.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img513.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img516.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img515.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img508.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img512.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img511.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
         src: '/assets/images/aura/org_img408.jpg',
         w: 900,
         h: 1067,
@@ -469,6 +523,43 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
+        src: '/assets/images/aura/org_img524.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img494.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img493.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img097.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img525.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
+        src: '/assets/images/aura/org_img527.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+
+      {
         src: '/assets/images/aura/org_img111.jpg',
         w: 900,
         h: 1067,
@@ -481,11 +572,12 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
-        src: '/assets/images/aura/org_img097.jpg',
+        src: '/assets/images/aura/org_img509.jpg',
         w: 900,
         h: 1067,
         album: 'default'
       },
+
       {
         src: '/assets/images/aura/org_img112.jpg',
         w: 900,
@@ -581,6 +673,12 @@ export const GALLERIES: IGallery[] = [
         album: 'default'
       },
       {
+        src: '/assets/images/aura/org_img514.jpg',
+        w: 900,
+        h: 1067,
+        album: 'default'
+      },
+      {
         src: '/assets/images/aura/org_img093.jpg',
         w: 900,
         h: 1067,
@@ -648,7 +746,7 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 5,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_6.jpg',
@@ -656,7 +754,7 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 6,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_7.jpg',
@@ -664,7 +762,7 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 7,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_8_a.jpg',
@@ -673,7 +771,7 @@ export const GALLERIES: IGallery[] = [
         deck: 8,
         position: 0,
         album: 'default',
-        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_8_b.jpg',
@@ -682,7 +780,7 @@ export const GALLERIES: IGallery[] = [
         deck: 8,
         position: 1,
         album: 'default',
-        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, Diamond Dust, acrylic paint, and collage mixed media"
       },
       {
         src: '/assets/images/portraits/portraits_9.jpg',
@@ -690,7 +788,31 @@ export const GALLERIES: IGallery[] = [
         h: 1262,
         deck: 9,
         album: 'default',
-        title: " Gouache, Acryla Gouache, acrylic paint and collage mixed media"
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_10.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 10,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_11.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 11,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, collage mixed media"
+      },
+      {
+        src: '/assets/images/portraits/portraits_12.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 12,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
     ]
   },
