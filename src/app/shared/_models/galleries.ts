@@ -814,6 +814,14 @@ export const GALLERIES: IGallery[] = [
         album: 'default',
         title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
       },
+      {
+        src: '/assets/images/portraits/portraits_13.jpg',
+        w: 1000,
+        h: 1262,
+        deck: 13,
+        album: 'default',
+        title: " Gouache, Acryla Gouache, acrylic paint, and collage mixed media"
+      },
     ]
   },
   {
